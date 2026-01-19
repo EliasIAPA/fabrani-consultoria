@@ -26,14 +26,14 @@ export function Header() {
   return (
     <>
       {/* Top Bar de Urgência */}
-      <div className="bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 backdrop-blur-md border-b border-primary/20 py-2 text-center text-xs md:text-sm font-medium text-primary-foreground relative z-50 overflow-hidden">
+      <div className="bg-background border-b border-primary py-2 text-center text-xs md:text-sm font-medium text-primary-foreground relative z-50 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10 mix-blend-overlay"></div>
         <div className="container flex items-center justify-center gap-2 animate-pulse">
-          <span className="text-neon-cyan">⚡ 50 VAGAS DISPONÍVEIS</span>
+          <span className="text-primary font-bold">⚡ 50 VAGAS DISPONÍVEIS</span>
           <span className="hidden md:inline text-muted-foreground">|</span>
           <span className="hidden md:inline">CONSULTORIA COM O FOUNDER</span>
           <span className="hidden md:inline text-muted-foreground">→</span>
-          <a href="#cta" className="underline hover:text-neon-cyan transition-colors font-bold">
+          <a href="#cta" className="underline hover:text-primary transition-colors font-bold">
             GARANTIR VAGA POR R$ 97
           </a>
         </div>
@@ -51,7 +51,7 @@ export function Header() {
         <div className="container flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-[0_0_15px_var(--color-primary)] group-hover:shadow-[0_0_25px_var(--color-primary)] transition-all duration-300">
+            <div className="w-10 h-10 rounded-lg bg-primary text-black flex items-center justify-center font-bold text-xl shadow-[0_0_15px_rgba(0,255,135,0.4)] group-hover:shadow-[0_0_25px_var(--color-primary)] transition-all duration-300">
               F
             </div>
             <span className="text-xl font-bold tracking-tighter font-display text-white group-hover:text-primary transition-colors">
@@ -76,7 +76,7 @@ export function Header() {
           {/* CTA & Mobile Toggle */}
           <div className="flex items-center gap-4">
             <Button 
-              className="hidden md:flex btn-neon bg-primary hover:bg-primary/90 text-white border-none"
+              className="hidden md:flex btn-neon bg-primary hover:bg-primary-dark text-black border-none"
               asChild
             >
               <a href="#login">Área do Aluno</a>

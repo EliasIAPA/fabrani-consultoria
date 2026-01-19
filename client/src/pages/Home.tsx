@@ -7,7 +7,7 @@ import { Check, ArrowRight, AlertTriangle, Zap, Target, FileText, Users, Lock } 
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary selection:text-white">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary selection:text-black">
       <Header />
       
       <main>
@@ -16,7 +16,7 @@ export default function Home() {
         ========================================= */}
         <section id="hero" className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden">
           {/* Background Effects */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,28,245,0.15),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,135,0.05),transparent_50%)]"></div>
           <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid.svg')] opacity-[0.03]"></div>
           
           <div className="container relative z-10">
@@ -24,15 +24,15 @@ export default function Home() {
               
               {/* Pre-headline Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm animate-fade-in-up">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
                 <span className="text-xs md:text-sm font-mono text-muted-foreground uppercase tracking-wider">
                   20 Anos de Mercado | +100k Alunos | 150 Projetos Validados
                 </span>
               </div>
 
               {/* Headline */}
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight animate-fade-in-up delay-100">
-                1 Hora Para Descobrir Se Você Está a <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-green-400 glow-text-cyan">1 Ajuste</span> ou <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">1 Ano de Escalar</span>
+              <h1 className="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight animate-fade-in-up delay-100">
+                1 Hora Para Descobrir Se Você Está a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white glow-text-green">1 Ajuste</span> ou <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">1 Ano de Escalar</span>
               </h1>
 
               {/* Subheadline */}
@@ -42,7 +42,7 @@ export default function Home() {
 
               {/* CTA */}
               <div className="flex flex-col items-center gap-4 animate-fade-in-up delay-300">
-                <Button size="lg" className="btn-neon h-14 px-8 text-lg w-full md:w-auto" asChild>
+                <Button size="lg" className="btn-neon h-auto w-full md:w-auto text-black" asChild>
                   <a href="#cta">🔥 QUERO MINHA CONSULTORIA DE R$ 97 AGORA</a>
                 </Button>
                 <p className="text-xs text-muted-foreground flex items-center gap-2">
@@ -58,11 +58,11 @@ export default function Home() {
                   { number: "20", text: "Anos de Experiência" },
                   { number: "R$ 2bi", text: "Em Projetos Validados" },
                 ].map((badge, i) => (
-                  <div key={i} className="glass-card p-4 rounded-xl text-center group hover:-translate-y-1 transition-transform">
-                    <div className="text-2xl md:text-3xl font-bold text-white mb-1 group-hover:text-primary transition-colors font-display">
+                  <div key={i} className="badge-card group">
+                    <div className="badge-number group-hover:text-white transition-colors">
                       {badge.number}
                     </div>
-                    <div className="text-xs text-muted-foreground uppercase tracking-wide">
+                    <div className="badge-text">
                       {badge.text}
                     </div>
                   </div>
@@ -75,12 +75,12 @@ export default function Home() {
         {/* ========================================
              2. PROBLEM SECTION
         ========================================= */}
-        <section className="py-24 bg-black relative">
+        <section className="py-24 bg-card relative">
           <div className="container">
             <div className="max-w-3xl mx-auto space-y-16">
               
               <div className="text-center space-y-6">
-                <h2 className="text-3xl md:text-5xl font-bold">
+                <h2 className="section-title-bar text-3xl md:text-5xl font-bold">
                   Você Está Travado — <span className="text-muted-foreground">E Provavelmente Não É Onde Você Pensa</span>
                 </h2>
                 <p className="text-xl text-muted-foreground">
@@ -103,19 +103,19 @@ export default function Home() {
                     desc: "'Você precisa de mais tráfego', 'Sua oferta está fraca'. Tudo genérico. Nada específico para O SEU negócio. Você precisa de diagnóstico, não de palpite.",
                   },
                 ].map((problem, i) => (
-                  <div key={i} className="flex gap-6 p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-colors">
+                  <div key={i} className="flex gap-6 p-8 rounded-xl border-l-4 border-primary bg-background hover:bg-background/80 transition-colors">
                     <div className="shrink-0 w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center text-red-500">
                       <AlertTriangle />
                     </div>
                     <div className="space-y-2">
-                      <h3 className="text-xl font-bold text-white">{problem.title}</h3>
+                      <h3 className="text-2xl font-bold text-white">{problem.title}</h3>
                       <p className="text-muted-foreground leading-relaxed">{problem.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <blockquote className="text-2xl md:text-3xl font-medium text-center text-white/80 border-l-4 border-primary pl-6 py-2 italic">
+              <blockquote className="text-2xl md:text-3xl font-medium text-center text-primary border-y border-border py-8 italic">
                 "E se você pudesse ter 1 hora com quem enxerga o que você não vê — e já fez isso 150 vezes só em 2025?"
               </blockquote>
 
@@ -126,7 +126,7 @@ export default function Home() {
         {/* ========================================
              3. SOLUTION SECTION
         ========================================= */}
-        <section className="py-24 relative overflow-hidden">
+        <section className="py-24 relative overflow-hidden bg-background">
           {/* Background Gradient */}
           <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
           
@@ -151,7 +151,7 @@ export default function Home() {
                     "Estruturou Weburn (2,5 milhões de usuários)"
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center text-green-500 shrink-0">
+                      <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary shrink-0">
                         <Check size={14} />
                       </div>
                       <span className="text-white/90">{item}</span>
@@ -163,29 +163,29 @@ export default function Home() {
               <div className="grid gap-6">
                 {[
                   {
-                    icon: <Zap className="text-yellow-400" />,
+                    icon: <Zap className="text-primary" />,
                     title: "Diagnostica Seu Gargalo Invisível",
                     desc: "Ele não pergunta 'qual sua taxa de conversão?'. Ele pergunta 'por que seu modelo não gera credibilidade automática?'."
                   },
                   {
-                    icon: <Target className="text-red-400" />,
+                    icon: <Target className="text-primary" />,
                     title: "Valida Seu Modelo de Negócio",
                     desc: "Se você está pronto para escala institucional ou precisa ajustar estrutura antes. Diagnóstico técnico, não motivacional."
                   },
                   {
-                    icon: <FileText className="text-blue-400" />,
+                    icon: <FileText className="text-primary" />,
                     title: "Plano de Crescimento Personalizado",
                     desc: "Específico: 'Você precisa de certificação MEC primeiro, depois tráfego. Se fizer o inverso, vai desperdiçar R$ 30k'."
                   },
                   {
-                    icon: <Users className="text-purple-400" />,
+                    icon: <Users className="text-primary" />,
                     title: "Avaliação Para Aliança FABRANI",
                     desc: "Se você pode se tornar um dos 200 Aliançados e ter cursos validados como extensão pelo MEC."
                   }
                 ].map((benefit, i) => (
-                  <Card key={i} className="glass-card border-white/5 bg-white/[0.02]">
+                  <Card key={i} className="glass-card bg-card border-border">
                     <CardContent className="p-6 flex gap-4">
-                      <div className="shrink-0 w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
+                      <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                         {benefit.icon}
                       </div>
                       <div>
@@ -204,10 +204,10 @@ export default function Home() {
         {/* ========================================
              4. SOCIAL PROOF
         ========================================= */}
-        <section className="py-24 bg-black/50">
+        <section className="py-24 bg-card">
           <div className="container">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="section-title-bar text-3xl md:text-4xl font-bold mb-6">
                 Estes Não São "Casos de Sucesso".<br/>São Projetos Que Ele Validou.
               </h2>
               <p className="text-muted-foreground">
@@ -233,11 +233,10 @@ export default function Home() {
                   desc: "Maior app de saúde da América Latina. Diferencial competitivo brutal através de certificação profissional educacional."
                 }
               ].map((caseStudy, i) => (
-                <div key={i} className="group relative p-8 rounded-2xl bg-gradient-to-b from-white/5 to-transparent border border-white/5 hover:border-primary/30 transition-all duration-500">
-                  <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                <div key={i} className="group relative p-8 rounded-xl bg-background border border-border border-l-4 border-l-primary hover:border-primary hover:shadow-[0_12px_48px_rgba(0,255,135,0.2)] transition-all duration-500">
                   <div className="relative z-10">
-                    <h3 className="text-xl font-bold text-white mb-2">{caseStudy.name}</h3>
-                    <p className="text-primary font-mono text-sm mb-4">{caseStudy.stat}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{caseStudy.name}</h3>
+                    <p className="text-primary font-mono font-bold text-lg mb-4">{caseStudy.stat}</p>
                     <p className="text-sm text-muted-foreground">{caseStudy.desc}</p>
                   </div>
                 </div>
@@ -249,16 +248,16 @@ export default function Home() {
         {/* ========================================
              5. OFFER STACK
         ========================================= */}
-        <section id="cta" className="py-24 relative">
+        <section id="cta" className="py-24 relative bg-background">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.02]"></div>
           
           <div className="container max-w-5xl">
-            <div className="glass-card rounded-3xl p-8 md:p-12 border-primary/20 relative overflow-hidden">
+            <div className="glass-card rounded-3xl p-8 md:p-12 border-primary relative overflow-hidden bg-card">
               {/* Glow Effect */}
-              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
 
               <div className="relative z-10">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
                   O Que Você Recebe Por R$ 97
                 </h2>
 
@@ -286,26 +285,26 @@ export default function Home() {
                         value: "Inestimável"
                       }
                     ].map((item, i) => (
-                      <div key={i} className="flex gap-4">
-                        <div className="shrink-0 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-black text-xs font-bold">
+                      <div key={i} className="flex gap-4 p-4 bg-primary/5 border border-border border-l-4 border-l-primary rounded-lg">
+                        <div className="shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-black text-xs font-bold">
                           <Check size={14} />
                         </div>
                         <div>
-                          <h3 className="font-bold text-white">{item.title}</h3>
-                          <p className="text-sm text-muted-foreground mb-1">{item.desc}</p>
-                          <p className="text-xs font-mono text-primary">Valor: {item.value}</p>
+                          <h3 className="font-bold text-white text-xl mb-1">{item.title}</h3>
+                          <p className="text-sm text-muted-foreground mb-2">{item.desc}</p>
+                          <p className="text-xs font-mono text-primary font-bold">Valor: {item.value}</p>
                         </div>
                       </div>
                     ))}
                   </div>
 
-                  <div className="bg-black/40 rounded-2xl p-8 flex flex-col justify-center items-center text-center border border-white/10">
+                  <div className="bg-background rounded-2xl p-8 flex flex-col justify-center items-center text-center border border-border shadow-[0_8px_32px_rgba(0,255,135,0.08)]">
                     <p className="text-sm text-muted-foreground uppercase tracking-widest mb-2">Investimento Hoje</p>
-                    <p className="text-lg text-white/50 line-through mb-2">R$ 7.000+</p>
-                    <div className="text-6xl font-bold text-white mb-2 glow-text-cyan">R$ 97</div>
+                    <p className="text-2xl text-muted-foreground line-through mb-2">R$ 7.000+</p>
+                    <div className="text-7xl font-black text-primary mb-2 glow-text-green">R$ 97</div>
                     <p className="text-sm text-muted-foreground mb-8">À vista ou até 3x sem juros</p>
                     
-                    <Button size="lg" className="w-full btn-neon h-16 text-lg" asChild>
+                    <Button size="lg" className="w-full btn-neon h-auto text-lg text-black" asChild>
                       <a href="https://pay.kiwify.com.br/..." target="_blank" rel="noopener noreferrer">
                         QUERO MINHA VAGA AGORA
                       </a>

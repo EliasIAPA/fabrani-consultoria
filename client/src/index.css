@@ -41,10 +41,11 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   
-  /* Custom Colors for Neural Cyber-Minimalism */
+  /* Custom Colors for Neural Cyber-Minimalism + CSS.pdf Guidelines */
   --color-neon-cyan: var(--neon-cyan);
   --color-neon-purple: var(--neon-purple);
   --color-deep-void: var(--deep-void);
+  --color-neon-green: var(--neon-green);
 }
 
 :root {
@@ -58,7 +59,7 @@
   --chart-3: oklch(0.55 0.2 280);
   --chart-4: oklch(0.45 0.15 260);
   --chart-5: oklch(0.35 0.1 250);
-  --radius: 0.5rem;
+  --radius: 0.75rem; /* 12px from PDF */
   --background: oklch(0.98 0 0);
   --foreground: oklch(0.12 0.01 285);
   --card: oklch(1 0 0);
@@ -86,56 +87,59 @@
   --neon-cyan: oklch(0.75 0.18 190);
   --neon-purple: oklch(0.65 0.22 290);
   --deep-void: oklch(0.12 0.01 285);
+  --neon-green: oklch(0.87 0.29 142); /* #00FF87 converted to OKLCH approx */
 }
 
 .dark {
   /* Neural Cyber-Minimalism Palette - Dark Mode (Primary) */
-  --primary: oklch(0.75 0.18 190); /* Cyan Neural */
-  --primary-foreground: oklch(0.12 0.01 285);
-  --sidebar-primary: oklch(0.75 0.18 190);
-  --sidebar-primary-foreground: oklch(0.12 0.01 285);
+  /* Updated Primary to Neon Green #00FF87 from PDF */
+  --primary: oklch(0.87 0.29 142); /* #00FF87 Neon Green */
+  --primary-foreground: oklch(0.05 0.01 285); /* #0A0A0A Dark BG */
+  --sidebar-primary: oklch(0.87 0.29 142);
+  --sidebar-primary-foreground: oklch(0.05 0.01 285);
   
-  --background: oklch(0.12 0.01 285); /* Deep Void */
-  --foreground: oklch(0.98 0 0);
+  --background: oklch(0.05 0.01 285); /* #0A0A0A Deep Void */
+  --foreground: oklch(1 0 0); /* #FFFFFF */
   
-  --card: oklch(0.15 0.01 285); /* Slightly lighter than bg */
-  --card-foreground: oklch(0.98 0 0);
+  --card: oklch(0.12 0.01 285); /* #1A1A1A Card BG */
+  --card-foreground: oklch(1 0 0);
   
-  --popover: oklch(0.15 0.01 285);
-  --popover-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.12 0.01 285);
+  --popover-foreground: oklch(1 0 0);
   
-  --secondary: oklch(0.2 0.02 285);
-  --secondary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.16 0.01 285); /* #242424 Hover BG */
+  --secondary-foreground: oklch(1 0 0);
   
-  --muted: oklch(0.2 0.02 285);
-  --muted-foreground: oklch(0.7 0.02 285);
+  --muted: oklch(0.16 0.01 285);
+  --muted-foreground: oklch(0.45 0 0); /* #666666 Muted Text */
   
-  --accent: oklch(0.2 0.02 285);
-  --accent-foreground: oklch(0.98 0 0);
+  --accent: oklch(0.16 0.01 285);
+  --accent-foreground: oklch(1 0 0);
   
   --destructive: oklch(0.6 0.2 25);
-  --destructive-foreground: oklch(0.98 0 0);
+  --destructive-foreground: oklch(0.985 0 0);
   
-  --border: oklch(0.25 0.02 285);
-  --input: oklch(0.25 0.02 285);
-  --ring: oklch(0.75 0.18 190); /* Cyan Ring */
+  --border: oklch(0.87 0.29 142 / 0.2); /* rgba(0, 255, 135, 0.2) */
+  --input: oklch(0.87 0.29 142 / 0.2);
+  --ring: oklch(0.87 0.29 142); /* Neon Green Ring */
   
-  --chart-1: oklch(0.75 0.18 190); /* Cyan */
+  --chart-1: oklch(0.87 0.29 142); /* Neon Green */
   --chart-2: oklch(0.65 0.22 290); /* Purple */
   --chart-3: oklch(0.85 0.15 180);
   --chart-4: oklch(0.6 0.2 300);
   --chart-5: oklch(0.9 0.1 200);
   
-  --sidebar: oklch(0.12 0.01 285);
-  --sidebar-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.2 0.02 285);
-  --sidebar-accent-foreground: oklch(0.98 0 0);
-  --sidebar-border: oklch(0.25 0.02 285);
-  --sidebar-ring: oklch(0.75 0.18 190);
+  --sidebar: oklch(0.05 0.01 285);
+  --sidebar-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.16 0.01 285);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(0.87 0.29 142 / 0.2);
+  --sidebar-ring: oklch(0.87 0.29 142);
   
   --neon-cyan: oklch(0.75 0.18 190);
   --neon-purple: oklch(0.65 0.22 290);
-  --deep-void: oklch(0.12 0.01 285);
+  --deep-void: oklch(0.05 0.01 285);
+  --neon-green: oklch(0.87 0.29 142);
 }
 
 @layer base {
@@ -162,17 +166,27 @@
     }
   }
   
-  /* Typography overrides */
+  /* Typography overrides from PDF */
   h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight font-bold;
+    @apply tracking-tight font-bold mb-6;
+    line-height: 1.2;
   }
   
   h1 {
-    @apply text-4xl md:text-6xl lg:text-7xl;
+    @apply text-5xl md:text-7xl font-black; /* 72px desktop */
   }
   
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl;
+    @apply text-4xl md:text-5xl font-bold; /* 48px desktop */
+  }
+  
+  h3 {
+    @apply text-2xl md:text-4xl font-bold; /* 32px desktop */
+  }
+  
+  p {
+    @apply mb-4 text-muted-foreground leading-relaxed;
+    font-size: 18px; /* Body text from PDF */
   }
   
   /* Glassmorphism utilities */
@@ -181,10 +195,14 @@
   }
   
   .glass-card {
-    @apply bg-card/40 backdrop-blur-sm border border-white/5 hover:border-primary/50 transition-colors duration-300;
+    @apply bg-card border border-border hover:border-primary hover:shadow-[0_12px_48px_rgba(0,255,135,0.2)] hover:-translate-y-1 transition-all duration-300;
   }
   
   /* Neon Glows */
+  .glow-text-green {
+    text-shadow: 0 0 20px var(--color-neon-green);
+  }
+  
   .glow-text-cyan {
     text-shadow: 0 0 20px var(--color-neon-cyan);
   }
@@ -193,12 +211,8 @@
     text-shadow: 0 0 20px var(--color-neon-purple);
   }
   
-  .glow-box-cyan {
-    box-shadow: 0 0 20px -5px var(--color-neon-cyan);
-  }
-  
-  .glow-box-purple {
-    box-shadow: 0 0 20px -5px var(--color-neon-purple);
+  .glow-box-green {
+    box-shadow: 0 0 24px rgba(0, 255, 135, 0.4);
   }
 }
 
@@ -207,41 +221,48 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1.5rem; /* 24px from PDF */
+    padding-right: 1.5rem;
+    max-width: 1200px; /* 1200px from PDF */
   }
 
   .flex {
     min-height: 0;
     min-width: 0;
   }
-
-  @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem;
-      padding-right: 2rem;
-      max-width: 1280px;
-    }
-  }
   
-  /* Custom Button Styles */
+  /* Custom Button Styles from PDF */
   .btn-neon {
-    @apply relative overflow-hidden bg-primary text-primary-foreground font-bold uppercase tracking-wider transition-all duration-300 hover:shadow-[0_0_20px_var(--color-primary)] hover:scale-105 active:scale-95;
+    @apply relative overflow-hidden bg-primary text-primary-foreground font-bold uppercase tracking-wider transition-all duration-300 shadow-[0_0_24px_rgba(0,255,135,0.4)] hover:shadow-[0_0_32px_rgba(0,255,135,0.6)] hover:scale-105 active:scale-95 border-none rounded-lg;
+    padding: 18px 48px;
+    font-size: 16px;
   }
   
-  .btn-neon::after {
+  .btn-outline-neon {
+    @apply bg-transparent text-primary border-2 border-primary font-bold uppercase tracking-wider transition-all duration-300 hover:bg-primary/10 hover:text-white rounded-lg;
+    padding: 18px 48px;
+  }
+  
+  /* Section Title Style from PDF */
+  .section-title-bar {
+    @apply relative pb-4 mb-8 text-center;
+  }
+  
+  .section-title-bar::after {
     content: '';
-    @apply absolute inset-0 bg-white/20 translate-x-[-100%] skew-x-[-15deg] transition-transform duration-500;
+    @apply block w-20 h-1 bg-primary mx-auto mt-6;
   }
   
-  .btn-neon:hover::after {
-    @apply translate-x-[100%];
+  /* Badge Style from PDF */
+  .badge-card {
+    @apply inline-flex flex-col items-center bg-card border border-border p-6 rounded-lg transition-all duration-300 hover:border-primary hover:-translate-y-1;
+  }
+  
+  .badge-number {
+    @apply text-4xl font-black text-primary mb-2 leading-none;
+  }
+  
+  .badge-text {
+    @apply text-sm text-muted-foreground uppercase tracking-wider text-center;
   }
 }

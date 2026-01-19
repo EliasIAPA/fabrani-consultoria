@@ -9,7 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Check, ArrowRight, AlertTriangle, Zap, Target, FileText, Users, Lock, Clock, ShieldAlert, HelpCircle } from "lucide-react";
+import { Check, ArrowRight, AlertTriangle, Zap, Target, FileText, Users, Lock, Clock, ShieldAlert, HelpCircle, Award, Briefcase, GraduationCap } from "lucide-react";
 
 export default function Home() {
   return (
@@ -130,7 +130,7 @@ export default function Home() {
         </section>
 
         {/* ========================================
-             3. SOLUTION SECTION
+             3. SOLUTION SECTION (ABOUT FOUNDER)
         ========================================= */}
         <section className="py-24 relative overflow-hidden bg-background">
           {/* Background Gradient */}
@@ -139,68 +139,74 @@ export default function Home() {
           <div className="container relative z-10">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               
-              <div className="space-y-8">
-                <Badge variant="outline" className="border-primary text-primary px-4 py-1">DIAGNÓSTICO TÉCNICO</Badge>
-                <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                  Conheça o Founder Que Não Adivinha. <span className="text-primary">Ele Diagnostica.</span>
-                </h2>
-                <p className="text-lg text-muted-foreground">
-                  Ele não é coach. Não é guru. Ele é o <strong>Founder e Diretor da FABRANI</strong> — a instituição por trás dos maiores projetos do digital brasileiro.
-                </p>
-                
-                <div className="space-y-4">
-                  {[
-                    "Formou +100.000 alunos",
-                    "Validou 150 projetos educacionais só em 2025",
-                    "Está por trás de Ícaro de Carvalho (300k alunos)",
-                    "Validou Tiago Finch/Ticto (R$ 2 bilhões transacionados)",
-                    "Estruturou Weburn (2,5 milhões de usuários)"
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary shrink-0">
-                        <Check size={14} />
-                      </div>
-                      <span className="text-white/90">{item}</span>
-                    </div>
-                  ))}
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary to-purple-600 rounded-2xl opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500"></div>
+                <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                  <img 
+                    src="/images/founder.png" 
+                    alt="Elias Evangelista - Founder FABRANI" 
+                    className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-8">
+                    <h3 className="text-2xl font-bold text-white">Elias Evangelista</h3>
+                    <p className="text-primary font-mono">Founder & Diretor FABRANI</p>
+                  </div>
                 </div>
               </div>
 
-              <div className="grid gap-6">
-                {[
-                  {
-                    icon: <Zap className="text-primary" />,
-                    title: "Diagnostica Seu Gargalo Invisível",
-                    desc: "Ele não pergunta 'qual sua taxa de conversão?'. Ele pergunta 'por que seu modelo não gera credibilidade automática?'."
-                  },
-                  {
-                    icon: <Target className="text-primary" />,
-                    title: "Valida Seu Modelo de Negócio",
-                    desc: "Se você está pronto para escala institucional ou precisa ajustar estrutura antes. Diagnóstico técnico, não motivacional."
-                  },
-                  {
-                    icon: <FileText className="text-primary" />,
-                    title: "Plano de Crescimento Personalizado",
-                    desc: "Específico: 'Você precisa de certificação MEC primeiro, depois tráfego. Se fizer o inverso, vai desperdiçar R$ 30k'."
-                  },
-                  {
-                    icon: <Users className="text-primary" />,
-                    title: "Avaliação Para Aliança FABRANI",
-                    desc: "Se você pode se tornar um dos 200 Aliançados e ter cursos validados como extensão pelo MEC."
-                  }
-                ].map((benefit, i) => (
-                  <Card key={i} className="glass-card bg-card border-border">
-                    <CardContent className="p-6 flex gap-4">
-                      <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                        {benefit.icon}
+              <div className="space-y-8">
+                <Badge variant="outline" className="border-primary text-primary px-4 py-1">QUEM VAI TE ATENDER</Badge>
+                <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                  Não É Coach. Não É Guru.<br/>
+                  <span className="text-primary">É Quem Valida o Mercado.</span>
+                </h2>
+                
+                <div className="space-y-6 text-muted-foreground text-lg">
+                  <p>
+                    Com <strong>24 anos de experiência</strong> em modelos de negócios físicos e digitais, Elias Evangelista não apenas ensina — ele constrói as estruturas que sustentam os maiores players do mercado.
+                  </p>
+                  
+                  <div className="grid sm:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-white font-bold">
+                        <Briefcase className="text-primary" size={20} /> Experiência
+                      </div>
+                      <ul className="text-sm space-y-1">
+                        <li>• 24 anos em Modelos de Negócios</li>
+                        <li>• Mercado Digital desde 2009</li>
+                        <li>• Advogado há 20 anos</li>
+                        <li>• Contabilista há 24 anos</li>
+                      </ul>
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2 text-white font-bold">
+                        <GraduationCap className="text-primary" size={20} /> Formação
+                      </div>
+                      <ul className="text-sm space-y-1">
+                        <li>• Mestrado em Direito</li>
+                        <li>• MBA em Modelo de Negócios</li>
+                        <li>• Especialista em Regulação MEC</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="bg-card border border-border p-6 rounded-xl">
+                    <div className="flex items-center gap-2 text-white font-bold mb-4">
+                      <Award className="text-primary" size={20} /> Track Record
+                    </div>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <span className="block text-2xl font-bold text-white">150</span>
+                        <span className="text-muted-foreground">Projetos em 2025</span>
                       </div>
                       <div>
-                        <h4 className="font-bold text-white mb-2">{benefit.title}</h4>
-                        <p className="text-sm text-muted-foreground">{benefit.desc}</p>
+                        <span className="block text-2xl font-bold text-white">+100k</span>
+                        <span className="text-muted-foreground">Alunos Treinados</span>
                       </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                    </div>
+                  </div>
+                </div>
               </div>
 
             </div>

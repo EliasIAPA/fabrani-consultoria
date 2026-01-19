@@ -10,8 +10,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Check, ArrowRight, AlertTriangle, Zap, Target, FileText, Users, Lock, Clock, ShieldAlert, HelpCircle, Award, Briefcase, GraduationCap } from "lucide-react";
+import { trackInitiateCheckout } from "@/lib/fbPixel";
 
 export default function Home() {
+
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary selection:text-black">
       <Header />
@@ -317,7 +319,7 @@ export default function Home() {
                     <p className="text-sm text-muted-foreground mb-8">À vista ou até 3x sem juros</p>
                     
                     <Button size="lg" className="w-full btn-neon h-auto text-lg text-black" asChild>
-                      <a href="https://pay.kiwify.com.br/..." target="_blank" rel="noopener noreferrer">
+                      <a href="https://pay.kiwify.com.br/..." target="_blank" rel="noopener noreferrer" onClick={() => trackInitiateCheckout()}>
                         QUERO MINHA VAGA AGORA
                       </a>
                     </Button>
@@ -614,7 +616,7 @@ export default function Home() {
 
             <div className="text-center max-w-2xl mx-auto space-y-8">
               <Button size="lg" className="w-full btn-neon h-20 text-xl md:text-2xl text-black shadow-[0_0_40px_rgba(0,255,135,0.3)]" asChild>
-                <a href="https://pay.kiwify.com.br/..." target="_blank" rel="noopener noreferrer">
+                <a href="https://pay.kiwify.com.br/..." target="_blank" rel="noopener noreferrer" onClick={() => trackInitiateCheckout()}>
                   🔥 QUERO MINHA CONSULTORIA DE R$ 97 AGORA
                 </a>
               </Button>

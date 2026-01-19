@@ -38,7 +38,7 @@ export default function Home() {
 
               {/* Headline */}
               <h1 className="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight animate-fade-in-up delay-100">
-                1 Hora Para Descobrir Se Você Está a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white glow-text-green">1 Ajuste</span> ou <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">1 Ano de Escalar</span>
+                1 Hora para você descobrir como ficar a <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white glow-text-green">1 Ajuste</span> e não <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">1 Ano para Escalar</span>
               </h1>
 
               {/* Subheadline */}

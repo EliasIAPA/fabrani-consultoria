@@ -58,12 +58,12 @@ export default function Home() {
               <div className="flex flex-col items-center gap-5 animate-fade-in-up delay-300 pt-4">
                 <Button 
                   size="lg" 
-                  className="btn-neon h-auto w-full sm:w-auto text-black text-lg md:text-xl px-8 md:px-12 py-5 md:py-6" 
+                  className="btn-neon h-auto w-full sm:w-auto text-black text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6" 
                   asChild
                   onClick={handleCTAClick}
                 >
                   <a href="#cta">
-                    🔥 QUERO MINHA CONSULTORIA DE R$ 97 AGORA
+                    🔥 QUERO ACESSAR
                   </a>
                 </Button>
                 <p className="text-sm md:text-base text-white/60 flex items-center gap-2">
@@ -334,12 +334,12 @@ export default function Home() {
                     
                     <Button 
                       size="lg" 
-                      className="w-full btn-neon h-auto text-lg md:text-xl text-black py-5 md:py-6" 
+                      className="w-full btn-neon h-auto text-base sm:text-lg md:text-xl text-black py-4 sm:py-5 md:py-6" 
                       asChild
                       onClick={handleCTAClick}
                     >
                       <a href="https://pay.kiwify.com.br/..." target="_blank" rel="noopener noreferrer">
-                        QUERO MINHA VAGA AGORA
+                        QUERO ACESSAR
                         <ChevronRight className="ml-2" size={24} />
                       </a>
                     </Button>
@@ -532,11 +532,11 @@ export default function Home() {
             <div className="text-center">
               <Button 
                 size="lg" 
-                className="bg-red-600 hover:bg-red-500 text-white shadow-[0_0_30px_rgba(220,38,38,0.4)] border-none text-lg md:text-xl px-8 py-5 md:py-6 rounded-xl font-bold" 
+                className="bg-red-600 hover:bg-red-500 text-white shadow-[0_0_30px_rgba(220,38,38,0.4)] border-none text-base sm:text-lg md:text-xl px-6 sm:px-8 py-4 sm:py-5 md:py-6 rounded-xl font-bold" 
                 asChild
                 onClick={handleCTAClick}
               >
-                <a href="#cta">🔥 QUERO GARANTIR MINHA VAGA ENTRE OS 50</a>
+                <a href="#cta">🔥 QUERO ACESSAR</a>
               </Button>
             </div>
           </div>
@@ -643,12 +643,12 @@ export default function Home() {
             <div className="text-center max-w-2xl mx-auto space-y-8">
               <Button 
                 size="lg" 
-                className="w-full btn-neon h-auto text-xl md:text-2xl text-black py-6 md:py-7 shadow-[0_0_50px_rgba(0,255,135,0.4)]" 
+                className="w-full btn-neon h-auto text-lg sm:text-xl md:text-2xl text-black py-5 sm:py-6 md:py-7 shadow-[0_0_50px_rgba(0,255,135,0.4)]" 
                 asChild
                 onClick={handleCTAClick}
               >
                 <a href="https://pay.kiwify.com.br/..." target="_blank" rel="noopener noreferrer">
-                  🔥 QUERO MINHA CONSULTORIA DE R$ 97 AGORA
+                  🔥 QUERO ACESSAR
                 </a>
               </Button>
               

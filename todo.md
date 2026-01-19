@@ -74,3 +74,9 @@
 - [x] Configurar evento PageView automático
 - [x] Adicionar evento Purchase na página /obrigado
 - [x] Testar integração do Pixel
+
+## Correção CTAs Mobile
+- [x] Alterar texto dos CTAs para "QUERO ACESSAR" na página principal
+- [x] Alterar texto dos CTAs para "QUERO ACESSAR" na página /time
+- [x] Ajustar tamanho dos botões para versão mobile
+- [x] Testar responsividade em mobile

@@ -232,17 +232,17 @@ export default function Home() {
                 {
                   name: "Ícaro de Carvalho",
                   stat: "300.000 alunos impactados",
-                  desc: "Ícaro não é apenas um influenciador. Ele é um educador institucionalizado — e a FABRANI foi fundamental para estruturar isso."
+                  desc: "Desenvolvimento de Pós Graduação e Certificação do Evento \"O Novo Mercado\""
                 },
                 {
                   name: "Tiago Finch / Ticto",
                   stat: "R$ 2 bilhões em transações",
-                  desc: "Como você processa bilhões com confiança? Vendendo educação certificada por instituição reconhecida nacionalmente."
+                  desc: "Certificação do Evento Outlier 2"
                 },
                 {
                   name: "Weburn",
                   stat: "2,5 milhões de usuários",
-                  desc: "Maior app de saúde da América Latina. Diferencial competitivo brutal através de certificação profissional educacional."
+                  desc: "Desenvolvimento de MBA pela FABRANI"
                 }
               ].map((caseStudy, i) => (
                 <div key={i} className="group relative p-8 rounded-xl bg-background border border-border border-l-4 border-l-primary hover:border-primary hover:shadow-[0_12px_48px_rgba(0,255,135,0.2)] transition-all duration-500">

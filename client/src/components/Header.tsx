@@ -1,27 +1,39 @@
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [timeLeft, setTimeLeft] = useState({ hours: 24, minutes: 0, seconds: 0 });
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    
+    // Timer logic
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev.seconds > 0) {
+          return { ...prev, seconds: prev.seconds - 1 };
+        } else if (prev.minutes > 0) {
+          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
+        } else if (prev.hours > 0) {
+          return { ...prev, hours: prev.hours - 1, minutes: 59, seconds: 59 };
+        } else {
+          // Reset timer loop for demo purposes or stop
+          return { hours: 23, minutes: 59, seconds: 59 };
+        }
+      });
+    }, 1000);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearInterval(timer);
+    };
   }, []);
 
-  const navItems = [
-    { name: "O Manifesto", href: "#hero" },
-    { name: "Graduação AI-Driven", href: "#graduacao" },
-    { name: "MBAs de Aplicação", href: "#mbas" },
-    { name: "AI Starter Pack", href: "#starter" },
-    { name: "Hub de Insights", href: "#hub" },
-  ];
+  const formatTime = (val: number) => val.toString().padStart(2, '0');
 
   return (
     <>
@@ -59,60 +71,21 @@ export function Header() {
             </span>
           </a>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium text-muted-foreground hover:text-white transition-colors relative group"
-              >
-                {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full shadow-[0_0_10px_var(--color-primary)]"></span>
-              </a>
-            ))}
-          </nav>
-
-          {/* CTA & Mobile Toggle */}
+          {/* Countdown Timer (Substituindo Menu) */}
           <div className="flex items-center gap-4">
-            <Button 
-              className="hidden md:flex btn-neon bg-primary hover:bg-primary-dark text-black border-none"
-              asChild
-            >
-              <a href="#login">Área do Aluno</a>
-            </Button>
-
-            <button
-              className="lg:hidden text-white p-2"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? <X /> : <Menu />}
-            </button>
+            <div className="flex items-center gap-2 bg-card border border-primary/30 px-4 py-2 rounded-lg shadow-[0_0_15px_rgba(0,255,135,0.1)]">
+              <span className="text-xs text-muted-foreground uppercase tracking-wider font-bold hidden sm:inline-block">Oferta encerra em:</span>
+              <div className="flex items-center gap-1 font-mono text-primary font-bold text-lg leading-none">
+                <span className="w-[2ch] text-center">{formatTime(timeLeft.hours)}</span>
+                <span className="text-muted-foreground">:</span>
+                <span className="w-[2ch] text-center">{formatTime(timeLeft.minutes)}</span>
+                <span className="text-muted-foreground">:</span>
+                <span className="w-[2ch] text-center">{formatTime(timeLeft.seconds)}</span>
+              </div>
+            </div>
           </div>
         </div>
       </header>
-
-      {/* Mobile Menu Overlay */}
-      <div
-        className={cn(
-          "fixed inset-0 z-30 bg-background/95 backdrop-blur-xl pt-32 px-6 transition-transform duration-300 lg:hidden flex flex-col gap-6",
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        )}
-      >
-        {navItems.map((item) => (
-          <a
-            key={item.name}
-            href={item.href}
-            className="text-2xl font-bold text-white hover:text-primary transition-colors"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            {item.name}
-          </a>
-        ))}
-        <Button className="w-full btn-neon mt-4" asChild>
-          <a href="#login">Área do Aluno</a>
-        </Button>
-      </div>
     </>
   );
 }

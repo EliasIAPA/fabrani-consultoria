@@ -68,3 +68,9 @@
 - [x] Remover Header com contador de urgência da página /obrigado
 - [x] Criar header simplificado sem sistema de redirecionamento
 - [x] Testar página corrigida
+
+## Integração Pixel Facebook (2419105295112897)
+- [x] Adicionar código base do Pixel no index.html (todas as páginas)
+- [x] Configurar evento PageView automático
+- [x] Adicionar evento Purchase na página /obrigado
+- [x] Testar integração do Pixel

@@ -3,7 +3,13 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Check, ArrowRight, AlertTriangle, Zap, Target, FileText, Users, Lock } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Check, ArrowRight, AlertTriangle, Zap, Target, FileText, Users, Lock, Clock, ShieldAlert, HelpCircle } from "lucide-react";
 
 export default function Home() {
   return (
@@ -315,6 +321,253 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ========================================
+             6. OBJECTION CRUSHER SECTION
+        ========================================= */}
+        <section className="py-24 bg-card">
+          <div className="container max-w-4xl">
+            <h2 className="section-title-bar text-3xl md:text-4xl font-bold mb-12">
+              Deixa Eu Adivinhar o Que Você Está Pensando...
+            </h2>
+
+            <div className="space-y-8">
+              {[
+                {
+                  title: '"Vai ser muito genérico, igual todas as consultorias"',
+                  content: (
+                    <>
+                      <p>Entendo perfeitamente. Você já pagou por "consultoria personalizada" e recebeu planilha copiada e dicas genéricas.</p>
+                      <p className="mt-4 font-bold text-white">A diferença aqui:</p>
+                      <ul className="list-disc pl-5 space-y-2 mt-2">
+                        <li>Ele não é consultor profissional. Ele é Founder de instituição educacional credenciada pelo MEC.</li>
+                        <li>Ele não vive de consultoria. Ele vive de validar negócios educacionais de escala.</li>
+                        <li>Essa consultoria é o filtro para encontrar os 50 projetos que ele vai apoiar em 2026.</li>
+                      </ul>
+                      <p className="mt-4 text-primary font-bold">Tradução: Ele está mais interessado em achar os certos do que em te agradar.</p>
+                    </>
+                  )
+                },
+                {
+                  title: '"R$ 97 vai realmente resolver meu problema?"',
+                  content: (
+                    <>
+                      <p className="font-bold text-white">Resposta honesta: Não. R$ 97 não vai resolver seu problema.</p>
+                      <p className="mt-4">O que R$ 97 compra:</p>
+                      <ul className="list-disc pl-5 space-y-2 mt-2">
+                        <li>1 hora da atenção dele</li>
+                        <li>Diagnóstico preciso do seu gargalo</li>
+                        <li>Plano claro do que fazer</li>
+                      </ul>
+                      <p className="mt-4">O que resolve seu problema: <strong>Você executar o que ele disser.</strong></p>
+                      <p className="mt-4 text-primary font-bold">Se você quer clareza cirúrgica de onde está o buraco do seu barco, então vale cada centavo.</p>
+                    </>
+                  )
+                },
+                {
+                  title: '"Como sei que vou virar Aliançado?"',
+                  content: (
+                    <>
+                      <p className="font-bold text-white">Resposta honesta: Você não sabe. E ele também não.</p>
+                      <p className="mt-4">A consultoria não garante que você vira Aliançado. O que ela garante:</p>
+                      <ul className="list-disc pl-5 space-y-2 mt-2">
+                        <li>✅ Você vai descobrir se está pronto para ser Aliançado agora</li>
+                        <li>✅ Se não, vai saber exatamente o que falta (e como chegar lá)</li>
+                      </ul>
+                      <p className="mt-4 text-primary font-bold">O pior lugar para estar não é "longe do objetivo". É não saber a distância real. R$ 97 te mostra a distância exata.</p>
+                    </>
+                  )
+                }
+              ].map((obj, i) => (
+                <div key={i} className="bg-background border border-border p-8 rounded-xl">
+                  <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
+                    <span className="text-2xl">💭</span> {obj.title}
+                  </h3>
+                  <div className="text-muted-foreground leading-relaxed">
+                    {obj.content}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ========================================
+             7. URGENCY/SCARCITY SECTION
+        ========================================= */}
+        <section className="py-24 bg-background relative overflow-hidden">
+          <div className="absolute inset-0 bg-red-500/5 pointer-events-none"></div>
+          
+          <div className="container max-w-4xl relative z-10">
+            <h2 className="section-title-bar text-3xl md:text-4xl font-bold mb-12 text-red-500">
+              Por Que Apenas 50 Vagas (E Por Que Não Vão Sobrar)
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-card p-8 rounded-xl border border-red-500/20">
+                <div className="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center text-red-500 mb-6">
+                  <Target size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Limitação Real de Capacidade</h3>
+                <p className="text-muted-foreground">
+                  O Founder da FABRANI não dá 500 consultorias por mês. Ele abriu 50 vagas porque esse é o número máximo que ele consegue atender pessoalmente com excelência enquanto toca a operação de 150 projetos.
+                </p>
+              </div>
+
+              <div className="bg-card p-8 rounded-xl border border-red-500/20">
+                <div className="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center text-red-500 mb-6">
+                  <Clock size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">Foco Estratégico em 2026</h3>
+                <p className="text-muted-foreground">
+                  Em 2026, o foco é qualidade sobre quantidade. Ele quer validar 50 novos projetos — mas apenas os certos. Essa consultoria é o processo seletivo.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-red-500/10 border border-red-500/30 p-8 rounded-xl text-center mb-12">
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center justify-center gap-2">
+                <ShieldAlert className="text-red-500" /> Quando as vagas preencherem:
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-bold text-red-400 uppercase tracking-wider">
+                <span>❌ A porta fecha</span>
+                <span>❌ Sem lista de espera</span>
+                <span>❌ Sem próxima turma</span>
+                <span>❌ Sem "me avisa"</span>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Button size="lg" className="btn-neon bg-red-600 hover:bg-red-700 text-white shadow-[0_0_20px_rgba(220,38,38,0.4)] border-none" asChild>
+                <a href="#cta">🔥 QUERO GARANTIR MINHA VAGA ENTRE OS 50</a>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* ========================================
+             8. FAQ SECTION
+        ========================================= */}
+        <section className="py-24 bg-card">
+          <div className="container max-w-3xl">
+            <h2 className="section-title-bar text-3xl md:text-4xl font-bold mb-12">
+              Perguntas Que Você Deve Estar Fazendo
+            </h2>
+
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {[
+                { q: "Quanto tempo leva para agendar após a compra?", a: "Imediatamente. Após a confirmação do pagamento, você recebe um link com os horários disponíveis na agenda dele. Você escolhe o melhor horário para você e pronto. Simples e rápido." },
+                { q: "A consultoria é online ou presencial?", a: "100% online via Zoom ou Google Meet. Você pode estar em qualquer lugar do Brasil (ou do mundo). Basta ter internet e 1 hora disponível." },
+                { q: "Eu realmente vou falar com o Founder ou com a equipe?", a: "Direto com o Founder e Diretor da FABRANI. Não é com analista. Não é com consultor da equipe. É com ele pessoalmente, 1 hora dedicada ao seu negócio." },
+                { q: "Preciso ter um faturamento mínimo para aproveitar?", a: "Não. Se você já vende (ou quer vender) cursos, mentorias ou programas educacionais, a consultoria funciona. Não importa se você fatura R$ 5.000 ou R$ 500.000/mês. O diagnóstico se adapta ao seu momento atual." },
+                { q: "E se eu não quiser virar Aliançado? Perdi meu dinheiro?", a: "Absolutamente não. Você sai com o diagnóstico completo e o plano de crescimento independentemente de virar Aliançado. Virar Aliançado é uma possibilidade, não uma obrigação. O valor da consultoria está na clareza que você recebe." },
+                { q: "Posso gravar a consultoria para revisitar depois?", a: "Sim. Você pode gravar para assistir quantas vezes quiser e não perder nenhum detalhe do que foi dito." },
+                { q: "Tem garantia de reembolso?", a: "Não. São 50 vagas limitadas e ele vai dedicar 1 hora pessoalmente para você. Se você não está 100% certo de que quer clareza, não compre. Mas se está disposto a ouvir a verdade (mesmo que doa), R$ 97 é o investimento mais barato que você vai fazer para parar de desperdiçar dinheiro." },
+                { q: "Depois das 50 vagas, vai abrir de novo?", a: "Não há previsão. Depende da capacidade de atendimento dele ao longo de 2026. Pode ser que sim, pode ser que não. O que você sabe é que hoje tem vaga. Amanhã, não sabemos." },
+                { q: "Quanto tempo dura a consultoria?", a: "1 hora completa. Pode ser que ele estenda se necessário, mas o mínimo garantido é 1 hora focada no seu negócio." },
+                { q: "E se meu negócio for muito específico/nichado?", a: "Melhor ainda. Ele já validou projetos nos nichos mais diversos: saúde, marketing, vendas, mindset, técnicos, maternidade, esportes, finanças. Quanto mais específico, mais cirúrgico o diagnóstico." }
+              ].map((faq, i) => (
+                <AccordionItem key={i} value={`item-${i}`} className="border border-border bg-background rounded-lg px-4">
+                  <AccordionTrigger className="text-left font-bold hover:text-primary hover:no-underline py-4">
+                    <span className="flex items-center gap-3">
+                      <HelpCircle size={18} className="text-primary shrink-0" />
+                      {faq.q}
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-4 pl-9 leading-relaxed">
+                    {faq.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
+
+        {/* ========================================
+             9. FINAL CTA SECTION
+        ========================================= */}
+        <section className="py-24 bg-background relative overflow-hidden">
+          <div className="container max-w-5xl relative z-10">
+            <h2 className="text-4xl md:text-5xl font-black text-center mb-16">
+              Você Tem Duas Escolhas
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-16">
+              {/* Escolha 1 */}
+              <div className="bg-card border border-red-500/20 p-8 rounded-2xl relative overflow-hidden group hover:border-red-500/40 transition-colors">
+                <div className="absolute top-0 left-0 w-full h-1 bg-red-500"></div>
+                <h3 className="text-2xl font-bold text-white mb-6">Escolha #1: Continuar Testando Sozinho</h3>
+                <ul className="space-y-4 mb-8">
+                  {[
+                    "Gastando R$ 5.000+/mês em tráfego sem saber se é o problema real",
+                    "Testando headlines, cores, copies sem clareza do gargalo estrutural",
+                    "Se perguntando 'será que estou perto de decolar?' (sem nunca saber a resposta)",
+                    "Observando concorrentes medianos escalarem com certificação MEC",
+                    "Desperdiçando tempo precioso em tentativa e erro"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-muted-foreground">
+                      <span className="text-red-500 mt-1">❌</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="bg-red-500/10 p-4 rounded-lg text-center border border-red-500/20">
+                  <p className="text-sm text-red-400 uppercase font-bold mb-1">Custo nos próximos 6 meses</p>
+                  <p className="text-2xl font-black text-white">R$ 30.000+ desperdiçados</p>
+                </div>
+              </div>
+
+              {/* Escolha 2 */}
+              <div className="bg-card border border-primary p-8 rounded-2xl relative overflow-hidden shadow-[0_0_30px_rgba(0,255,135,0.1)] transform md:-translate-y-4">
+                <div className="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+                <div className="absolute top-4 right-4 bg-primary text-black text-xs font-bold px-3 py-1 rounded-full">RECOMENDADO</div>
+                <h3 className="text-2xl font-bold text-white mb-6">Escolha #2: Ter Clareza Cirúrgica em 1 Hora</h3>
+                <ul className="space-y-4 mb-8">
+                  {[
+                    "Descobre exatamente o que está travando seu crescimento (causa raiz)",
+                    "Sai com um plano de ação priorizado (não genérico, específico para você)",
+                    "Tem a avaliação se está pronto para Aliança FABRANI (ou o que falta)",
+                    "Para de desperdiçar dinheiro testando no escuro",
+                    "Sabe a distância real entre você e a escala"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-white">
+                      <span className="text-primary mt-1">✅</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="bg-primary/10 p-4 rounded-lg text-center border border-primary/30">
+                  <p className="text-sm text-primary uppercase font-bold mb-1">Investimento Único</p>
+                  <p className="text-4xl font-black text-white glow-text-green">R$ 97</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center max-w-2xl mx-auto space-y-8">
+              <Button size="lg" className="w-full btn-neon h-20 text-xl md:text-2xl text-black shadow-[0_0_40px_rgba(0,255,135,0.3)]" asChild>
+                <a href="https://pay.kiwify.com.br/..." target="_blank" rel="noopener noreferrer">
+                  🔥 QUERO MINHA CONSULTORIA DE R$ 97 AGORA
+                </a>
+              </Button>
+              
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
+                <span className="flex items-center gap-2"><Check size={16} className="text-primary" /> Consultoria 1h com Founder</span>
+                <span className="flex items-center gap-2"><Check size={16} className="text-primary" /> Plano Personalizado</span>
+                <span className="flex items-center gap-2"><Check size={16} className="text-primary" /> Avaliação Aliança</span>
+              </div>
+
+              <div className="pt-8 border-t border-border">
+                <p className="text-lg font-bold text-white mb-4">Uma Última Coisa Antes de Você Decidir:</p>
+                <p className="text-muted-foreground leading-relaxed mb-6">
+                  Você pode continuar justificando por que não escala. Ou pode ter clareza cirúrgica do que fazer.
+                  Você pode desperdiçar mais R$ 30.000 nos próximos 6 meses. Ou pode investir R$ 97 hoje.
+                  A porta está aberta. Mas só para 50 pessoas.
+                </p>
+                <p className="text-xl font-bold text-primary">Você vai ser uma delas?</p>
               </div>
             </div>
           </div>

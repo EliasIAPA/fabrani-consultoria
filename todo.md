@@ -44,3 +44,10 @@
 - [ ] Configurar Pixel na plataforma Greenn (evento Purchase)
 - [ ] Adicionar botão flutuante de WhatsApp (opcional)
 - [ ] Configurar subdomínio personalizado na Cloudflare
+
+## Sistema de Urgência com Redirecionamento
+- [x] Criar sistema de cookie para marcar primeiro acesso
+- [x] Alterar contador de 24h para 20 minutos
+- [x] Implementar lógica de redirecionamento após tempo esgotar
+- [x] Criar página /time com preço R$ 147,00
+- [x] Testar fluxo completo (acesso → 20min → redirecionamento)

@@ -37,15 +37,16 @@ export function Header() {
 
   return (
     <>
-      {/* Top Bar de Urgência */}
-      <div className="bg-background border-b border-primary py-2 text-center text-xs md:text-sm font-medium text-primary-foreground relative z-50 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10 mix-blend-overlay"></div>
-        <div className="container flex items-center justify-center gap-2 animate-pulse">
-          <span className="text-primary font-bold">⚡ 50 VAGAS DISPONÍVEIS</span>
-          <span className="hidden md:inline text-muted-foreground">|</span>
-          <span className="hidden md:inline">CONSULTORIA COM O FOUNDER</span>
-          <span className="hidden md:inline text-muted-foreground">→</span>
-          <a href="#cta" className="underline hover:text-primary transition-colors font-bold">
+      {/* Top Bar de Urgência - IMPROVED CONTRAST */}
+      <div className="bg-primary py-2.5 text-center relative z-50 overflow-hidden">
+        <div className="container flex items-center justify-center gap-2 md:gap-4">
+          <span className="text-black font-bold text-sm md:text-base flex items-center gap-2">
+            <span className="animate-pulse">⚡</span> 50 VAGAS DISPONÍVEIS
+          </span>
+          <span className="hidden md:inline text-black/60">|</span>
+          <span className="hidden md:inline text-black/80 font-medium">CONSULTORIA COM O FOUNDER</span>
+          <span className="hidden md:inline text-black/60">→</span>
+          <a href="#cta" className="text-black font-bold underline underline-offset-2 hover:no-underline transition-all text-sm md:text-base">
             GARANTIR VAGA POR R$ 97
           </a>
         </div>
@@ -54,33 +55,35 @@ export function Header() {
       {/* Main Header */}
       <header
         className={cn(
-          "fixed top-[36px] left-0 right-0 z-40 transition-all duration-300 border-b border-transparent",
+          "fixed top-[44px] left-0 right-0 z-40 transition-all duration-300 border-b border-transparent",
           isScrolled
-            ? "bg-background/80 backdrop-blur-xl border-white/5 py-3 shadow-[0_4px_30px_-10px_rgba(0,0,0,0.5)]"
-            : "bg-transparent py-6"
+            ? "bg-background/95 backdrop-blur-xl border-white/10 py-3 shadow-[0_4px_30px_-10px_rgba(0,0,0,0.5)]"
+            : "bg-background/50 backdrop-blur-sm py-4 md:py-5"
         )}
       >
         <div className="container flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-lg bg-primary text-black flex items-center justify-center font-bold text-xl shadow-[0_0_15px_rgba(0,255,135,0.4)] group-hover:shadow-[0_0_25px_var(--color-primary)] transition-all duration-300">
+          {/* Logo - IMPROVED */}
+          <a href="#" className="flex items-center gap-3 group">
+            <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-primary text-black flex items-center justify-center font-black text-xl md:text-2xl shadow-[0_0_20px_rgba(0,255,135,0.5)] group-hover:shadow-[0_0_30px_rgba(0,255,135,0.7)] transition-all duration-300">
               F
             </div>
-            <span className="text-xl font-bold tracking-tighter font-display text-white group-hover:text-primary transition-colors">
+            <span className="text-xl md:text-2xl font-black tracking-tight text-white group-hover:text-primary transition-colors">
               FABRANI
             </span>
           </a>
 
-          {/* Countdown Timer (Substituindo Menu) */}
+          {/* Countdown Timer - IMPROVED READABILITY */}
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2 bg-card border border-primary/30 px-4 py-2 rounded-lg shadow-[0_0_15px_rgba(0,255,135,0.1)]">
-              <span className="text-xs text-muted-foreground uppercase tracking-wider font-bold hidden sm:inline-block">Oferta encerra em:</span>
-              <div className="flex items-center gap-1 font-mono text-primary font-bold text-lg leading-none">
-                <span className="w-[2ch] text-center">{formatTime(timeLeft.hours)}</span>
-                <span className="text-muted-foreground">:</span>
-                <span className="w-[2ch] text-center">{formatTime(timeLeft.minutes)}</span>
-                <span className="text-muted-foreground">:</span>
-                <span className="w-[2ch] text-center">{formatTime(timeLeft.seconds)}</span>
+            <div className="flex items-center gap-3 bg-card/80 border-2 border-primary/40 px-4 md:px-6 py-2.5 md:py-3 rounded-xl shadow-[0_0_20px_rgba(0,255,135,0.15)]">
+              <span className="text-xs md:text-sm text-white/70 uppercase tracking-wider font-semibold hidden sm:inline-block">
+                Oferta encerra em:
+              </span>
+              <div className="flex items-center gap-1.5 font-mono text-primary font-black text-xl md:text-2xl leading-none">
+                <span className="w-[2.5ch] text-center bg-black/30 px-1.5 py-1 rounded">{formatTime(timeLeft.hours)}</span>
+                <span className="text-white/50 text-lg">:</span>
+                <span className="w-[2.5ch] text-center bg-black/30 px-1.5 py-1 rounded">{formatTime(timeLeft.minutes)}</span>
+                <span className="text-white/50 text-lg">:</span>
+                <span className="w-[2.5ch] text-center bg-black/30 px-1.5 py-1 rounded">{formatTime(timeLeft.seconds)}</span>
               </div>
             </div>
           </div>

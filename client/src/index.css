@@ -99,28 +99,29 @@
   --sidebar-primary-foreground: oklch(0.05 0.01 285);
   
   --background: oklch(0.05 0.01 285); /* #0A0A0A Deep Void */
-  --foreground: oklch(1 0 0); /* #FFFFFF */
+  --foreground: oklch(0.98 0 0); /* Pure white for better contrast */
   
   --card: oklch(0.12 0.01 285); /* #1A1A1A Card BG */
-  --card-foreground: oklch(1 0 0);
+  --card-foreground: oklch(0.98 0 0);
   
   --popover: oklch(0.12 0.01 285);
-  --popover-foreground: oklch(1 0 0);
+  --popover-foreground: oklch(0.98 0 0);
   
   --secondary: oklch(0.16 0.01 285); /* #242424 Hover BG */
-  --secondary-foreground: oklch(1 0 0);
+  --secondary-foreground: oklch(0.98 0 0);
   
   --muted: oklch(0.16 0.01 285);
-  --muted-foreground: oklch(0.45 0 0); /* #666666 Muted Text */
+  /* IMPROVED: Muted text now lighter for better readability */
+  --muted-foreground: oklch(0.72 0 0); /* #B0B0B0 - much more readable */
   
   --accent: oklch(0.16 0.01 285);
-  --accent-foreground: oklch(1 0 0);
+  --accent-foreground: oklch(0.98 0 0);
   
   --destructive: oklch(0.6 0.2 25);
   --destructive-foreground: oklch(0.985 0 0);
   
-  --border: oklch(0.87 0.29 142 / 0.2); /* rgba(0, 255, 135, 0.2) */
-  --input: oklch(0.87 0.29 142 / 0.2);
+  --border: oklch(0.87 0.29 142 / 0.25); /* Slightly more visible borders */
+  --input: oklch(0.87 0.29 142 / 0.25);
   --ring: oklch(0.87 0.29 142); /* Neon Green Ring */
   
   --chart-1: oklch(0.87 0.29 142); /* Neon Green */
@@ -130,10 +131,10 @@
   --chart-5: oklch(0.9 0.1 200);
   
   --sidebar: oklch(0.05 0.01 285);
-  --sidebar-foreground: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.98 0 0);
   --sidebar-accent: oklch(0.16 0.01 285);
-  --sidebar-accent-foreground: oklch(1 0 0);
-  --sidebar-border: oklch(0.87 0.29 142 / 0.2);
+  --sidebar-accent-foreground: oklch(0.98 0 0);
+  --sidebar-border: oklch(0.87 0.29 142 / 0.25);
   --sidebar-ring: oklch(0.87 0.29 142);
   
   --neon-cyan: oklch(0.75 0.18 190);
@@ -148,6 +149,9 @@
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    /* Improved base font size for better readability */
+    font-size: 18px;
+    line-height: 1.7;
     /* Custom scrollbar for dark mode */
     &::-webkit-scrollbar {
       width: 8px;
@@ -166,27 +170,51 @@
     }
   }
   
-  /* Typography overrides from PDF */
+  /* IMPROVED Typography - Larger, more readable */
   h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight font-bold mb-6;
-    line-height: 1.2;
+    @apply tracking-tight font-bold mb-6 text-white;
+    line-height: 1.15;
   }
   
   h1 {
-    @apply text-5xl md:text-7xl font-black; /* 72px desktop */
+    @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black;
+    letter-spacing: -0.02em;
   }
   
   h2 {
-    @apply text-4xl md:text-5xl font-bold; /* 48px desktop */
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold;
+    letter-spacing: -0.01em;
   }
   
   h3 {
-    @apply text-2xl md:text-4xl font-bold; /* 32px desktop */
+    @apply text-2xl sm:text-3xl md:text-4xl font-bold;
   }
   
+  h4 {
+    @apply text-xl sm:text-2xl font-bold;
+  }
+  
+  /* IMPROVED: Body text larger and more readable */
   p {
-    @apply mb-4 text-muted-foreground leading-relaxed;
-    font-size: 18px; /* Body text from PDF */
+    @apply mb-5 leading-relaxed;
+    font-size: 1.125rem; /* 18px base */
+    color: oklch(0.75 0 0); /* Lighter gray for better contrast */
+  }
+  
+  /* Strong text should be white for emphasis */
+  strong, b {
+    @apply text-white font-semibold;
+  }
+  
+  /* Lists more readable */
+  ul, ol {
+    @apply space-y-2;
+  }
+  
+  li {
+    font-size: 1.0625rem; /* 17px */
+    line-height: 1.6;
+    color: oklch(0.72 0 0);
   }
   
   /* Glassmorphism utilities */
@@ -195,24 +223,29 @@
   }
   
   .glass-card {
-    @apply bg-card border border-border hover:border-primary hover:shadow-[0_12px_48px_rgba(0,255,135,0.2)] hover:-translate-y-1 transition-all duration-300;
+    @apply bg-card border border-border hover:border-primary hover:shadow-[0_12px_48px_rgba(0,255,135,0.25)] hover:-translate-y-1 transition-all duration-300;
   }
   
-  /* Neon Glows */
+  /* Neon Glows - Enhanced */
   .glow-text-green {
-    text-shadow: 0 0 20px var(--color-neon-green);
+    text-shadow: 0 0 30px rgba(0, 255, 135, 0.6), 0 0 60px rgba(0, 255, 135, 0.3);
   }
   
   .glow-text-cyan {
-    text-shadow: 0 0 20px var(--color-neon-cyan);
+    text-shadow: 0 0 30px var(--color-neon-cyan);
   }
   
   .glow-text-purple {
-    text-shadow: 0 0 20px var(--color-neon-purple);
+    text-shadow: 0 0 30px var(--color-neon-purple);
   }
   
   .glow-box-green {
-    box-shadow: 0 0 24px rgba(0, 255, 135, 0.4);
+    box-shadow: 0 0 30px rgba(0, 255, 135, 0.5), 0 0 60px rgba(0, 255, 135, 0.2);
+  }
+  
+  /* High contrast text utility */
+  .text-high-contrast {
+    color: oklch(0.92 0 0) !important;
   }
 }
 
@@ -221,9 +254,16 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1.5rem; /* 24px from PDF */
+    padding-left: 1.5rem;
     padding-right: 1.5rem;
-    max-width: 1200px; /* 1200px from PDF */
+    max-width: 1200px;
+  }
+  
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 
   .flex {
@@ -231,38 +271,126 @@
     min-width: 0;
   }
   
-  /* Custom Button Styles from PDF */
+  /* IMPROVED: Custom Button Styles - Larger, more impactful */
   .btn-neon {
-    @apply relative overflow-hidden bg-primary text-primary-foreground font-bold uppercase tracking-wider transition-all duration-300 shadow-[0_0_24px_rgba(0,255,135,0.4)] hover:shadow-[0_0_32px_rgba(0,255,135,0.6)] hover:scale-105 active:scale-95 border-none rounded-lg;
-    padding: 18px 48px;
-    font-size: 16px;
+    @apply relative overflow-hidden bg-primary text-primary-foreground font-bold uppercase tracking-wider transition-all duration-300 border-none rounded-xl;
+    padding: 20px 40px;
+    font-size: 1.125rem; /* 18px */
+    box-shadow: 
+      0 0 30px rgba(0, 255, 135, 0.5),
+      0 0 60px rgba(0, 255, 135, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  
+  .btn-neon:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 
+      0 0 40px rgba(0, 255, 135, 0.7),
+      0 0 80px rgba(0, 255, 135, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+  
+  .btn-neon:active {
+    transform: scale(0.98);
   }
   
   .btn-outline-neon {
-    @apply bg-transparent text-primary border-2 border-primary font-bold uppercase tracking-wider transition-all duration-300 hover:bg-primary/10 hover:text-white rounded-lg;
-    padding: 18px 48px;
+    @apply bg-transparent text-primary border-2 border-primary font-bold uppercase tracking-wider transition-all duration-300 hover:bg-primary/15 hover:text-white rounded-xl;
+    padding: 20px 40px;
+    font-size: 1.125rem;
   }
   
-  /* Section Title Style from PDF */
+  /* IMPROVED: Section Title Style - More prominent */
   .section-title-bar {
-    @apply relative pb-4 mb-8 text-center;
+    @apply relative pb-6 mb-10 text-center text-white;
   }
   
   .section-title-bar::after {
     content: '';
-    @apply block w-20 h-1 bg-primary mx-auto mt-6;
+    @apply block w-24 h-1.5 bg-primary mx-auto mt-8 rounded-full;
+    box-shadow: 0 0 20px rgba(0, 255, 135, 0.5);
   }
   
-  /* Badge Style from PDF */
+  /* IMPROVED: Badge Style - More readable */
   .badge-card {
-    @apply inline-flex flex-col items-center bg-card border border-border p-6 rounded-lg transition-all duration-300 hover:border-primary hover:-translate-y-1;
+    @apply inline-flex flex-col items-center bg-card border border-border p-6 md:p-8 rounded-xl transition-all duration-300 hover:border-primary hover:-translate-y-2;
   }
   
   .badge-number {
-    @apply text-4xl font-black text-primary mb-2 leading-none;
+    @apply text-4xl md:text-5xl font-black text-primary mb-3 leading-none;
+    text-shadow: 0 0 20px rgba(0, 255, 135, 0.4);
   }
   
   .badge-text {
-    @apply text-sm text-muted-foreground uppercase tracking-wider text-center;
+    @apply text-sm md:text-base text-white/80 uppercase tracking-wider text-center font-medium;
   }
+  
+  /* IMPROVED: Card styles for better readability */
+  .content-card {
+    @apply bg-card border border-border p-6 md:p-8 rounded-xl;
+  }
+  
+  .content-card h3 {
+    @apply text-xl md:text-2xl font-bold text-white mb-4;
+  }
+  
+  .content-card p {
+    @apply text-base md:text-lg leading-relaxed;
+    color: oklch(0.75 0 0);
+  }
+  
+  /* Improved list item styling */
+  .feature-list li {
+    @apply flex items-start gap-3 text-base md:text-lg py-2;
+    color: oklch(0.8 0 0);
+  }
+  
+  /* Blockquote styling */
+  blockquote {
+    @apply text-xl md:text-2xl lg:text-3xl font-medium text-center py-8 px-4 border-y border-border;
+    color: var(--color-primary);
+    line-height: 1.4;
+  }
+  
+  /* FAQ Accordion improvements */
+  .faq-trigger {
+    @apply text-lg md:text-xl font-semibold text-white py-5;
+  }
+  
+  .faq-content {
+    @apply text-base md:text-lg leading-relaxed pb-5;
+    color: oklch(0.75 0 0);
+  }
+}
+
+/* Animation utilities */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
 }

@@ -51,3 +51,15 @@
 - [x] Implementar lógica de redirecionamento após tempo esgotar
 - [x] Criar página /time com preço R$ 147,00
 - [x] Testar fluxo completo (acesso → 20min → redirecionamento)
+
+## Página de Obrigado (/obrigado)
+- [x] Criar componente ThankYouPage.tsx
+- [x] Seção de celebração inicial
+- [x] Passo 1: Formulário estratégico com link
+- [x] Passo 2: Agendamento com regra 48h
+- [x] Checklist visual
+- [x] O que esperar da consultoria
+- [x] FAQ rápido
+- [x] Botão flutuante WhatsApp
+- [x] Adicionar rota /obrigado no App.tsx
+- [x] Testar página completa

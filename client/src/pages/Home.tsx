@@ -333,6 +333,65 @@ export default function Home() {
         </section>
 
         {/* ========================================
+             5.5. ALIANÇA FABRANI SECTION
+        ========================================= */}
+        <section className="py-24 bg-card relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 to-primary/5 pointer-events-none"></div>
+          
+          <div className="container max-w-5xl relative z-10">
+            <div className="bg-background border border-purple-500/30 rounded-3xl p-8 md:p-12 shadow-[0_0_50px_rgba(168,85,247,0.1)]">
+              <div className="text-center mb-12">
+                <Badge variant="outline" className="border-purple-500 text-purple-400 px-4 py-1 mb-6">OPORTUNIDADE EXCLUSIVA</Badge>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  Na Consultoria você também será avaliado para o projeto <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-primary">ALIANÇA FABRANI</span>
+                </h2>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  Faculdade Brasileira de Negócios Inovadores. O ecossistema que transforma infoprodutores em instituições de ensino.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[
+                  {
+                    icon: <Award className="text-purple-400" size={24} />,
+                    text: "Cursos, mentorias e palestras reconhecidas pelo MEC"
+                  },
+                  {
+                    icon: <Users className="text-purple-400" size={24} />,
+                    text: "Acesso a 300 professores para gravar qualquer conteúdo"
+                  },
+                  {
+                    icon: <Zap className="text-purple-400" size={24} />,
+                    text: "Grupo individualizado e exclusivo no WhatsApp"
+                  },
+                  {
+                    icon: <Target className="text-purple-400" size={24} />,
+                    text: "Acesso a Eventos FABRANI Online e Presencial"
+                  },
+                  {
+                    icon: <Briefcase className="text-purple-400" size={24} />,
+                    text: "Uso da MARCA: atue como universidade sem o custo de uma"
+                  },
+                  {
+                    icon: <FileText className="text-purple-400" size={24} />,
+                    text: "Receba o passo a passo para ter Sua Escola Digital"
+                  }
+                ].map((benefit, i) => (
+                  <div key={i} className="flex items-start gap-4 p-6 rounded-xl bg-card border border-border hover:border-purple-500/50 transition-colors group">
+                    <div className="shrink-0 w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
+                      {benefit.icon}
+                    </div>
+                    <p className="text-sm font-medium text-white leading-relaxed">
+                      {benefit.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ========================================
              6. OBJECTION CRUSHER SECTION
         ========================================= */}
         <section className="py-24 bg-card">

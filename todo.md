@@ -63,3 +63,8 @@
 - [x] Botão flutuante WhatsApp
 - [x] Adicionar rota /obrigado no App.tsx
 - [x] Testar página completa
+
+## Correção Página de Obrigado
+- [x] Remover Header com contador de urgência da página /obrigado
+- [x] Criar header simplificado sem sistema de redirecionamento
+- [x] Testar página corrigida

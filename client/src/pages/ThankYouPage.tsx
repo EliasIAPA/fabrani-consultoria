@@ -1,5 +1,5 @@
-import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -33,7 +33,21 @@ export default function ThankYouPage() {
         </svg>
       </a>
 
-      <Header />
+      {/* Header Simplificado - Sem contador de urgência */}
+      <header className="fixed top-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-b border-border">
+        <div className="container h-20 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-black font-black text-xl group-hover:scale-105 transition-transform">
+              F
+            </div>
+            <span className="text-xl font-bold text-white tracking-tight">FABRANI</span>
+          </Link>
+          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30">
+            <CheckCircle2 className="w-5 h-5 text-primary" />
+            <span className="text-sm font-bold text-primary">COMPRA CONFIRMADA</span>
+          </div>
+        </div>
+      </header>
       
       <main>
         {/* ========================================

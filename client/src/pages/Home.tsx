@@ -43,15 +43,15 @@ export default function Home() {
 
               {/* Headline - Larger and more impactful */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight animate-fade-in-up delay-100">
-                1 Hora para você descobrir como ficar a{" "}
-                <span className="text-primary glow-text-green">1 Ajuste</span>
-                {" "}e não{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400">1 Ano para Escalar</span>
+                Você Está Investindo No{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400">Lugar Errado</span>
+                {" "}— 1 Hora Para Descobrir Onde Colocar Seu Dinheiro Para{" "}
+                <span className="text-primary glow-text-green">Realmente Escalar</span>
               </h1>
 
               {/* Subheadline - Better contrast and size */}
               <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-                O Founder da FABRANI abriu a agenda para <strong className="text-white">50 infoprodutores</strong>. Não é consultoria genérica. É um <strong className="text-white">diagnóstico cirúrgico</strong> de quem já validou R$ 2bi em projetos.
+                Receba o <strong className="text-white">Plano Estruturado 2026</strong> e <strong className="text-primary">Personalizado</strong> para Seu Negócio.
               </p>
 
               {/* CTA - Larger and more prominent */}

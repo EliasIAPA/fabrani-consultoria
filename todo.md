@@ -104,3 +104,7 @@
 - [x] Atualizar Solution Section com Sistema P³
 - [x] Atualizar Offer Stack com nova estrutura (preço R$ 147)
 - [x] Testar página /time completa
+
+## Integração Checkout Greenn (Página Principal)
+- [x] Substituir todos os links de checkout na Home.tsx pelo link da Greenn
+- [x] Testar funcionamento dos botões

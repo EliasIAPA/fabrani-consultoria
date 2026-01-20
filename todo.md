@@ -112,3 +112,12 @@
 ## Integração Checkout Greenn (Página /time - R$ 147)
 - [x] Substituir todos os links de checkout na TimePage.tsx pelo link da Greenn
 - [x] Testar funcionamento dos botões
+
+## Pop-up de Saída (Exit Intent)
+- [x] Criar componente ExitPopup.tsx
+- [x] Implementar detecção de exit intent (mouse sai da janela)
+- [x] Design com mensagem "50% OFF - Restam 3 vagas"
+- [x] CTA para checkout R$ 47
+- [x] Mostrar apenas uma vez por sessão
+- [x] Integrar nas páginas principal e /time
+- [x] Testar funcionamento

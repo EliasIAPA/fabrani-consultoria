@@ -347,7 +347,7 @@ export default function TimePage() {
                       asChild
                       onClick={handleCTAClick}
                     >
-                      <a href="https://pay.kiwify.com.br/..." target="_blank" rel="noopener noreferrer">
+                      <a href="https://payfast.greenn.com.br/154808/offer/7SzDU0" target="_blank" rel="noopener noreferrer">
                         QUERO ACESSAR
                         <ChevronRight className="ml-2" size={24} />
                       </a>
@@ -656,7 +656,7 @@ export default function TimePage() {
                 asChild
                 onClick={handleCTAClick}
               >
-                <a href="https://pay.kiwify.com.br/..." target="_blank" rel="noopener noreferrer">
+                <a href="https://payfast.greenn.com.br/154808/offer/7SzDU0" target="_blank" rel="noopener noreferrer">
                   🔥 QUERO ACESSAR
                 </a>
               </Button>

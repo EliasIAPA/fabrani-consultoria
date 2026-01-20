@@ -108,3 +108,7 @@
 ## Integração Checkout Greenn (Página Principal)
 - [x] Substituir todos os links de checkout na Home.tsx pelo link da Greenn
 - [x] Testar funcionamento dos botões
+
+## Integração Checkout Greenn (Página /time - R$ 147)
+- [x] Substituir todos os links de checkout na TimePage.tsx pelo link da Greenn
+- [x] Testar funcionamento dos botões

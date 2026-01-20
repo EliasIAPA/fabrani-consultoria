@@ -312,15 +312,15 @@ export default function Home() {
               <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img 
-                    src="/images/parceiros/escola-dolar-forbes.webp" 
+                    src="/images/parceiros/escola-dolar.jpg" 
                     alt="Escola do Dólar - Forbes Malta - Certificação FABRANI"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Escola do Dólar</h3>
-                  <p className="text-primary font-mono font-bold text-lg mb-2">+2.5 milhões de usuários</p>
-                  <p className="text-base text-white/70">MBA desenvolvido pela FABRANI - Capa Forbes Malta</p>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+20 mil alunos nos EUA</p>
+                  <p className="text-base text-white/70">Escola do Dólar - Certificação FABRANI - Capa Forbes Malta</p>
                 </div>
               </div>
 
@@ -328,15 +328,15 @@ export default function Home() {
               <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img 
-                    src="/images/parceiros/neil-patel.webp" 
+                    src="/images/parceiros/neilpatel.jpg" 
                     alt="Elias Evangelista e Neil Patel"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Neil Patel</h3>
-                  <p className="text-primary font-mono font-bold text-lg mb-2">Top 100 Empreendedores</p>
-                  <p className="text-base text-white/70">Reconhecido por Barack Obama como um dos 100 melhores empreendedores com menos de 30 anos</p>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">Maior Especialista em SEO</p>
+                  <p className="text-base text-white/70">Elias Evangelista com Neil Patel - Referência mundial em Marketing Digital</p>
                 </div>
               </div>
 

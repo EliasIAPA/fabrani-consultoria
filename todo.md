@@ -87,3 +87,13 @@
 - [x] Criar seção de parceiros com imagens (Ícaro, Escola do Dólar, Neil Patel)
 - [x] Adicionar seção de vídeos de depoimentos
 - [x] Testar exibição de imagens e vídeos
+
+## Atualização da Copy da Landing Page (Nova Versão)
+- [x] Atualizar Hero Section (headline: "Pare de Vender Curso. Construa uma Escola Digital Escalável")
+- [x] Atualizar subheadline com modelo de 100k alunos
+- [x] Atualizar Problem Section com 3 dores (Gargalo, Commodity, Escalar sem perder autoridade)
+- [x] Atualizar Solution Section com Sistema P^3
+- [x] Atualizar Offer Stack com nova estrutura de valor
+- [x] Manter design, vídeos, parceiros e informações sobre Elias
+- [x] Manter sistema de redirecionamento de 20 minutos
+- [x] Testar página completa

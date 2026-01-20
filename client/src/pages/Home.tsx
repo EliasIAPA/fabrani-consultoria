@@ -296,15 +296,15 @@ export default function Home() {
               <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
                 <div className="aspect-[4/3] overflow-hidden">
                   <img 
-                    src="/images/parceiros/novo-mercado.webp" 
+                    src="/images/parceiros/onm.jpg" 
                     alt="Ícaro de Carvalho - O Novo Mercado - Certificação FABRANI"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Ícaro de Carvalho</h3>
-                  <p className="text-primary font-mono font-bold text-lg mb-2">+300 mil alunos</p>
-                  <p className="text-base text-white/70">Evento O Novo Mercado - Certificação FABRANI</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">O Novo Mercado - 2025</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">Certificação FABRANI</p>
+                  <p className="text-base text-white/70">Pós Graduação Ícaro de Carvalho / FABRANI - Projeto: Elias Evangelista</p>
                 </div>
               </div>
 

@@ -80,3 +80,10 @@
 - [x] Alterar texto dos CTAs para "QUERO ACESSAR" na página /time
 - [x] Ajustar tamanho dos botões para versão mobile
 - [x] Testar responsividade em mobile
+
+## Prova Social - Parceiros e Vídeos
+- [x] Extrair imagens do documento provasocial.docx
+- [x] Copiar vídeos para pasta pública (vendedordeElite.mp4, RennerSilva.mp4, outlier2025.mp4)
+- [x] Criar seção de parceiros com imagens (Ícaro, Escola do Dólar, Neil Patel)
+- [x] Adicionar seção de vídeos de depoimentos
+- [x] Testar exibição de imagens e vídeos

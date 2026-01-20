@@ -274,6 +274,168 @@ export default function Home() {
         </section>
 
         {/* ========================================
+             4.5. PARCEIROS - PROVA SOCIAL COM IMAGENS
+        ========================================= */}
+        <section className="py-20 md:py-28 bg-background relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
+          
+          <div className="container relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <Badge variant="outline" className="border-primary text-primary px-5 py-2 mb-6 text-sm font-semibold">PARCEIROS FABRANI</Badge>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                Quem Já Confia na <span className="text-primary">FABRANI</span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70">
+                Grandes nomes do mercado digital que validaram seus projetos com a FABRANI.
+              </p>
+            </div>
+
+            {/* Grid de Parceiros com Imagens */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
+              {/* Ícaro de Carvalho - O Novo Mercado */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src="/images/parceiros/novo-mercado.webp" 
+                    alt="Ícaro de Carvalho - O Novo Mercado - Certificação FABRANI"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Ícaro de Carvalho</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+300 mil alunos</p>
+                  <p className="text-base text-white/70">Evento O Novo Mercado - Certificação FABRANI</p>
+                </div>
+              </div>
+
+              {/* Escola do Dólar - Forbes */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src="/images/parceiros/escola-dolar-forbes.webp" 
+                    alt="Escola do Dólar - Forbes Malta - Certificação FABRANI"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Escola do Dólar</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+2.5 milhões de usuários</p>
+                  <p className="text-base text-white/70">MBA desenvolvido pela FABRANI - Capa Forbes Malta</p>
+                </div>
+              </div>
+
+              {/* Neil Patel */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src="/images/parceiros/neil-patel.webp" 
+                    alt="Elias Evangelista e Neil Patel"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Neil Patel</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">Top 100 Empreendedores</p>
+                  <p className="text-base text-white/70">Reconhecido por Barack Obama como um dos 100 melhores empreendedores com menos de 30 anos</p>
+                </div>
+              </div>
+
+              {/* Renato Bruno - Método SIM */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src="/images/parceiros/renato-bruno.webp" 
+                    alt="Renato Bruno - Método SIM - Certificação FABRANI"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Renato Bruno</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">Palestrante ONU</p>
+                  <p className="text-base text-white/70">Método SIM - Empresário e Coordenador PUC - Certificação FABRANI</p>
+                </div>
+              </div>
+
+              {/* Weburn */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card md:col-span-2 lg:col-span-1">
+                <div className="aspect-[4/3] overflow-hidden bg-white flex items-center justify-center">
+                  <img 
+                    src="/images/parceiros/weburn.webp" 
+                    alt="Weburn - MBA FABRANI"
+                    className="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Weburn</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+2.5 milhões de usuários</p>
+                  <p className="text-base text-white/70">Maior App da América - MBA desenvolvido pela FABRANI</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Seção de Vídeos de Depoimentos */}
+            <div className="mt-16">
+              <h3 className="text-2xl md:text-3xl font-bold text-center mb-10">
+                <span className="text-primary">Depoimentos</span> de Quem Já Passou Pela FABRANI
+              </h3>
+              
+              <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+                {/* Vídeo 1 - Vendedor de Elite */}
+                <div className="rounded-2xl overflow-hidden border border-white/10 bg-card">
+                  <div className="aspect-[9/16] md:aspect-video">
+                    <video 
+                      controls 
+                      className="w-full h-full object-cover"
+                      poster="/images/parceiros/novo-mercado.webp"
+                    >
+                      <source src="/videos/vendedordeElite.mp4" type="video/mp4" />
+                      Seu navegador não suporta vídeos.
+                    </video>
+                  </div>
+                  <div className="p-4">
+                    <p className="text-base font-semibold text-white">Vendedor de Elite</p>
+                  </div>
+                </div>
+
+                {/* Vídeo 2 - Renner Silva */}
+                <div className="rounded-2xl overflow-hidden border border-white/10 bg-card">
+                  <div className="aspect-[9/16] md:aspect-video">
+                    <video 
+                      controls 
+                      className="w-full h-full object-cover"
+                      poster="/images/parceiros/escola-dolar-forbes.webp"
+                    >
+                      <source src="/videos/RennerSilva.mp4" type="video/mp4" />
+                      Seu navegador não suporta vídeos.
+                    </video>
+                  </div>
+                  <div className="p-4">
+                    <p className="text-base font-semibold text-white">Renner Silva</p>
+                  </div>
+                </div>
+
+                {/* Vídeo 3 - Outlier 2025 */}
+                <div className="rounded-2xl overflow-hidden border border-white/10 bg-card">
+                  <div className="aspect-[9/16] md:aspect-video">
+                    <video 
+                      controls 
+                      className="w-full h-full object-cover"
+                      poster="/images/parceiros/neil-patel.webp"
+                    >
+                      <source src="/videos/outlier2025.mp4" type="video/mp4" />
+                      Seu navegador não suporta vídeos.
+                    </video>
+                  </div>
+                  <div className="p-4">
+                    <p className="text-base font-semibold text-white">Outlier 2025</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ========================================
              5. OFFER STACK - OPTIMIZED FOR CONVERSION
         ========================================= */}
         <section id="cta" className="py-20 md:py-28 relative bg-background">

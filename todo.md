@@ -129,3 +129,9 @@
 - [x] Ajustar pop-up para funcionar no mobile (scroll up + tempo na página)
 - [x] Adicionar thumbnails/posters nos vídeos
 - [x] Testar todas as alterações
+
+## Sincronizar Página /time com Principal
+- [x] Adicionar seção de Parceiros FABRANI com todas as imagens
+- [x] Adicionar vídeos (Outlier, Vendedor de Elite, Renner Silva)
+- [x] Manter preço R$ 147 e checkout correto
+- [x] Testar página completa

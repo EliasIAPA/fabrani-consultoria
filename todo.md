@@ -97,3 +97,10 @@
 - [x] Manter design, vídeos, parceiros e informações sobre Elias
 - [x] Manter sistema de redirecionamento de 20 minutos
 - [x] Testar página completa
+
+## Atualização Página /time (R$ 147)
+- [x] Atualizar Hero Section com nova copy (Sistema P³)
+- [x] Atualizar Problem Section com 3 dores
+- [x] Atualizar Solution Section com Sistema P³
+- [x] Atualizar Offer Stack com nova estrutura (preço R$ 147)
+- [x] Testar página /time completa

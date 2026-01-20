@@ -41,21 +41,21 @@ export default function TimePage() {
               <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-red-500/20 border border-red-500/40 backdrop-blur-sm animate-fade-in-up">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
                 <span className="text-sm md:text-base font-semibold text-red-400 uppercase tracking-wide">
-                  ⏰ Oferta de R$ 97 encerrada • Novo valor: {PRICE}
+                  ⏰ OFERTA DE R$ 97 ENCERRADA • ÚLTIMA CHANCE: {PRICE}
                 </span>
               </div>
 
               {/* Headline - Larger and more impactful */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight animate-fade-in-up delay-100">
-                1 Hora para você descobrir como ficar a{" "}
-                <span className="text-primary glow-text-green">1 Ajuste</span>
-                {" "}e não{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400">1 Ano para Escalar</span>
+                Pare de Vender Curso.{" "}
+                <span className="text-primary glow-text-green">Construa uma Escola Digital</span>
+                {" "}Escalável{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-400">Sem Depender de Você.</span>
               </h1>
 
               {/* Subheadline - Better contrast and size */}
               <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-                O Founder da FABRANI abriu a agenda para <strong className="text-white">50 infoprodutores</strong>. Não é consultoria genérica. É um <strong className="text-white">diagnóstico cirúrgico</strong> de quem já validou R$ 2bi em projetos.
+                O Modelo de Negócio que gerou <strong className="text-white">100 mil alunos</strong> sem Instagram pessoal, <strong className="text-primary">500+ professores</strong> contratados e <strong className="text-white">150 projetos validados em 2025</strong> — agora disponível para 50 infoprodutores prontos para a transição.
               </p>
 
               {/* CTA - Larger and more prominent */}
@@ -78,10 +78,10 @@ export default function TimePage() {
               {/* Badges Grid - More readable */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 pt-12 animate-fade-in-up delay-500">
                 {[
-                  { number: "150", text: "Projetos Validados em 2025" },
+                  { number: "20", text: "Anos de Mercado" },
                   { number: "+100K", text: "Alunos Formados" },
-                  { number: "20", text: "Anos de Experiência" },
-                  { number: "R$ 2bi", text: "Em Projetos Validados" },
+                  { number: "150", text: "Projetos Validados em 2025" },
+                  { number: "500+", text: "Professores Contratados" },
                 ].map((badge, i) => (
                   <div key={i} className="badge-card group">
                     <div className="badge-number group-hover:text-white transition-colors">
@@ -106,26 +106,26 @@ export default function TimePage() {
               
               <div className="text-center space-y-6">
                 <h2 className="section-title-bar text-3xl sm:text-4xl md:text-5xl font-bold">
-                  Você Está Travado — <span className="text-white/60">E Provavelmente Não É Onde Você Pensa</span>
+                  Você Não Precisa de Mais Tráfego. <span className="text-white/60">Você Precisa de um Modelo de Negócio.</span>
                 </h2>
-                <p className="text-xl md:text-2xl text-white/70 max-w-2xl mx-auto">
-                  Você trabalha duro. Investe. Testa. Mas não sabe se está a 1 ajuste de decolar... ou a 1 ano de distância.
+                <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto">
+                  Você fatura bem. R$ 50k, R$ 100k, talvez R$ 300k por mês. Mas você sabe que algo está errado. Você trabalha 12-14 horas por dia e escalar significa trabalhar MAIS horas.
                 </p>
               </div>
 
               <div className="grid gap-6 md:gap-8">
                 {[
                   {
-                    title: "Você Investe... Mas Não Sabe Se É No Lugar Certo",
-                    desc: "Gastou R$ 5k em tráfego, mudou a cor do botão 47 vezes, contratou copywriter... e a conversão subiu 0,3%. Você está ajustando detalhes enquanto o problema é estrutural.",
+                    title: "DOR #1: Você É o Gargalo do Próprio Negócio",
+                    desc: "Você construiu tudo em cima de você. Cada venda depende da sua presença: gravar módulos, aparecer em lives, validar conteúdo, estar em todo lançamento. Não consegue tirar férias sem as vendas caírem. Você criou um EMPREGO, não um negócio.",
                   },
                   {
-                    title: "Você Não Sabe Se Está a 1 Passo ou a 10 Mudanças",
-                    desc: "Será que é o posicionamento? O produto? Falta de certificação MEC? Você está voando no escuro, desperdiçando tempo e dinheiro testando às cegas.",
+                    title: "DOR #2: Seu Mercado Virou Commodity",
+                    desc: "Cursos online vendem por R$ 19,90 na Hotmart. ChatGPT dá consultoria de graça. Cada lançamento é mais difícil que o anterior. Você precisa baixar preço ou aumentar bônus. Se continuar no modelo de 'curso + mentoria', vai acordar em 2 anos vendendo a R$ 97 o que hoje vende a R$ 2.997.",
                   },
                   {
-                    title: "Você Já Tentou 'Experts' e Continua Sem Clareza",
-                    desc: "'Você precisa de mais tráfego', 'Sua oferta está fraca'. Tudo genérico. Nada específico para O SEU negócio. Você precisa de diagnóstico, não de palpite.",
+                    title: "DOR #3: Você Não Sabe Como Escalar Sem Perder Autoridade",
+                    desc: "'Ninguém entende o método como eu.' 'Se eu delegar, a qualidade cai.' 'Minha audiência me segue por causa de MIM.' Você tentou contratar especialistas e voltou a fazer tudo sozinho. Está preso entre continuar fazendo tudo (burnout) ou delegar e perder qualidade.",
                   },
                 ].map((problem, i) => (
                   <div key={i} className="flex flex-col sm:flex-row gap-5 md:gap-6 p-6 md:p-8 rounded-2xl border-l-4 border-primary bg-background hover:bg-white/[0.02] transition-colors">
@@ -141,7 +141,7 @@ export default function TimePage() {
               </div>
 
               <blockquote className="text-xl sm:text-2xl md:text-3xl font-medium text-center text-primary border-y border-white/10 py-10 italic leading-relaxed">
-                "E se você pudesse ter 1 hora com quem enxerga o que você não vê — e já fez isso 150 vezes só em 2025?"
+                "E se o problema não for você? E se for o próprio MODELO de negócio que você escolheu? Esse modelo existe. E 150 projetos validados em 2025 provam isso."
               </blockquote>
 
             </div>
@@ -174,39 +174,43 @@ export default function TimePage() {
               </div>
 
               <div className="space-y-8 order-1 lg:order-2">
-                <Badge variant="outline" className="border-primary text-primary px-5 py-2 text-sm font-semibold">QUEM VAI TE ATENDER</Badge>
+                <Badge variant="outline" className="border-primary text-primary px-5 py-2 text-sm font-semibold">A SOLUÇÃO: SISTEMA P³</Badge>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-                  Não É Coach. Não É Guru.<br/>
-                  <span className="text-primary">É Quem Valida o Mercado.</span>
+                  Processos. Pessoas. Produtos.<br/>
+                  <span className="text-primary">O Modelo Que Escala Sem Você.</span>
                 </h2>
                 
                 <div className="space-y-6">
                   <p className="text-lg md:text-xl text-white/80 leading-relaxed">
-                    Com <strong className="text-white">24 anos de experiência</strong> em modelos de negócios físicos e digitais, Elias Evangelista não apenas ensina — ele constrói as estruturas que sustentam os maiores players do mercado.
+                    O <strong className="text-white">Sistema P³</strong> é o modelo que transformou a FABRANI em uma instituição com 100 mil alunos, 500+ professores e 150 projetos validados em 2025 — tudo isso sem depender de um único rosto.
                   </p>
                   
-                  <div className="grid sm:grid-cols-2 gap-6">
-                    <div className="space-y-3 bg-card/50 p-5 rounded-xl border border-white/5">
-                      <div className="flex items-center gap-2 text-white font-bold text-lg">
-                        <Briefcase className="text-primary" size={22} /> Experiência
+                  <div className="grid sm:grid-cols-3 gap-5">
+                    <div className="space-y-3 bg-card/50 p-5 rounded-xl border border-primary/20">
+                      <div className="flex items-center gap-2 text-primary font-bold text-lg">
+                        <Target className="text-primary" size={22} /> PROCESSOS
                       </div>
-                      <ul className="text-base text-white/70 space-y-2">
-                        <li>• 24 anos em Modelos de Negócios</li>
-                        <li>• Mercado Digital desde 2009</li>
-                        <li>• Advogado há 20 anos</li>
-                        <li>• Contabilista há 24 anos</li>
-                      </ul>
+                      <p className="text-base text-white/70">
+                        Sistemas que funcionam sem você. Automação, SOPs, fluxos de trabalho que rodam 24/7.
+                      </p>
                     </div>
                     
-                    <div className="space-y-3 bg-card/50 p-5 rounded-xl border border-white/5">
-                      <div className="flex items-center gap-2 text-white font-bold text-lg">
-                        <GraduationCap className="text-primary" size={22} /> Formação
+                    <div className="space-y-3 bg-card/50 p-5 rounded-xl border border-primary/20">
+                      <div className="flex items-center gap-2 text-primary font-bold text-lg">
+                        <Users className="text-primary" size={22} /> PESSOAS
                       </div>
-                      <ul className="text-base text-white/70 space-y-2">
-                        <li>• Mestrado em Direito</li>
-                        <li>• MBA em Modelo de Negócios</li>
-                        <li>• Especialista em Regulação MEC</li>
-                      </ul>
+                      <p className="text-base text-white/70">
+                        Professores e especialistas que entregam por você. Acesso a 500+ profissionais prontos.
+                      </p>
+                    </div>
+                    
+                    <div className="space-y-3 bg-card/50 p-5 rounded-xl border border-primary/20">
+                      <div className="flex items-center gap-2 text-primary font-bold text-lg">
+                        <Zap className="text-primary" size={22} /> PRODUTOS
+                      </div>
+                      <p className="text-base text-white/70">
+                        Cursos MEC, certificações, eventos. Produtos que vendem sem sua presença constante.
+                      </p>
                     </div>
                   </div>
 
@@ -297,23 +301,23 @@ export default function TimePage() {
                   <div className="space-y-5">
                     {[
                       {
-                        title: "Consultoria Online de 1 Hora",
-                        desc: "Análise completa do seu negócio e diagnóstico do gargalo invisível.",
+                        title: "Diagnóstico Estrutural Completo",
+                        desc: "Análise do seu modelo atual: onde está o gargalo, o que escala e o que te prende.",
                         value: "R$ 5.000+"
                       },
                       {
-                        title: "Plano de Crescimento Personalizado",
-                        desc: "Roadmap de ações priorizadas. Onde investir primeiro e timeline realista.",
-                        value: "R$ 2.000"
+                        title: "Roadmap de Transição P³",
+                        desc: "Plano personalizado para implementar Processos, Pessoas e Produtos no seu negócio.",
+                        value: "R$ 3.000"
                       },
                       {
                         title: "Avaliação Para Aliança FABRANI",
-                        desc: "Potencial para se tornar um dos 200 Aliançados e ter cursos MEC.",
+                        desc: "Potencial para se tornar um dos 50 projetos apoiados em 2026 com cursos MEC.",
                         value: "Inestimável"
                       },
                       {
-                        title: "Liberdade Total de Plataforma",
-                        desc: "Se virar Aliançado: 0% sobre vendas. Venda onde quiser.",
+                        title: "Acesso ao Ecossistema FABRANI",
+                        desc: "500+ professores, certificação MEC, estrutura completa. 0% sobre vendas.",
                         value: "Inestimável"
                       }
                     ].map((item, i) => (

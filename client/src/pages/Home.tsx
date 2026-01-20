@@ -361,11 +361,11 @@ export default function Home() {
 
               {/* Weburn */}
               <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card md:col-span-2 lg:col-span-1">
-                <div className="aspect-[4/3] overflow-hidden bg-white flex items-center justify-center">
+                <div className="aspect-[4/3] overflow-hidden bg-[#2d2d2d] flex items-center justify-center">
                   <img 
                     src="/images/parceiros/weburn.png" 
                     alt="Weburn - MBA FABRANI"
-                    className="w-full h-full object-contain p-8 group-hover:scale-105 transition-transform duration-500"
+                    className="w-3/4 h-auto object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">
@@ -390,6 +390,24 @@ export default function Home() {
                   <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Vendedor de Elite</h3>
                   <p className="text-primary font-mono font-bold text-lg mb-2">+3 mil pessoas</p>
                   <p className="text-base text-white/70">Certificação FABRANI</p>
+                </div>
+              </div>
+
+              {/* Renner Silva - Melhor Palestrante do Brasil */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
+                  >
+                    <source src="/videos/RennerSilva.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos.
+                  </video>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Renner Silva</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">Melhor Palestrante do Brasil</p>
+                  <p className="text-base text-white/70">Projeto Validade e Certificado Elias Evangelista/FABRANI</p>
                 </div>
               </div>
             </div>

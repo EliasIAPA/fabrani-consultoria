@@ -352,7 +352,7 @@ export default function Home() {
                   <video 
                     controls 
                     className="w-full h-full object-cover"
-                    poster="/images/parceiros/outlier-poster.jpg"
+                    poster="/videos/outlier2025-poster.jpg"
                   >
                     <source src="/videos/outlier2025.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeos.
@@ -387,6 +387,7 @@ export default function Home() {
                   <video 
                     controls 
                     className="w-full h-full object-cover"
+                    poster="/videos/vendedordeElite-poster.jpg"
                   >
                     <source src="/videos/vendedordeElite.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeos.
@@ -405,6 +406,7 @@ export default function Home() {
                   <video 
                     controls 
                     className="w-full h-full object-cover"
+                    poster="/videos/RennerSilva-poster.jpg"
                   >
                     <source src="/videos/RennerSilva.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeos.

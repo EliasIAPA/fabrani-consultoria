@@ -45,13 +45,13 @@ export function Header({ price = "R$ 97", isTimePage = false }: HeaderProps) {
           ) : (
             <>
               <span className="text-black font-bold text-sm md:text-base flex items-center gap-2">
-                <span className="animate-pulse">⚡</span> 50 VAGAS DISPONÍVEIS
+                <span className="animate-pulse">⚡</span> VAGAS LIMITADAS
               </span>
               <span className="hidden md:inline text-black/60">|</span>
-              <span className="hidden md:inline text-black/80 font-medium">CONSULTORIA COM O FOUNDER</span>
+              <span className="text-black/80 font-medium text-sm md:text-base">CONSULTORIA COM O FOUNDER</span>
               <span className="hidden md:inline text-black/60">→</span>
               <a href="#cta" className="text-black font-bold underline underline-offset-2 hover:no-underline transition-all text-sm md:text-base">
-                GARANTIR VAGA POR {price}
+                GARANTIR VAGA
               </a>
             </>
           )}
@@ -92,14 +92,14 @@ export function Header({ price = "R$ 97", isTimePage = false }: HeaderProps) {
                 </div>
               </div>
             ) : (
-              <div className="flex items-center gap-3 bg-card/80 border-2 border-primary/40 px-4 md:px-6 py-2.5 md:py-3 rounded-xl shadow-[0_0_20px_rgba(0,255,135,0.15)]">
-                <span className="text-xs md:text-sm text-white/70 uppercase tracking-wider font-semibold hidden sm:inline-block">
+              <div className="flex items-center gap-3 bg-card/80 border-2 border-primary/40 px-5 md:px-8 py-3 md:py-4 rounded-xl shadow-[0_0_30px_rgba(0,255,135,0.2)]">
+                <span className="text-sm md:text-base text-white/80 uppercase tracking-wider font-semibold hidden sm:inline-block">
                   Oferta encerra em:
                 </span>
-                <div className="flex items-center gap-1.5 font-mono text-primary font-black text-xl md:text-2xl leading-none">
-                  <span className="w-[2.5ch] text-center bg-black/30 px-1.5 py-1 rounded">{formatTime(timeLeft.minutes)}</span>
-                  <span className="text-white/50 text-lg">:</span>
-                  <span className="w-[2.5ch] text-center bg-black/30 px-1.5 py-1 rounded">{formatTime(timeLeft.seconds)}</span>
+                <div className="flex items-center gap-2 font-mono text-primary font-black text-2xl md:text-4xl leading-none">
+                  <span className="w-[2.5ch] text-center bg-black/40 px-2 py-1.5 rounded-lg shadow-inner">{formatTime(timeLeft.minutes)}</span>
+                  <span className="text-white/60 text-xl md:text-2xl animate-pulse">:</span>
+                  <span className="w-[2.5ch] text-center bg-black/40 px-2 py-1.5 rounded-lg shadow-inner">{formatTime(timeLeft.seconds)}</span>
                 </div>
               </div>
             )}

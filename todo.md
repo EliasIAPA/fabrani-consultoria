@@ -121,3 +121,11 @@
 - [x] Mostrar apenas uma vez por sessão
 - [x] Integrar nas páginas principal e /time
 - [x] Testar funcionamento
+
+## Ajustes Menu, Pop-up e Vídeos
+- [x] Remover valor (R$ 97) do menu superior
+- [x] Remover "50 vagas" do menu
+- [x] Ampliar o contador no menu
+- [x] Ajustar pop-up para funcionar no mobile (scroll up + tempo na página)
+- [x] Adicionar thumbnails/posters nos vídeos
+- [x] Testar todas as alterações

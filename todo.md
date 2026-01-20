@@ -137,8 +137,8 @@
 - [x] Testar página completa
 
 ## Backup Git - Todas as Páginas
-- [ ] Verificar estrutura de páginas (/, /time, /obrigado)
-- [ ] Verificar status do Git
-- [ ] Adicionar todos os arquivos ao Git
-- [ ] Criar commit com todas as páginas
+- [x] Verificar estrutura de páginas (/, /time, /obrigado)
+- [x] Verificar status do Git
+- [x] Adicionar todos os arquivos ao Git
+- [x] Criar commit com todas as páginas
 - [ ] Criar checkpoint/backup completo

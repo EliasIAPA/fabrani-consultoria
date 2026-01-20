@@ -135,3 +135,10 @@
 - [x] Adicionar vídeos (Outlier, Vendedor de Elite, Renner Silva)
 - [x] Manter preço R$ 147 e checkout correto
 - [x] Testar página completa
+
+## Backup Git - Todas as Páginas
+- [ ] Verificar estrutura de páginas (/, /time, /obrigado)
+- [ ] Verificar status do Git
+- [ ] Adicionar todos os arquivos ao Git
+- [ ] Criar commit com todas as páginas
+- [ ] Criar checkpoint/backup completo

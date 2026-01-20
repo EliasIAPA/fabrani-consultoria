@@ -141,4 +141,7 @@
 - [x] Verificar status do Git
 - [x] Adicionar todos os arquivos ao Git
 - [x] Criar commit com todas as páginas
-- [ ] Criar checkpoint/backup completo
+- [x] Criar checkpoint/backup completo
+
+## Correção Nome do Projeto
+- [x] Atualizar título para escala.fabrani.com.br (sem "e")

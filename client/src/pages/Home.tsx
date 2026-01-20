@@ -374,6 +374,24 @@ export default function Home() {
                   <p className="text-base text-white/70">Projeto MBA - FABRANI/Elias Evangelista</p>
                 </div>
               </div>
+
+              {/* Evento Vendedor de Elite - 3 mil pessoas */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
+                  >
+                    <source src="/videos/vendedordeElite.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos.
+                  </video>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Vendedor de Elite</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+3 mil pessoas</p>
+                  <p className="text-base text-white/70">Certificação FABRANI</p>
+                </div>
+              </div>
             </div>
 
             {/* Seção de Vídeos de Depoimentos */}

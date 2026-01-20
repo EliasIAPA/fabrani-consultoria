@@ -340,19 +340,22 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Renato Bruno - Método SIM */}
+              {/* Evento Outlier - 2 mil pessoas */}
               <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img 
-                    src="/images/parceiros/renato-bruno.webp" 
-                    alt="Renato Bruno - Método SIM - Certificação FABRANI"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
+                    poster="/images/parceiros/outlier-poster.jpg"
+                  >
+                    <source src="/videos/outlier2025.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos.
+                  </video>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Renato Bruno</h3>
-                  <p className="text-primary font-mono font-bold text-lg mb-2">Palestrante ONU</p>
-                  <p className="text-base text-white/70">Método SIM - Empresário e Coordenador PUC - Certificação FABRANI</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Evento Outlier</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+2 mil pessoas</p>
+                  <p className="text-base text-white/70">Certificação FABRANI - Tiago Finch / Ticto</p>
                 </div>
               </div>
 

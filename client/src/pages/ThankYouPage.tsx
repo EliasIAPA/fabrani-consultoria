@@ -1,13 +1,5 @@
 import { Footer } from "@/components/Footer";
 import { Link } from "wouter";
-import { useEffect } from "react";
-
-// Declarar fbq para TypeScript
-declare global {
-  interface Window {
-    fbq: (...args: unknown[]) => void;
-  }
-}
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -19,18 +11,8 @@ import {
 import { Check, CheckCircle2, FileText, Calendar, MessageCircle, Clock, Video, Target, AlertTriangle, HelpCircle } from "lucide-react";
 
 export default function ThankYouPage() {
-  // Disparar evento Purchase do Pixel do Facebook ao carregar a página
-  useEffect(() => {
-    if (typeof window !== 'undefined' && window.fbq) {
-      window.fbq('track', 'Purchase', {
-        value: 97.00,
-        currency: 'BRL',
-        content_name: 'Consultoria Escale FABRANI',
-        content_type: 'product',
-        content_ids: ['consultoria-escale-fabrani']
-      });
-    }
-  }, []);
+  // NOTA: Evento Purchase removido - deve ser configurado na Greenn via API de Conversões
+  // para garantir que apenas compras reais sejam rastreadas
 
   const whatsappNumber = "5516997117597";
   const whatsappMessage = encodeURIComponent("Olá Comprei a Consultoria Escale FABRANI e estou com Dúvida !");

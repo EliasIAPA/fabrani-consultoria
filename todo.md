@@ -145,3 +145,6 @@
 
 ## Correção Nome do Projeto
 - [x] Atualizar título para escala.fabrani.com.br (sem "e")
+
+## Correção Pixel Facebook
+- [x] Remover evento Purchase da página /obrigado (evitar dados incorretos)

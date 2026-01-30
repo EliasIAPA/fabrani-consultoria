@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import TimePage from "./pages/TimePage";
 import ThankYouPage from "./pages/ThankYouPage";
+import ExpiredOfferPage from "./pages/ExpiredOfferPage";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -14,6 +15,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/time"} component={TimePage} />
+      <Route path={"/expirado"} component={ExpiredOfferPage} />
       <Route path={"/obrigado"} component={ThankYouPage} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}

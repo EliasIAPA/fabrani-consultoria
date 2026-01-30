@@ -485,6 +485,150 @@ export default function ExpiredOfferPage() {
         </section>
 
         {/* ========================================
+             8.5. PARCEIROS - PROVA SOCIAL COM IMAGENS E VÍDEOS
+        ========================================= */}
+        <section className="py-20 md:py-28 bg-background relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent pointer-events-none"></div>
+          
+          <div className="container relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-14">
+              <Badge variant="outline" className="border-primary text-primary px-5 py-2 mb-6 text-sm font-semibold">PARCEIROS FABRANI</Badge>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+                Quem Já Confia na <span className="text-primary">FABRANI</span>
+              </h2>
+              <p className="text-lg md:text-xl text-white/70">
+                Grandes nomes do mercado digital que validaram seus projetos com a FABRANI.
+              </p>
+            </div>
+
+            {/* Grid de Parceiros com Imagens */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16">
+              {/* Ícaro de Carvalho - O Novo Mercado */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src="/images/parceiros/onm.jpg" 
+                    alt="Ícaro de Carvalho - O Novo Mercado - Certificação FABRANI"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">O Novo Mercado - 2025</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">Certificação FABRANI</p>
+                  <p className="text-base text-white/70">Pós Graduação Ícaro de Carvalho / FABRANI - Projeto: Elias Evangelista</p>
+                </div>
+              </div>
+
+              {/* Escola do Dólar - Forbes */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src="/images/parceiros/escola-dolar.jpg" 
+                    alt="Escola do Dólar - Forbes Malta - Certificação FABRANI"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Escola do Dólar</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+20 mil alunos nos EUA</p>
+                  <p className="text-base text-white/70">Escola do Dólar - Certificação FABRANI - Capa Forbes Malta</p>
+                </div>
+              </div>
+
+              {/* Neil Patel */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src="/images/parceiros/neilpatel.jpg" 
+                    alt="Elias Evangelista e Neil Patel"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Neil Patel</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">Maior Especialista em SEO</p>
+                  <p className="text-base text-white/70">Elias Evangelista com Neil Patel - Referência mundial em Marketing Digital</p>
+                </div>
+              </div>
+
+              {/* Evento Outlier - 2 mil pessoas */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
+                    poster="/videos/outlier2025-poster.jpg"
+                  >
+                    <source src="/videos/outlier2025.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos.
+                  </video>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Evento Outlier</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+2 mil pessoas</p>
+                  <p className="text-base text-white/70">Certificação FABRANI - Tiago Finch / Ticto</p>
+                </div>
+              </div>
+
+              {/* Weburn */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card md:col-span-2 lg:col-span-1">
+                <div className="aspect-[4/3] overflow-hidden bg-[#2d2d2d] flex items-center justify-center">
+                  <img 
+                    src="/images/parceiros/weburn.png" 
+                    alt="Weburn - MBA FABRANI"
+                    className="w-3/4 h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Weburn</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+2,5 milhões de usuários no App</p>
+                  <p className="text-base text-white/70">Projeto MBA - FABRANI/Elias Evangelista</p>
+                </div>
+              </div>
+
+              {/* Evento Vendedor de Elite - 3 mil pessoas */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
+                    poster="/videos/vendedordeElite-poster.jpg"
+                  >
+                    <source src="/videos/vendedordeElite.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos.
+                  </video>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Vendedor de Elite</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+3 mil pessoas</p>
+                  <p className="text-base text-white/70">Certificação FABRANI</p>
+                </div>
+              </div>
+
+              {/* Renner Silva - Melhor Palestrante do Brasil */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
+                    poster="/videos/RennerSilva-poster.jpg"
+                  >
+                    <source src="/videos/RennerSilva.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos.
+                  </video>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Renner Silva</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">Melhor Palestrante do Brasil</p>
+                  <p className="text-base text-white/70">Projeto Validade e Certificado Elias Evangelista/FABRANI</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+
+        {/* ========================================
              9. COMO FUNCIONA — PROCESSO SIMPLES
         ========================================= */}
         <section className="py-24 bg-card relative">

@@ -745,7 +745,85 @@ export default function Home() {
         </section>
 
         {/* ========================================
-             13. FAQ
+             13. QUEM JÁ CONFIA NA FABRANI
+        ========================================= */}
+        <section className="py-24 bg-card relative">
+          <div className="container">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="section-title-bar text-3xl md:text-4xl font-bold mb-6">
+                Quem Já Confia na FABRANI
+              </h2>
+              <p className="text-muted-foreground">
+                Grandes nomes do mercado digital que validaram seus projetos com a FABRANI
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  name: "O Novo Mercado - 2025",
+                  stat: "300.000 alunos impactados",
+                  desc: "Desenvolvimento de Pós Graduação e Certificação do Evento \"O Novo Mercado\"",
+                  type: "image",
+                  image: "/images/novo-mercado.png"
+                },
+                {
+                  name: "Escola do Dólar",
+                  stat: "Forbes Malta",
+                  desc: "Certificação e validação de conteúdo educacional",
+                  type: "image",
+                  image: "/images/escola-dolar.png"
+                },
+                {
+                  name: "Neil Patel",
+                  stat: "SEO & Marketing",
+                  desc: "Desenvolvimento de certificações em marketing digital",
+                  type: "image",
+                  image: "/images/neil-patel.png"
+                },
+                {
+                  name: "Evento Outlier",
+                  stat: "+2 mil pessoas",
+                  desc: "Certificação do Evento Outlier 2",
+                  type: "video",
+                  video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                },
+                {
+                  name: "Weburn",
+                  stat: "+2,5 milhões de usuários",
+                  desc: "Desenvolvimento de MBA pela FABRANI",
+                  type: "image",
+                  image: "/images/weburn.png"
+                },
+                {
+                  name: "Vendedor de Elite",
+                  stat: "+3 mil pessoas",
+                  desc: "Certificação e desenvolvimento de conteúdo",
+                  type: "video",
+                  video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                },
+                {
+                  name: "Renner Silva",
+                  stat: "Melhor Palestrante do Brasil",
+                  desc: "Validação e certificação de projetos educacionais",
+                  type: "video",
+                  video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                }
+              ].map((partner, i) => (
+                <div key={i} className="group relative p-8 rounded-xl bg-background border border-border border-l-4 border-l-primary hover:border-primary hover:shadow-[0_12px_48px_rgba(0,255,135,0.2)] transition-all duration-500">
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-bold text-white mb-2">{partner.name}</h3>
+                    <p className="text-primary font-mono font-bold text-lg mb-4">{partner.stat}</p>
+                    <p className="text-sm text-muted-foreground">{partner.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ========================================
+             14. FAQ
         ========================================= */}
         <section className="py-24 bg-background relative">
           <div className="container">

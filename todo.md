@@ -148,3 +148,10 @@
 
 ## Correção Pixel Facebook
 - [x] Remover evento Purchase da página /obrigado (evitar dados incorretos)
+
+## Nova Seção: O que você só encontra na FABRANI
+- [x] Criar seção com 4 diferenciais + data do encontro 12/02/2026
+- [x] Adicionar à página principal (/)
+- [x] Adicionar à página /time
+- [x] Adicionar à página /expirado
+- [x] Testar e validar em todas as páginas

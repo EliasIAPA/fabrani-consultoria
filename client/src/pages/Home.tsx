@@ -652,7 +652,100 @@ export default function Home() {
         </section>
 
         {/* ========================================
-             12. QUALIFICAÇÃO — NÃO É PARA TODOS
+             12. O QUE VOCÊ SÓ ENCONTRA NA FABRANI
+        ========================================= */}
+        <section className="py-24 bg-background relative">
+          <div className="container">
+            <div className="max-w-5xl mx-auto">
+              {/* Header */}
+              <div className="text-center mb-16">
+                <Badge className="mb-4 bg-primary/20 text-primary border-primary/50">DIFERENCIAIS ÚNICOS</Badge>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                  O que você só encontra na <span className="text-primary">FABRANI</span>
+                </h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  Somos a única plataforma que oferece esses 4 diferenciais combinados para transformar seu negócio educacional
+                </p>
+              </div>
+
+              {/* Cards Grid */}
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                {[
+                  {
+                    number: "#1",
+                    title: "Transformamos seu curso em Extensão Universitária válida pelo MEC",
+                    desc: "Em até 7 dias, seu conteúdo se torna uma certificação institucional reconhecida nacionalmente",
+                    icon: Award
+                  },
+                  {
+                    number: "#2",
+                    title: "Menor valor de Certificação do Brasil",
+                    desc: "A partir de R$ 10,00 por aluno em plano de assinatura — o menor custo operacional do mercado",
+                    icon: TrendingUp
+                  },
+                  {
+                    number: "#3",
+                    title: "Venda seu curso em qualquer lugar",
+                    desc: "Liberdade total para escolher sua plataforma de pagamento — sem dependência de intermediários",
+                    icon: Users
+                  },
+                  {
+                    number: "#4",
+                    title: "Projeto Pedagógico criado ao vivo com você",
+                    desc: "Não é um template genérico — construímos seu projeto pedagógico personalizado durante a implementação",
+                    icon: Lightbulb
+                  },
+                ].map((item, i) => {
+                  const IconComponent = item.icon;
+                  return (
+                    <div key={i} className="group relative p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-[0_12px_48px_rgba(0,255,135,0.15)]">
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary/20 text-primary">
+                            <IconComponent size={24} />
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <div className="text-sm font-bold text-primary mb-2">{item.number}</div>
+                          <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
+                          <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* CTA Section */}
+              <div className="relative rounded-2xl bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 p-8 md:p-12 text-center">
+                <div className="mb-6">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-3">Encontro de Implantação</h3>
+                  <p className="text-lg text-muted-foreground mb-4">Nosso próximo encontro de implantação do projeto acontece em:</p>
+                  <div className="inline-block bg-primary/30 border border-primary/50 rounded-lg px-6 py-4 mb-6">
+                    <p className="text-2xl font-bold text-primary">📅 12 de Fevereiro de 2026</p>
+                    <p className="text-lg text-white mt-2">⏰ 19h (Online e Ao Vivo)</p>
+                  </div>
+                </div>
+                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                  Você receberá acesso ao encontro ao vivo onde implementaremos seu projeto pedagógico, esclareceremos dúvidas e validaremos toda a estrutura junto com você.
+                </p>
+                <Button 
+                  size="lg" 
+                  className="btn-neon h-auto text-black text-base sm:text-lg px-8 py-4" 
+                  asChild
+                  onClick={handleCTAClick}
+                >
+                  <a href="https://escale.fabrani.com.br/time">
+                    🔥 QUERO PARTICIPAR DO ENCONTRO
+                  </a>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ========================================
+             13. FAQ
         ========================================= */}
         <section className="py-24 bg-background relative">
           <div className="container">

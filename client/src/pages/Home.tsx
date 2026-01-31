@@ -848,7 +848,7 @@ export default function Home() {
                   <video 
                     controls 
                     className="w-full h-full object-cover"
-                    poster="/videos/vendedordeElite.mp4"
+                    poster="/videos/vendedordeElite-poster.jpg"
                   >
                     <source src="/videos/vendedordeElite.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeos.
@@ -867,7 +867,7 @@ export default function Home() {
                   <video 
                     controls 
                     className="w-full h-full object-cover"
-                    poster="/videos/RennerSilva.mp4"
+                    poster="/videos/RennerSilva-poster.jpg"
                   >
                     <source src="/videos/RennerSilva.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeos.

@@ -388,10 +388,10 @@ export default function TimePage() {
               {/* Evento Vendedor de Elite - 3 mil pessoas */}
               <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
                 <div className="aspect-[4/3] overflow-hidden">
-                   <video 
+                  <video 
                     controls 
                     className="w-full h-full object-cover"
-                    poster="/videos/vendedordeElite.mp4"
+                    poster="/videos/vendedordeElite-poster.jpg"
                   >
                     <source src="/videos/vendedordeElite.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeos.
@@ -410,7 +410,7 @@ export default function TimePage() {
                   <video 
                     controls 
                     className="w-full h-full object-cover"
-                    poster="/videos/RennerSilva.mp4"
+                    poster="/videos/RennerSilva-poster.jpg"
                   >
                     <source src="/videos/RennerSilva.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeos.

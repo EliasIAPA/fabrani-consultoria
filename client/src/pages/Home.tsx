@@ -758,66 +758,127 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "O Novo Mercado - 2025",
-                  stat: "300.000 alunos impactados",
-                  desc: "Desenvolvimento de Pós Graduação e Certificação do Evento \"O Novo Mercado\"",
-                  type: "image",
-                  image: "/images/novo-mercado.png"
-                },
-                {
-                  name: "Escola do Dólar",
-                  stat: "Forbes Malta",
-                  desc: "Certificação e validação de conteúdo educacional",
-                  type: "image",
-                  image: "/images/escola-dolar.png"
-                },
-                {
-                  name: "Neil Patel",
-                  stat: "SEO & Marketing",
-                  desc: "Desenvolvimento de certificações em marketing digital",
-                  type: "image",
-                  image: "/images/neil-patel.png"
-                },
-                {
-                  name: "Evento Outlier",
-                  stat: "+2 mil pessoas",
-                  desc: "Certificação do Evento Outlier 2",
-                  type: "video",
-                  video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
-                },
-                {
-                  name: "Weburn",
-                  stat: "+2,5 milhões de usuários",
-                  desc: "Desenvolvimento de MBA pela FABRANI",
-                  type: "image",
-                  image: "/images/weburn.png"
-                },
-                {
-                  name: "Vendedor de Elite",
-                  stat: "+3 mil pessoas",
-                  desc: "Certificação e desenvolvimento de conteúdo",
-                  type: "video",
-                  video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
-                },
-                {
-                  name: "Renner Silva",
-                  stat: "Melhor Palestrante do Brasil",
-                  desc: "Validação e certificação de projetos educacionais",
-                  type: "video",
-                  video: "https://www.youtube.com/embed/dQw4w9WgXcQ"
-                }
-              ].map((partner, i) => (
-                <div key={i} className="group relative p-8 rounded-xl bg-background border border-border border-l-4 border-l-primary hover:border-primary hover:shadow-[0_12px_48px_rgba(0,255,135,0.2)] transition-all duration-500">
-                  <div className="relative z-10">
-                    <h3 className="text-2xl font-bold text-white mb-2">{partner.name}</h3>
-                    <p className="text-primary font-mono font-bold text-lg mb-4">{partner.stat}</p>
-                    <p className="text-sm text-muted-foreground">{partner.desc}</p>
-                  </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {/* Ícaro de Carvalho - O Novo Mercado */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src="/images/parceiros/onm.jpg" 
+                    alt="Ícaro de Carvalho - O Novo Mercado - Certificação FABRANI"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-              ))}
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">O Novo Mercado - 2025</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">Certificação FABRANI</p>
+                  <p className="text-base text-white/70">Pós Graduação Ícaro de Carvalho / FABRANI - Projeto: Elias Evangelista</p>
+                </div>
+              </div>
+
+              {/* Escola do Dólar - Forbes */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src="/images/parceiros/escola-dolar.jpg" 
+                    alt="Escola do Dólar - Forbes Malta - Certificação FABRANI"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Escola do Dólar</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+20 mil alunos nos EUA</p>
+                  <p className="text-base text-white/70">Escola do Dólar - Certificação FABRANI - Capa Forbes Malta</p>
+                </div>
+              </div>
+
+              {/* Neil Patel */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src="/images/parceiros/neilpatel.jpg" 
+                    alt="Elias Evangelista e Neil Patel"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Neil Patel</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">Maior Especialista em SEO</p>
+                  <p className="text-base text-white/70">Elias Evangelista com Neil Patel - Referência mundial em Marketing Digital</p>
+                </div>
+              </div>
+
+              {/* Evento Outlier - 2 mil pessoas */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
+                    poster="/videos/outlier2025-poster.jpg"
+                  >
+                    <source src="/videos/outlier2025.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos.
+                  </video>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Evento Outlier</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+2 mil pessoas</p>
+                  <p className="text-base text-white/70">Certificação FABRANI - Tiago Finch / Ticto</p>
+                </div>
+              </div>
+
+              {/* Weburn */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden bg-[#2d2d2d] flex items-center justify-center">
+                  <img 
+                    src="/images/parceiros/weburn.png" 
+                    alt="Weburn - MBA FABRANI"
+                    className="w-3/4 h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Weburn</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+2,5 milhões de usuários</p>
+                  <p className="text-base text-white/70">Desenvolvimento de MBA pela FABRANI</p>
+                </div>
+              </div>
+
+              {/* Vendedor de Elite */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
+                    poster="/videos/vendedor-elite-poster.jpg"
+                  >
+                    <source src="/videos/vendedor-elite.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos.
+                  </video>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Vendedor de Elite</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+3 mil pessoas</p>
+                  <p className="text-base text-white/70">Certificação e desenvolvimento de conteúdo</p>
+                </div>
+              </div>
+
+              {/* Renner Silva */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
+                    poster="/videos/renner-silva-poster.jpg"
+                  >
+                    <source src="/videos/renner-silva.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos.
+                  </video>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Renner Silva</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">Melhor Palestrante do Brasil</p>
+                  <p className="text-base text-white/70">Validação e certificação de projetos educacionais</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -88,7 +88,7 @@ export function ExitPopup() {
     // Dispara evento do Pixel do Facebook
     if (typeof window !== "undefined" && (window as any).fbq) {
       (window as any).fbq("track", "InitiateCheckout", {
-        value: 47.0,
+        value: 97.0,
         currency: "BRL",
         content_name: "Consultoria Escola Digital Escalável - Exit Popup",
       });
@@ -149,8 +149,7 @@ export function ExitPopup() {
             <span className="text-white font-bold text-base sm:text-lg text-center">Consultoria Escola Digital Escalável</span>
           </div>
           <div className="text-center">
-            <span className="text-muted-foreground line-through text-base sm:text-lg">De R$ 97</span>
-            <span className="text-3xl sm:text-5xl font-black text-primary ml-3">R$ 47</span>
+            <span className="text-3xl sm:text-5xl font-black text-primary">R$ 97</span>
           </div>
         </div>
 
@@ -162,7 +161,7 @@ export function ExitPopup() {
           onClick={handleCTAClick}
         >
           <a 
-            href="https://payfast.greenn.com.br/154808/offer/SWDXVl" 
+            href="https://payfast.greenn.com.br/em29d57/offer/aiAmgX" 
             target="_blank" 
             rel="noopener noreferrer"
           >

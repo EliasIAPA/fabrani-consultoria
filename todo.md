@@ -155,3 +155,10 @@
 - [x] Adicionar à página /time
 - [x] Adicionar à página /expirado
 - [x] Testar e validar em todas as páginas
+
+## Atualização Exit Popup - Preço e URL Greenn
+- [x] Alterar preço do exit popup de R$ 47,00 para R$ 97,00
+- [x] Remover desconto visual ("De R$ 97")
+- [x] Atualizar URL de checkout para `https://payfast.greenn.com.br/em29d57/offer/aiAmgX`
+- [x] Atualizar evento Pixel Facebook (value: 97.0)
+- [x] Testar pop-up funcionando corretamente

@@ -638,7 +638,7 @@ export default function Home() {
                     asChild
                     onClick={handleCTAClick}
                   >
-                    <a href="https://escale.fabrani.com.br/time">
+                    <a href="https://payfast.greenn.com.br/em29d57/offer/aiAmgX">
                       🔥 QUERO ACESSAR AGORA
                     </a>
                   </Button>
@@ -735,7 +735,7 @@ export default function Home() {
                   asChild
                   onClick={handleCTAClick}
                 >
-                  <a href="https://escale.fabrani.com.br/time">
+                  <a href="https://payfast.greenn.com.br/em29d57/offer/aiAmgX">
                     🔥 QUERO PARTICIPAR DO ENCONTRO
                   </a>
                 </Button>
@@ -976,7 +976,7 @@ export default function Home() {
                   asChild
                   onClick={handleCTAClick}
                 >
-                  <a href="https://escale.fabrani.com.br/time">
+                  <a href="https://payfast.greenn.com.br/em29d57/offer/aiAmgX">
                     👉 QUERO ACESSAR
                   </a>
                 </Button>

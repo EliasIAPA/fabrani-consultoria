@@ -638,7 +638,7 @@ export default function TimePage() {
                     asChild
                     onClick={handleCTAClick}
                   >
-                    <a href="https://escale.fabrani.com.br/time">
+                    <a href="https://payfast.greenn.com.br/em29d57/offer/6sjOD7">
                       🔥 QUERO ACESSAR AGORA
                     </a>
                   </Button>
@@ -735,7 +735,7 @@ export default function TimePage() {
                   asChild
                   onClick={handleCTAClick}
                 >
-                  <a href="https://escale.fabrani.com.br/time">
+                  <a href="https://payfast.greenn.com.br/em29d57/offer/6sjOD7">
                     🔥 QUERO PARTICIPAR DO ENCONTRO
                   </a>
                 </Button>
@@ -976,7 +976,7 @@ export default function TimePage() {
                   asChild
                   onClick={handleCTAClick}
                 >
-                  <a href="https://escale.fabrani.com.br/time">
+                  <a href="https://payfast.greenn.com.br/em29d57/offer/6sjOD7">
                     👉 QUERO ACESSAR
                   </a>
                 </Button>

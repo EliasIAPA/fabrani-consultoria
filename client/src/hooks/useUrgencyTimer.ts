@@ -37,6 +37,11 @@ function isOnTimePage(): boolean {
   return window.location.pathname === EXPIRED_REDIRECT_PATH;
 }
 
+// Função para verificar se está na página /obrigado
+function isOnThankYouPage(): boolean {
+  return window.location.pathname === "/obrigado";
+}
+
 export function useUrgencyTimer(): UseUrgencyTimerReturn {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ minutes: 20, seconds: 0 });
   const [isExpired, setIsExpired] = useState(false);
@@ -44,8 +49,8 @@ export function useUrgencyTimer(): UseUrgencyTimerReturn {
 
   // Inicialização - verificar cookie e calcular tempo restante
   useEffect(() => {
-    // Se está na página /time, não precisa do timer
-    if (isOnTimePage()) {
+    // Se está na página /time ou /obrigado, não precisa do timer
+    if (isOnTimePage() || isOnThankYouPage()) {
       setHasVisitedBefore(true);
       setIsExpired(true);
       return;
@@ -84,7 +89,7 @@ export function useUrgencyTimer(): UseUrgencyTimerReturn {
 
   // Timer countdown
   useEffect(() => {
-    if (isExpired || isOnTimePage()) return;
+    if (isExpired || isOnTimePage() || isOnThankYouPage()) return;
 
     const timer = setInterval(() => {
       setTimeLeft((prev) => {

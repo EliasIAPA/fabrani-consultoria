@@ -39,7 +39,7 @@ export function Header({ price = "R$ 97", isTimePage = false }: HeaderProps) {
               </span>
               <span className="hidden md:inline text-white/80">|</span>
               <span className="text-white/90 font-medium text-sm md:text-base">
-                Novo valor: <strong className="text-white">R$ 147</strong>
+                Novo valor: <strong className="text-white">R$ 97</strong>
               </span>
             </>
           ) : (

@@ -162,3 +162,19 @@
 - [x] Atualizar URL de checkout para `https://payfast.greenn.com.br/em29d57/offer/aiAmgX`
 - [x] Atualizar evento Pixel Facebook (value: 97.0)
 - [x] Testar pop-up funcionando corretamente
+
+## Atualização Seção "Uma Condição Que Não Vai Se Repetir"
+- [x] Atualizar copy com 5 itens de valor (Projeto Pedagógico, Pack Logotipo MEC, Contrato FABRANI, Consultoria Coletiva, Estratégia Digital)
+- [x] Incluir preços individuais (R$1000, R$197, R$1000, R$497, sem preço)
+- [x] Atualizar total de R$ 2.700 (riscado) para R$ 97
+- [x] Adicionar frase "Em até 7 dias seu curso será uma extensão universitária"
+- [x] Atualizar em todas as páginas (/, /time, /expirado)
+- [x] Testar visualização em desktop e mobile
+
+## Correcao de Valores - R$ 147 para R$ 97
+- [x] Corrigir TimePage.tsx: Header price de R$ 147 para R$ 97
+- [x] Corrigir TimePage.tsx: Secao de preco de R$ 147 para R$ 97
+- [x] Corrigir Header.tsx: "Novo valor" de R$ 147 para R$ 97
+- [x] Testar pagina principal (/) - R$ 97 correto
+- [x] Testar pagina /time - R$ 97 correto
+- [x] Testar pagina /expirado - R$ 4.997 correto

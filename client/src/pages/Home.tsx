@@ -579,6 +579,37 @@ export default function Home() {
                   Uma Condição Que Não Vai Se Repetir
                 </h2>
 
+                {/* Veja tudo o que você vai receber */}
+                <div className="mb-12">
+                  <h3 className="text-2xl font-bold text-center text-white mb-8">Veja tudo o que você vai receber:</h3>
+                  
+                  <div className="space-y-4">
+                    {[
+                      { num: "#1", title: "Projeto Pedagógico do Curso ou Mentoria que transforma seu curso em Extensão Universitária", price: "R$1.000,00" },
+                      { num: "#2", title: "Pack de Logotipo do MEC para incluir no seu site, landingpage, redes sociais como Curso Válido pelo MEC como Extensão Universitária", price: "R$197,00" },
+                      { num: "#3", title: "Contrato com a Faculdade que permite uso e divulgação da Marca FABRANI Faculdade de Negócios Inovadores como sua parceira oficial", price: "R$1.000,00" },
+                      { num: "#4", title: "Consultoria Coletiva Ao Vivo para implantação do projeto e transformar seu curso ou mentoria em extensão no MEC - ao vivo", price: "R$497,00" },
+                      { num: "#5", title: "Estratégia digital - Caixa Rápido, explicada ao vivo - que poderá gerar R$10.000 a R$100.000 em vendas do seu curso ou mentoria", price: "R$ sem preço" },
+                    ].map((item, i) => (
+                      <div key={i} className="flex gap-4 p-4 bg-primary/5 border border-border border-l-4 border-l-primary rounded-lg">
+                        <div className="shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-black text-xs font-bold flex-none">
+                          <Check size={14} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm text-muted-foreground mb-1">{item.num}</p>
+                          <p className="text-white font-semibold text-sm mb-2">{item.title}</p>
+                          <p className="text-primary font-bold text-sm">{item.price}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-8 p-6 rounded-xl bg-primary/10 border border-primary/30 text-center">
+                    <p className="text-white font-bold mb-2">Em até 7 dias seu curso será uma extensão universitária.</p>
+                  </div>
+                </div>
+
+                {/* Preço e Benefícios */}
                 <div className="grid md:grid-cols-2 gap-12 mb-12">
                   <div className="space-y-6">
                     <div className="flex gap-4 p-4 bg-primary/5 border border-border border-l-4 border-l-primary rounded-lg">
@@ -613,6 +644,13 @@ export default function Home() {
                   </div>
 
                   <div className="space-y-6">
+                    <div className="text-center p-8 rounded-xl bg-red-500/10 border border-red-500/30">
+                      <p className="text-sm text-muted-foreground mb-2">TOTAL</p>
+                      <p className="text-2xl font-bold text-muted-foreground line-through mb-3">R$ 2.700,00</p>
+                      <p className="text-sm text-muted-foreground mb-4">De R$ 2.700,00</p>
+                      <p className="text-5xl font-black text-primary mb-2">por R$ 97</p>
+                    </div>
+
                     <div className="text-center p-8 rounded-xl bg-primary/10 border border-primary/30">
                       <p className="text-sm text-muted-foreground mb-2">VALOR ESPECIAL HOJE</p>
                       <p className="text-5xl font-black text-primary mb-2">R$ 97</p>
@@ -624,10 +662,6 @@ export default function Home() {
                       <p className="text-3xl font-bold text-red-400">R$ 4.997</p>
                       <p className="text-xs text-muted-foreground mt-2">Preço integral volta automaticamente</p>
                     </div>
-
-                    <p className="text-center text-sm text-muted-foreground italic">
-                      📌 Cada certificado emitido possui custo operacional de até R$10 por aluno — o menor valor do Brasil.
-                    </p>
                   </div>
                 </div>
 

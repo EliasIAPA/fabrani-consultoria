@@ -97,6 +97,41 @@ export default function Home() {
                   </div>
                 ))}
               </div>
+
+              {/* Benefícios do Logotipo MEC */}
+              <div className="mt-16 pt-16 border-t border-primary/20 space-y-8">
+                <div className="text-center space-y-4">
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                    Quando Você Tem Seu Curso ou Mentoria Válido com Extensão pelo MEC:
+                  </h3>
+                </div>
+                
+                <div className="grid md:grid-cols-3 gap-6">
+                  {[
+                    {
+                      num: "#1",
+                      title: "O logótipo do MEC em seu site é um AVALIADOR invisível",
+                      desc: "Que gera mais autoridade e menos dúvida sobre você ou seu curso"
+                    },
+                    {
+                      num: "#2",
+                      title: "O logótipo do MEC em seu site reduz o custo do Tráfego",
+                      desc: "E aumenta brutalmente suas vendas"
+                    },
+                    {
+                      num: "#3",
+                      title: "O logótipo do MEC em seu site permite uma parceria sólida",
+                      desc: "Entre você e uma faculdade - cooperação Técnica"
+                    },
+                  ].map((item, i) => (
+                    <div key={i} className="flex flex-col gap-4 p-6 rounded-xl bg-primary/10 border-2 border-primary hover:bg-primary/15 transition-all duration-300">
+                      <div className="text-primary font-black text-2xl">{item.num}</div>
+                      <h4 className="text-lg font-bold text-foreground">{item.title}</h4>
+                      <p className="text-foreground/80 text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>

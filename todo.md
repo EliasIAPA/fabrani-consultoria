@@ -178,3 +178,21 @@
 - [x] Testar pagina principal (/) - R$ 97 correto
 - [x] Testar pagina /time - R$ 97 correto
 - [x] Testar pagina /expirado - R$ 4.997 correto
+
+## Redesign - Paleta de Cores Premium (Branco + Roxo)
+- [x] Atualizar variaveis CSS em index.css: fundo branco, roxo premium, gradientes sutis
+- [x] Alterar background de dark (#0A0A0A) para branco (#FFFFFF ou #F8F8F8)
+- [x] Alterar foreground de branco para cinza escuro (#1A1A1A)
+- [x] Manter neon roxo como cor primaria (roxo premium #7C3AED ou #8B5CF6)
+- [x] Adicionar gradientes sutis nos backgrounds
+- [x] Atualizar sombras para estilo elegante (box-shadow mais suave)
+- [x] Testar legibilidade em todas as paginas
+- [x] Ajustar contraste de textos muted para fundo claro
+
+## Remocao de Secao Institucional do Rodape
+- [x] Remover seção "Institucional" do Footer
+- [x] Remover links: Sobre FABRANI, Corpo Docente, Parceiros, Responsabilidade Social, Trabalhe Conosco
+- [x] Remover seção "Transparência" do Footer
+- [x] Remover seção "Atendimento" do Footer
+- [x] Manter apenas: Contato, Redes Sociais, Selo MEC, Frase FABRANI
+- [x] Testar footer em todas as paginas

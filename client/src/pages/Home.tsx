@@ -36,17 +36,25 @@ export default function Home() {
             <div className="max-w-5xl mx-auto text-center space-y-10">
               
               {/* Pre-headline */}
-              <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm animate-fade-in-up">
-                <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
-                <span className="text-sm md:text-base font-semibold text-foreground/90 uppercase tracking-wide">
-                  Transforme seu Curso em Extensão Universitária Válida pelo MEC
-                </span>
+              <div className="inline-flex flex-col items-center gap-2 px-6 py-4 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm animate-fade-in-up">
+                <div className="flex items-center gap-3">
+                  <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+                  <span className="text-sm md:text-base font-semibold text-foreground/90 uppercase tracking-wide">
+                    Transforme seu Curso em Extensão Universitária Válida pelo MEC
+                  </span>
+                </div>
+                <div className="text-sm md:text-base font-bold text-primary flex items-center gap-2">
+                  <Clock size={16} /> 12/02/26 • 19h • Online e ao Vivo
+                </div>
+                <div className="text-xs md:text-sm text-foreground font-semibold">
+                  Implantação da sua Certificação MEC (Direito a 1 Curso ou Mentoria)
+                </div>
               </div>
 
               {/* Headline */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight animate-fade-in-up delay-100">
                 De Infoprodutor para{" "}
-                <span className="text-primary">Empresário de Educação Formal</span>
+                <span className="text-primary glow-text-neon">Empresário de Educação Formal</span>
               </h1>
 
               {/* Subheadline */}
@@ -570,13 +578,14 @@ export default function Home() {
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-[0.02]"></div>
           
           <div className="container max-w-5xl relative z-10">
-            <div className="glass-card rounded-3xl p-8 md:p-12 border-primary relative overflow-hidden bg-background">
-              {/* Glow Effect */}
-              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+            <div className="glass-card rounded-3xl p-8 md:p-12 border-2 border-primary relative overflow-hidden bg-primary/10">
+              {/* Neon Glow Effect */}
+              <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none animate-pulse"></div>
+              <div className="absolute inset-0 border-2 border-primary rounded-3xl opacity-50 animate-pulse"></div>
 
               <div className="relative z-10">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-primary">
-                  Uma Condição Que Não Vai Se Repetir
+                <h2 className="text-3xl md:text-5xl font-black text-center mb-12 text-primary glow-text-neon">
+                  ✨ Uma Condição Que Não Vai Se Repetir ✨
                 </h2>
 
                 {/* Veja tudo o que você vai receber */}
@@ -591,12 +600,12 @@ export default function Home() {
                       { num: "#4", title: "Consultoria Coletiva Ao Vivo para implantação do projeto e transformar seu curso ou mentoria em extensão no MEC - ao vivo", price: "R$497,00" },
                       { num: "#5", title: "Estratégia digital - Caixa Rápido, explicada ao vivo - que poderá gerar R$10.000 a R$100.000 em vendas do seu curso ou mentoria", price: "R$ sem preço" },
                     ].map((item, i) => (
-                      <div key={i} className="flex gap-4 p-4 bg-primary/5 border border-border border-l-4 border-l-primary rounded-lg">
+                      <div key={i} className="flex gap-4 p-4 bg-primary/10 border-2 border-primary rounded-lg hover:bg-primary/15 transition-all duration-300 transform hover:scale-105">
                         <div className="shrink-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center text-black text-xs font-bold flex-none">
                           <Check size={14} />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="text-sm text-muted-foreground mb-1">{item.num}</p>
+                          <p className="text-sm text-primary font-bold mb-1">{item.num}</p>
                           <p className="text-foreground font-semibold text-sm mb-2">{item.title}</p>
                           <p className="text-primary font-bold text-sm">{item.price}</p>
                         </div>

@@ -239,7 +239,7 @@
     @apply bg-primary/5 py-12 md:py-16 px-4;
   }
   
-  /* Neon Glows - Removed */
+  /* Neon Glows - Restored for Headline */
   .glow-text-green {
     /* text-shadow removed */
   }
@@ -250,6 +250,11 @@
   
   .glow-text-purple {
     /* text-shadow removed */
+  }
+  
+  .glow-text-neon {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.6), 0 0 20px rgba(212, 175, 55, 0.4), 0 0 30px rgba(212, 175, 55, 0.2);
+    animation: neon-glow 2s ease-in-out infinite;
   }
   
   .glow-box-green {
@@ -410,4 +415,14 @@
 
 .delay-500 {
   animation-delay: 0.5s;
+}
+
+
+@keyframes neon-glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.6), 0 0 20px rgba(212, 175, 55, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.8), 0 0 30px rgba(212, 175, 55, 0.6), 0 0 40px rgba(212, 175, 55, 0.4);
+  }
 }

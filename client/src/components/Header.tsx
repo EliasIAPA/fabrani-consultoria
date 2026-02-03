@@ -73,7 +73,7 @@ export function Header({ price = "R$ 97", isTimePage = false }: HeaderProps) {
             <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-primary text-black flex items-center justify-center font-black text-xl md:text-2xl shadow-[0_0_20px_rgba(0,255,135,0.5)] group-hover:shadow-[0_0_30px_rgba(0,255,135,0.7)] transition-all duration-300">
               F
             </div>
-            <span className="text-xl md:text-2xl font-black tracking-tight text-white group-hover:text-primary transition-colors">
+            <span className="text-xl md:text-2xl font-black tracking-tight text-primary group-hover:text-primary transition-colors">
               FABRANI
             </span>
           </a>
@@ -92,14 +92,14 @@ export function Header({ price = "R$ 97", isTimePage = false }: HeaderProps) {
                 </div>
               </div>
             ) : (
-              <div className="flex items-center gap-3 bg-card/80 border-2 border-primary/40 px-5 md:px-8 py-3 md:py-4 rounded-xl shadow-[0_0_30px_rgba(0,255,135,0.2)]">
-                <span className="text-sm md:text-base text-white/80 uppercase tracking-wider font-semibold hidden sm:inline-block">
+              <div className="flex items-center gap-3 bg-primary/15 border-2 border-primary px-5 md:px-8 py-3 md:py-4 rounded-xl shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+                <span className="text-sm md:text-base text-primary uppercase tracking-wider font-semibold hidden sm:inline-block">
                   Oferta encerra em:
                 </span>
                 <div className="flex items-center gap-2 font-mono text-primary font-black text-2xl md:text-4xl leading-none">
-                  <span className="w-[2.5ch] text-center bg-black/40 px-2 py-1.5 rounded-lg shadow-inner">{formatTime(timeLeft.minutes)}</span>
-                  <span className="text-white/60 text-xl md:text-2xl animate-pulse">:</span>
-                  <span className="w-[2.5ch] text-center bg-black/40 px-2 py-1.5 rounded-lg shadow-inner">{formatTime(timeLeft.seconds)}</span>
+                  <span className="w-[2.5ch] text-center bg-primary/30 px-2 py-1.5 rounded-lg shadow-inner">{formatTime(timeLeft.minutes)}</span>
+                  <span className="text-primary/60 text-xl md:text-2xl animate-pulse">:</span>
+                  <span className="w-[2.5ch] text-center bg-primary/30 px-2 py-1.5 rounded-lg shadow-inner text-primary">{formatTime(timeLeft.seconds)}</span>
                 </div>
               </div>
             )}

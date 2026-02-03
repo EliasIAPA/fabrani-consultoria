@@ -691,7 +691,7 @@ export default function TimePage() {
         <section className="py-24 bg-background relative">
           <div className="container">
             <div className="max-w-5xl mx-auto">
-              {/* Header */}
+              {/* Diferenciais Section */}
               <div className="text-center mb-16">
                 <Badge className="mb-4 bg-primary/20 text-primary border-primary/50">DIFERENCIAIS ÚNICOS</Badge>
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">

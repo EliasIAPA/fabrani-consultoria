@@ -62,7 +62,7 @@ export default function TimePage() {
                   asChild
                   onClick={handleCTAClick}
                 >
-                  <a href="#cta">
+                  <a href="https://payfast.greenn.com.br/em29d57/offer/aiAmgX" target="_blank" rel="noopener noreferrer">
                     🔥 QUERO ACESSAR
                   </a>
                 </Button>

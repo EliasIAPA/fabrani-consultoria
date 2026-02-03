@@ -91,55 +91,55 @@
 }
 
 .dark {
-  /* Premium Light Palette - Fundo Branco com Roxo Premium */
-  /* Primary: Roxo Premium (#8B5CF6) */
-  --primary: oklch(0.60 0.18 280); /* Roxo Premium */
+  /* Premium Light Palette - Fundo Branco com Dourado Premium */
+  /* Primary: Dourado Premium (#D4AF37) */
+  --primary: oklch(0.75 0.15 70); /* Dourado Premium */
   --primary-foreground: oklch(0.98 0 0); /* Branco */
-  --sidebar-primary: oklch(0.60 0.18 280);
+  --sidebar-primary: oklch(0.75 0.15 70);
   --sidebar-primary-foreground: oklch(0.98 0 0);
   
-  --background: oklch(0.98 0 0); /* Branco #FFFFFF */
-  --foreground: oklch(0.15 0.02 280); /* Cinza escuro #1A1A2E */
+  --background: oklch(1.0 0 0); /* Branco puro #FFFFFF */
+  --foreground: oklch(0.05 0.01 0); /* Preto #000000 */
   
-  --card: oklch(0.96 0.01 280); /* Cinza muito claro #F5F5F5 */
-  --card-foreground: oklch(0.15 0.02 280);
+  --card: oklch(0.98 0.01 70); /* Branco com toque dourado #FEFDF8 */
+  --card-foreground: oklch(0.05 0.01 0); /* Preto */
   
-  --popover: oklch(0.96 0.01 280);
-  --popover-foreground: oklch(0.15 0.02 280);
+  --popover: oklch(0.98 0.01 70);
+  --popover-foreground: oklch(0.05 0.01 0);
   
-  --secondary: oklch(0.92 0.01 280); /* Cinza claro #EBEBEB */
-  --secondary-foreground: oklch(0.15 0.02 280);
+  --secondary: oklch(0.95 0.01 70); /* Cinza muito claro #F2F2F2 */
+  --secondary-foreground: oklch(0.05 0.01 0);
   
-  --muted: oklch(0.92 0.01 280);
-  /* Muted text em cinza medio para legibilidade */
-  --muted-foreground: oklch(0.50 0.02 280); /* #808080 */
+  --muted: oklch(0.95 0.01 70);
+  /* Muted text em cinza escuro para legibilidade */
+  --muted-foreground: oklch(0.40 0.01 0); /* #666666 */
   
-  --accent: oklch(0.92 0.01 280);
-  --accent-foreground: oklch(0.15 0.02 280);
+  --accent: oklch(0.95 0.01 70);
+  --accent-foreground: oklch(0.05 0.01 0);
   
   --destructive: oklch(0.6 0.2 25);
   --destructive-foreground: oklch(0.98 0 0);
   
-  --border: oklch(0.88 0.02 280); /* Borda cinza suave #E0E0E0 */
-  --input: oklch(0.88 0.02 280);
-  --ring: oklch(0.60 0.18 280); /* Roxo Premium */
+  --border: oklch(0.90 0.01 70); /* Borda cinza clara #D9D9D9 */
+  --input: oklch(0.90 0.01 70);
+  --ring: oklch(0.75 0.15 70); /* Dourado Premium */
   
-  --chart-1: oklch(0.60 0.18 280); /* Roxo Premium */
-  --chart-2: oklch(0.70 0.15 270); /* Roxo mais claro */
-  --chart-3: oklch(0.50 0.20 290); /* Roxo mais escuro */
-  --chart-4: oklch(0.65 0.12 275); /* Roxo suave */
-  --chart-5: oklch(0.55 0.18 285); /* Roxo medio */
+  --chart-1: oklch(0.75 0.15 70); /* Dourado Premium */
+  --chart-2: oklch(0.80 0.12 65); /* Dourado mais claro */
+  --chart-3: oklch(0.70 0.18 75); /* Dourado mais escuro */
+  --chart-4: oklch(0.77 0.10 72); /* Dourado suave */
+  --chart-5: oklch(0.73 0.14 68); /* Dourado medio */
   
-  --sidebar: oklch(0.98 0 0);
-  --sidebar-foreground: oklch(0.15 0.02 280);
-  --sidebar-accent: oklch(0.92 0.01 280);
-  --sidebar-accent-foreground: oklch(0.15 0.02 280);
-  --sidebar-border: oklch(0.88 0.02 280);
-  --sidebar-ring: oklch(0.60 0.18 280);
+  --sidebar: oklch(1.0 0 0);
+  --sidebar-foreground: oklch(0.05 0.01 0);
+  --sidebar-accent: oklch(0.95 0.01 70);
+  --sidebar-accent-foreground: oklch(0.05 0.01 0);
+  --sidebar-border: oklch(0.90 0.01 70);
+  --sidebar-ring: oklch(0.75 0.15 70);
   
   --neon-cyan: oklch(0.75 0.18 190);
-  --neon-purple: oklch(0.60 0.18 280); /* Roxo Premium */
-  --deep-void: oklch(0.15 0.02 280);
+  --neon-purple: oklch(0.75 0.15 70); /* Dourado Premium */
+  --deep-void: oklch(0.05 0.01 0);
   --neon-green: oklch(0.87 0.29 142); /* Manter neon verde para destaque */
 }
 
@@ -172,7 +172,7 @@
   
   /* IMPROVED Typography - Larger, more readable */
   h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight font-bold mb-6 text-white;
+    @apply tracking-tight font-bold mb-6 text-foreground;
     line-height: 1.15;
   }
   
@@ -198,12 +198,12 @@
   p {
     @apply mb-5 leading-relaxed;
     font-size: 1.125rem; /* 18px base */
-    color: oklch(0.75 0 0); /* Lighter gray for better contrast */
+    color: oklch(0.30 0.01 0); /* Cinza escuro para legibilidade */
   }
   
-  /* Strong text should be white for emphasis */
+  /* Strong text should be preto for emphasis */
   strong, b {
-    @apply text-white font-semibold;
+    @apply text-foreground font-semibold;
   }
   
   /* Lists more readable */
@@ -214,7 +214,7 @@
   li {
     font-size: 1.0625rem; /* 17px */
     line-height: 1.6;
-    color: oklch(0.72 0 0);
+    color: oklch(0.30 0.01 0); /* Cinza escuro */
   }
   
   /* Glassmorphism utilities */
@@ -321,7 +321,7 @@
   }
   
   .badge-text {
-    @apply text-sm md:text-base text-white/80 uppercase tracking-wider text-center font-medium;
+    @apply text-sm md:text-base text-foreground/70 uppercase tracking-wider text-center font-medium;
   }
   
   /* IMPROVED: Card styles for better readability */
@@ -330,18 +330,18 @@
   }
   
   .content-card h3 {
-    @apply text-xl md:text-2xl font-bold text-white mb-4;
+    @apply text-xl md:text-2xl font-bold text-foreground mb-4;
   }
   
   .content-card p {
     @apply text-base md:text-lg leading-relaxed;
-    color: oklch(0.75 0 0);
+    color: oklch(0.30 0.01 0);
   }
   
   /* Improved list item styling */
   .feature-list li {
     @apply flex items-start gap-3 text-base md:text-lg py-2;
-    color: oklch(0.8 0 0);
+    color: oklch(0.30 0.01 0);
   }
   
   /* Blockquote styling */
@@ -353,12 +353,12 @@
   
   /* FAQ Accordion improvements */
   .faq-trigger {
-    @apply text-lg md:text-xl font-semibold text-white py-5;
+    @apply text-lg md:text-xl font-semibold text-foreground py-5;
   }
   
   .faq-content {
     @apply text-base md:text-lg leading-relaxed pb-5;
-    color: oklch(0.75 0 0);
+    color: oklch(0.30 0.01 0);
   }
 }
 

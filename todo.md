@@ -196,3 +196,12 @@
 - [x] Remover seção "Atendimento" do Footer
 - [x] Manter apenas: Contato, Redes Sociais, Selo MEC, Frase FABRANI
 - [x] Testar footer em todas as paginas
+
+## Correcao de Paleta - Fundo Branco, Texto Preto, Dourado Premium
+- [x] Atualizar variaveis CSS: fundo branco puro (#FFFFFF), texto preto (#000000)
+- [x] Alterar cor primaria para dourado premium (#D4AF37 / oklch(0.75 0.15 70))
+- [x] Atualizar cores de texto em h1-h6 para preto (text-foreground)
+- [x] Atualizar cores de paragrafos para cinza escuro (oklch(0.30 0.01 0))
+- [x] Atualizar cores em badges, cards, FAQ para preto/cinza
+- [x] Testar legibilidade em desenvolvimento - VALIDADO
+- [x] Confirmar contraste alto e design premium elegante

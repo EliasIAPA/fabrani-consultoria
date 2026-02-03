@@ -43,9 +43,9 @@ export default function ThankYouPage() {
             <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-black font-black text-xl group-hover:scale-105 transition-transform">
               F
             </div>
-            <span className="text-xl font-bold text-white tracking-tight">FABRANI</span>
+            <span className="text-xl font-bold text-foreground tracking-tight">FABRANI</span>
           </Link>
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30">
+          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30">
             <CheckCircle2 className="w-5 h-5 text-primary" />
             <span className="text-sm font-bold text-primary">COMPRA CONFIRMADA</span>
           </div>
@@ -74,19 +74,19 @@ export default function ThankYouPage() {
               </h1>
 
               {/* Subheadline */}
-              <p className="text-xl md:text-2xl text-white font-semibold">
+              <p className="text-xl md:text-2xl text-foreground font-semibold">
                 Sua vaga está garantida. Agora, faltam <span className="text-primary">2 passos simples</span> para você ter sua 1 hora com o Founder.
               </p>
 
               <div className="bg-card border border-primary/30 rounded-2xl p-8 max-w-2xl mx-auto">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  <strong className="text-white">Parabéns por tomar a decisão certa.</strong> Enquanto outros 50 infoprodutores continuam testando no escuro, você escolheu clareza. Sua consultoria foi confirmada. Nos próximos dias, você terá <strong className="text-white">1 hora de diagnóstico cirúrgico</strong> com quem validou 150 projetos em 2025 e R$ 2 bilhões em negócios educacionais.
+                  <strong className="text-foreground">Parabéns por tomar a decisão certa.</strong> Enquanto outros 50 infoprodutores continuam testando no escuro, você escolheu clareza. Sua consultoria foi confirmada. Nos próximos dias, você terá <strong className="text-foreground">1 hora de diagnóstico cirúrgico</strong> com quem validou 150 projetos em 2025 e R$ 2 bilhões em negócios educacionais.
                 </p>
               </div>
 
               {/* Alert Box */}
               <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6 max-w-2xl mx-auto">
-                <p className="text-lg font-bold text-white flex items-center justify-center gap-2">
+                <p className="text-lg font-bold text-foreground flex items-center justify-center gap-2">
                   <AlertTriangle className="text-red-500" />
                   Mas antes da consultoria acontecer, você precisa completar 2 ações obrigatórias:
                 </p>
@@ -112,21 +112,21 @@ export default function ThankYouPage() {
               <div className="flex items-start gap-4 p-6 bg-background rounded-xl border border-border">
                 <div className="shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-black font-black text-xl">1</div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">PRIMEIRO: Preencher o formulário estratégico</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">PRIMEIRO: Preencher o formulário estratégico</h3>
                   <p className="text-muted-foreground">(5-10 minutos)</p>
                 </div>
               </div>
               <div className="flex items-start gap-4 p-6 bg-background rounded-xl border border-border">
                 <div className="shrink-0 w-12 h-12 rounded-full bg-primary flex items-center justify-center text-black font-black text-xl">2</div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-2">DEPOIS: Agendar sua consultoria</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-2">DEPOIS: Agendar sua consultoria</h3>
                   <p className="text-muted-foreground">(escolher data 48h após enviar o formulário)</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6 text-center">
-              <p className="text-lg font-bold text-white">
+              <p className="text-lg font-bold text-foreground">
                 <AlertTriangle className="inline-block mr-2 text-red-500" />
                 Não pule o passo 1. Sem o formulário preenchido, a consultoria não acontece.
               </p>
@@ -149,13 +149,13 @@ export default function ThankYouPage() {
                 </div>
                 <div>
                   <p className="text-primary font-mono text-sm uppercase tracking-wider">Passo 1</p>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white">Preencha o Formulário Estratégico AGORA</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground">Preencha o Formulário Estratégico AGORA</h2>
                 </div>
               </div>
 
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Por Que Este Formulário é Obrigatório?</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-4">Por Que Este Formulário é Obrigatório?</h3>
                   <p className="text-lg text-muted-foreground mb-4">Ele permite que o Founder da FABRANI:</p>
                   <ul className="space-y-3">
                     {[
@@ -164,7 +164,7 @@ export default function ThankYouPage() {
                       "Prepare um diagnóstico personalizado para você",
                       "Aproveite 100% da 1 hora (sem desperdiçar tempo com contexto básico)"
                     ].map((item, i) => (
-                      <li key={i} className="flex items-start gap-3 text-lg text-white">
+                      <li key={i} className="flex items-start gap-3 text-lg text-foreground">
                         <Check className="text-primary shrink-0 mt-1" />
                         <span>{item}</span>
                       </li>
@@ -173,7 +173,7 @@ export default function ThankYouPage() {
                 </div>
 
                 <div className="bg-background rounded-xl p-6 border border-border">
-                  <h3 className="text-xl font-bold text-white mb-4">O Que Você Vai Preencher:</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-4">O Que Você Vai Preencher:</h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li>• Sobre seu negócio atual (nicho, produto, faturamento)</li>
                     <li>• Principais desafios e gargalos</li>
@@ -194,7 +194,7 @@ export default function ThankYouPage() {
                 </Button>
 
                 <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6 text-center">
-                  <p className="text-lg font-bold text-white">
+                  <p className="text-lg font-bold text-foreground">
                     <AlertTriangle className="inline-block mr-2 text-red-500" />
                     NÃO PULE PARA O PASSO 2 SEM PREENCHER ESTE FORMULÁRIO
                   </p>
@@ -220,7 +220,7 @@ export default function ThankYouPage() {
                 </div>
                 <div>
                   <p className="text-primary font-mono text-sm uppercase tracking-wider">Passo 2</p>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white">Agende Sua Consultoria</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold text-foreground">Agende Sua Consultoria</h2>
                   <p className="text-muted-foreground">(APÓS Preencher o Formulário)</p>
                 </div>
               </div>
@@ -228,31 +228,31 @@ export default function ThankYouPage() {
               <div className="space-y-8">
                 {/* Regra 48h */}
                 <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                  <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
                     <AlertTriangle className="text-red-500" />
                     REGRA IMPORTANTE DE AGENDAMENTO:
                   </h3>
-                  <p className="text-lg text-white mb-4">
+                  <p className="text-lg text-foreground mb-4">
                     Você só pode agendar sua consultoria para uma data que seja, <strong>NO MÍNIMO, 48 horas (2 dias) APÓS</strong> você enviar o formulário.
                   </p>
                   <p className="text-muted-foreground">
-                    <strong className="text-white">Por quê?</strong> Porque o Founder precisa de 48 horas para: analisar suas respostas do formulário, preparar seu diagnóstico personalizado e estruturar a consultoria focada nos SEUS gargalos.
+                    <strong className="text-foreground">Por quê?</strong> Porque o Founder precisa de 48 horas para: analisar suas respostas do formulário, preparar seu diagnóstico personalizado e estruturar a consultoria focada nos SEUS gargalos.
                   </p>
                 </div>
 
                 {/* Exemplos */}
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-primary/10 border border-primary/30 rounded-xl p-6">
-                    <h4 className="font-bold text-white mb-3 flex items-center gap-2">
+                  <div className="bg-primary/20 border border-primary/30 rounded-xl p-6">
+                    <h4 className="font-bold text-foreground mb-3 flex items-center gap-2">
                       <Check className="text-primary" /> CORRETO:
                     </h4>
                     <p className="text-muted-foreground">
                       Você preencheu o formulário hoje (segunda-feira às 14h)<br/>
-                      → Pode agendar para <strong className="text-white">quarta-feira</strong> (ou depois) em qualquer horário disponível
+                      → Pode agendar para <strong className="text-foreground">quarta-feira</strong> (ou depois) em qualquer horário disponível
                     </p>
                   </div>
                   <div className="bg-red-500/10 border border-red-500/30 rounded-xl p-6">
-                    <h4 className="font-bold text-white mb-3 flex items-center gap-2">
+                    <h4 className="font-bold text-foreground mb-3 flex items-center gap-2">
                       <AlertTriangle className="text-red-500" /> ERRADO:
                     </h4>
                     <p className="text-muted-foreground">
@@ -264,7 +264,7 @@ export default function ThankYouPage() {
 
                 {/* Como funciona */}
                 <div className="bg-card rounded-xl p-6 border border-border">
-                  <h3 className="text-xl font-bold text-white mb-4">Como Funciona o Agendamento:</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-4">Como Funciona o Agendamento:</h3>
                   <ol className="space-y-2 text-muted-foreground list-decimal list-inside">
                     <li>Clique no botão abaixo</li>
                     <li>Escolha uma data 48h após você ter enviado o formulário</li>
@@ -326,12 +326,12 @@ export default function ThankYouPage() {
                 }
               ].map((item, i) => (
                 <div key={i} className="flex gap-6 p-6 bg-card rounded-xl border border-border hover:border-primary/50 transition-colors">
-                  <div className="shrink-0 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <div className="shrink-0 w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center text-primary">
                     {item.icon}
                   </div>
                   <div className="flex-1">
                     <p className="text-primary font-mono text-sm uppercase tracking-wider mb-1">{item.step}</p>
-                    <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                    <h3 className="text-xl font-bold text-foreground mb-2">{item.title}</h3>
                     {item.link && (
                       <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm break-all mb-2 block">
                         {item.link}
@@ -360,36 +360,36 @@ export default function ThankYouPage() {
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <div className="bg-background rounded-xl p-6 border border-border">
-                <h3 className="text-xl font-bold text-white mb-4">Como Será a Consultoria:</h3>
+                <h3 className="text-xl font-bold text-foreground mb-4">Como Será a Consultoria:</h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-3">
                     <Video className="text-primary shrink-0 mt-1" size={20} />
-                    <span><strong className="text-white">Formato:</strong> Videochamada online (Zoom ou Google Meet)</span>
+                    <span><strong className="text-foreground">Formato:</strong> Videochamada online (Zoom ou Google Meet)</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Clock className="text-primary shrink-0 mt-1" size={20} />
-                    <span><strong className="text-white">Duração:</strong> 1 hora completa dedicada ao SEU negócio</span>
+                    <span><strong className="text-foreground">Duração:</strong> 1 hora completa dedicada ao SEU negócio</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Target className="text-primary shrink-0 mt-1" size={20} />
-                    <span><strong className="text-white">Com quem:</strong> Founder e Diretor da FABRANI (não é com a equipe)</span>
+                    <span><strong className="text-foreground">Com quem:</strong> Founder e Diretor da FABRANI (não é com a equipe)</span>
                   </li>
                 </ul>
               </div>
 
               <div className="bg-background rounded-xl p-6 border border-border">
-                <h3 className="text-xl font-bold text-white mb-4">O Que Vai Acontecer:</h3>
+                <h3 className="text-xl font-bold text-foreground mb-4">O Que Vai Acontecer:</h3>
                 <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li><strong className="text-white">Minutos 0-10:</strong> Contexto rápido do seu negócio (ele já leu seu formulário)</li>
-                  <li><strong className="text-white">Minutos 10-40:</strong> Diagnóstico cirúrgico dos seus gargalos + validação do modelo</li>
-                  <li><strong className="text-white">Minutos 40-55:</strong> Plano de ação priorizado (o que fazer primeiro, segundo, terceiro)</li>
-                  <li><strong className="text-white">Minutos 55-60:</strong> Avaliação para Aliança FABRANI (se você está pronto ou o que falta)</li>
+                  <li><strong className="text-foreground">Minutos 0-10:</strong> Contexto rápido do seu negócio (ele já leu seu formulário)</li>
+                  <li><strong className="text-foreground">Minutos 10-40:</strong> Diagnóstico cirúrgico dos seus gargalos + validação do modelo</li>
+                  <li><strong className="text-foreground">Minutos 40-55:</strong> Plano de ação priorizado (o que fazer primeiro, segundo, terceiro)</li>
+                  <li><strong className="text-foreground">Minutos 55-60:</strong> Avaliação para Aliança FABRANI (se você está pronto ou o que falta)</li>
                 </ul>
               </div>
             </div>
 
-            <div className="bg-primary/10 border border-primary/30 rounded-xl p-8">
-              <h3 className="text-xl font-bold text-white mb-4 text-center">O Que Você Vai Sair Com:</h3>
+            <div className="bg-primary/20 border border-primary/30 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-foreground mb-4 text-center">O Que Você Vai Sair Com:</h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 {[
                   "Clareza total do que está impedindo você de escalar",
@@ -397,7 +397,7 @@ export default function ThankYouPage() {
                   "Próximos passos priorizados (onde investir primeiro)",
                   "Resposta clara: você está pronto para Aliança FABRANI ou o que falta"
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 text-white">
+                  <div key={i} className="flex items-start gap-3 text-foreground">
                     <Check className="text-primary shrink-0 mt-1" />
                     <span>{item}</span>
                   </div>
@@ -482,13 +482,13 @@ export default function ThankYouPage() {
           <div className="container max-w-3xl text-center">
             <div className="bg-[#25D366]/10 border border-[#25D366]/30 rounded-2xl p-8">
               <MessageCircle className="w-16 h-16 text-[#25D366] mx-auto mb-6" />
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                 Tem Alguma Dúvida? Fale Direto no WhatsApp
               </h2>
               <p className="text-muted-foreground mb-6">
                 Se você tiver qualquer dúvida sobre: preenchimento do formulário, agendamento da consultoria, confirmação de pagamento, problemas técnicos ou reagendamento.
               </p>
-              <Button size="lg" className="bg-[#25D366] hover:bg-[#20BD5A] text-white h-16 text-lg px-8" asChild>
+              <Button size="lg" className="bg-[#25D366] hover:bg-[#20BD5A] text-foreground h-16 text-lg px-8" asChild>
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                   💬 FALAR NO WHATSAPP - (16) 99711-7597
                 </a>
@@ -514,15 +514,15 @@ export default function ThankYouPage() {
               
               <div className="bg-card border border-border rounded-2xl p-8 text-left max-w-2xl mx-auto">
                 <p className="text-lg text-muted-foreground mb-6">
-                  Você acabou de dar um passo que <strong className="text-white">95% dos infoprodutores nunca dão</strong>: investir em clareza com quem realmente sabe.
+                  Você acabou de dar um passo que <strong className="text-foreground">95% dos infoprodutores nunca dão</strong>: investir em clareza com quem realmente sabe.
                 </p>
-                <p className="text-lg text-white font-bold mb-4">
+                <p className="text-lg text-foreground font-bold mb-4">
                   Mas o R$ 97 não te entrega resultados. O que te entrega resultados é:
                 </p>
                 <ol className="space-y-2 text-muted-foreground list-decimal list-inside mb-6">
-                  <li>Você preencher o formulário <strong className="text-white">agora</strong> (não deixar para depois)</li>
-                  <li>Você agendar a consultoria <strong className="text-white">corretamente</strong> (48h após o formulário)</li>
-                  <li>Você <strong className="text-white">executar</strong> o que o Founder vai te mostrar na call</li>
+                  <li>Você preencher o formulário <strong className="text-foreground">agora</strong> (não deixar para depois)</li>
+                  <li>Você agendar a consultoria <strong className="text-foreground">corretamente</strong> (48h após o formulário)</li>
+                  <li>Você <strong className="text-foreground">executar</strong> o que o Founder vai te mostrar na call</li>
                 </ol>
                 <p className="text-muted-foreground">
                   A maioria das pessoas que compram consultorias: não preenche o formulário direito, agenda de qualquer jeito, não aparece na consultoria, ou aparece e não executa nada depois.

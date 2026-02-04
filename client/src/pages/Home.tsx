@@ -715,17 +715,26 @@ export default function Home() {
                     Vagas limitadas • Implementação ao vivo em data única
                   </p>
                 </div>
-
-                {/* Headline - O MAIOR AVALISTA */}
-                <div className="text-center mb-16 mt-24">
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
-                    O MAIOR AVALISTA DO MERCADO DIGITAL
-                  </h2>
-                </div>
-
-                {/* YouTube Video with Custom Controls */}
-                <CustomYouTubePlayer videoId="N4Hl1NsRtwg" title="O AVALIADOR INVISÍVEL DO MERCADO DE CURSOS ONLINE" />
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ========================================
+             2. O MAIOR AVALISTA DO MERCADO DIGITAL
+        ========================================= */}
+        <section className="py-24 bg-background relative">
+          <div className="container">
+            <div className="max-w-5xl mx-auto">
+              {/* Headline - O MAIOR AVALISTA */}
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
+                  O MAIOR AVALISTA DO MERCADO DIGITAL
+                </h2>
+              </div>
+
+              {/* YouTube Video with Custom Controls */}
+              <CustomYouTubePlayer videoId="N4Hl1NsRtwg" title="O AVALIADOR INVISÍVEL DO MERCADO DE CURSOS ONLINE" />
             </div>
           </div>
         </section>

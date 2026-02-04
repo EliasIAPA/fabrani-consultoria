@@ -120,65 +120,60 @@ export function CustomYouTubePlayer({ videoId, title }: CustomYouTubePlayerProps
           }}
         />
 
-        {/* Overlay to hide YouTube UI elements */}
+        {/* Overlay to hide YouTube UI elements - positioned in bottom-right corner */}
         <div
           ref={overlayRef}
           style={{
             position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.4)',
+            bottom: '20px',
+            right: '20px',
+            width: '120px',
+            height: 'auto',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
             zIndex: 5,
             display: 'flex',
+            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
+            gap: '8px',
+            padding: '12px',
+            borderRadius: '8px',
             pointerEvents: 'auto',
+            backdropFilter: 'blur(4px)',
           }}
         >
-          {/* FABRANI Logo */}
+          {/* F Logo */}
           <div
             style={{
-              textAlign: 'center',
+              width: '60px',
+              height: '60px',
+              backgroundColor: '#EF4444',
+              borderRadius: '6px',
               display: 'flex',
-              flexDirection: 'column',
               alignItems: 'center',
-              gap: '0.5rem',
+              justifyContent: 'center',
+              fontSize: '32px',
+              fontWeight: 'bold',
+              color: '#D4AF37',
+              fontFamily: "'Montserrat', sans-serif",
+              boxShadow: '0 4px 12px rgba(239, 68, 68, 0.4)',
             }}
           >
-            {/* F Logo */}
-            <div
-              style={{
-                width: '80px',
-                height: '80px',
-                backgroundColor: '#EF4444',
-                borderRadius: '8px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '48px',
-                fontWeight: 'bold',
-                color: '#D4AF37',
-                fontFamily: "'Montserrat', sans-serif",
-                boxShadow: '0 4px 20px rgba(239, 68, 68, 0.4)',
-              }}
-            >
-              F
-            </div>
-            {/* FABRANI Text */}
-            <div
-              style={{
-                color: '#D4AF37',
-                fontSize: '18px',
-                fontWeight: 'bold',
-                fontFamily: "'Montserrat', sans-serif",
-                letterSpacing: '2px',
-                textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
-              }}
-            >
-              FABRANI
-            </div>
+            F
+          </div>
+          {/* FABRANI Text */}
+          <div
+            style={{
+              color: '#D4AF37',
+              fontSize: '11px',
+              fontWeight: 'bold',
+              fontFamily: "'Montserrat', sans-serif",
+              letterSpacing: '1px',
+              textShadow: '0 2px 4px rgba(0, 0, 0, 0.5)',
+              textAlign: 'center',
+            }}
+          >
+            FABRANI
           </div>
         </div>
 

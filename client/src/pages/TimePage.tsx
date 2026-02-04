@@ -651,17 +651,7 @@ export default function TimePage() {
                       <p className="text-5xl font-black text-primary mb-2">por R$ 97</p>
                     </div>
 
-                    <div className="text-center p-8 rounded-xl bg-primary/20 border border-primary/30">
-                      <p className="text-sm text-muted-foreground mb-2">VALOR ESPECIAL HOJE</p>
-                      <p className="text-5xl font-black text-primary mb-2">R$ 97</p>
-                      <p className="text-sm text-muted-foreground">Implementação + Certificação</p>
-                    </div>
 
-                    <div className="text-center p-6 rounded-xl bg-red-500/10 border border-red-500/30">
-                      <p className="text-sm text-muted-foreground mb-2">APÓS O ENCERRAMENTO</p>
-                      <p className="text-3xl font-bold text-red-400">R$ 4.997</p>
-                      <p className="text-xs text-muted-foreground mt-2">Preço integral volta automaticamente</p>
-                    </div>
                   </div>
                 </div>
 

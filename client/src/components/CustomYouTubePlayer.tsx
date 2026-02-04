@@ -15,7 +15,9 @@ declare global {
 export function CustomYouTubePlayer({ videoId, title }: CustomYouTubePlayerProps) {
   const playerRef = useRef<any>(null);
   const progressBarRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef<HTMLDivElement>(null);
   const [player, setPlayer] = useState<any>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
   const updateIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
@@ -63,8 +65,20 @@ export function CustomYouTubePlayer({ videoId, title }: CustomYouTubePlayerProps
 
   const onPlayerStateChange = (event: any) => {
     if (event.data === (window as any).YT.PlayerState.PLAYING) {
+      setIsPlaying(true);
+      // Hide overlay when playing
+      if (overlayRef.current) {
+        overlayRef.current.style.opacity = '0';
+        overlayRef.current.style.pointerEvents = 'none';
+      }
       startProgressUpdate();
     } else {
+      setIsPlaying(false);
+      // Show overlay when paused/stopped
+      if (overlayRef.current) {
+        overlayRef.current.style.opacity = '1';
+        overlayRef.current.style.pointerEvents = 'auto';
+      }
       if (updateIntervalRef.current) {
         clearInterval(updateIntervalRef.current);
       }
@@ -106,6 +120,42 @@ export function CustomYouTubePlayer({ videoId, title }: CustomYouTubePlayerProps
             height: '100%',
           }}
         />
+
+        {/* Overlay to hide YouTube UI elements */}
+        <div
+          ref={overlayRef}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            zIndex: 5,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            opacity: 1,
+            pointerEvents: 'auto',
+            transition: 'opacity 0.3s ease-in-out',
+          }}
+        >
+          {/* FABRANI Logo/Text */}
+          <div
+            style={{
+              textAlign: 'center',
+              color: '#D4AF37',
+              fontSize: '2rem',
+              fontWeight: 'bold',
+              fontFamily: "'Montserrat', sans-serif",
+              letterSpacing: '2px',
+              textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
+            }}
+          >
+            <div style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>F</div>
+            <div style={{ fontSize: '0.9rem', letterSpacing: '3px' }}>FABRANI</div>
+          </div>
+        </div>
 
         {/* Custom Progress Bar */}
         <div

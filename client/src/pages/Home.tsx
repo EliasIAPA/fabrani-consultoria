@@ -721,7 +721,7 @@ export default function Home() {
         </section>
 
         {/* ========================================
-             2. MEC - O AVALIADOR INVISÍVEL
+             2. O MAIOR AVALISTA DO MERCADO DIGITAL
         ========================================= */}
         <section className="py-24 bg-background relative">
           <div className="container">
@@ -729,7 +729,7 @@ export default function Home() {
               {/* Headline */}
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
-                  MEC O AVALIADOR INVISÍVEL DE CURSOS ONLINE
+                  O MAIOR AVALISTA DO MERCADO DIGITAL
                 </h2>
               </div>
 

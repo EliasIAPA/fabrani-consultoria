@@ -13,6 +13,7 @@ declare global {
 }
 
 export function CustomYouTubePlayer({ videoId, title }: CustomYouTubePlayerProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<any>(null);
   const progressBarRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -31,8 +32,8 @@ export function CustomYouTubePlayer({ videoId, title }: CustomYouTubePlayerProps
 
     // Define callback when API is ready
     (window as any).onYouTubeIframeAPIReady = () => {
-      if (playerRef.current) {
-        const newPlayer = new (window as any).YT.Player(playerRef.current, {
+      if (containerRef.current) {
+        const newPlayer = new (window as any).YT.Player(containerRef.current, {
           videoId: videoId,
           playerVars: {
             controls: 0,
@@ -68,16 +69,14 @@ export function CustomYouTubePlayer({ videoId, title }: CustomYouTubePlayerProps
       setIsPlaying(true);
       // Hide overlay when playing
       if (overlayRef.current) {
-        overlayRef.current.style.opacity = '0';
-        overlayRef.current.style.pointerEvents = 'none';
+        overlayRef.current.style.display = 'none';
       }
       startProgressUpdate();
     } else {
       setIsPlaying(false);
       // Show overlay when paused/stopped
       if (overlayRef.current) {
-        overlayRef.current.style.opacity = '1';
-        overlayRef.current.style.pointerEvents = 'auto';
+        overlayRef.current.style.display = 'flex';
       }
       if (updateIntervalRef.current) {
         clearInterval(updateIntervalRef.current);
@@ -112,9 +111,9 @@ export function CustomYouTubePlayer({ videoId, title }: CustomYouTubePlayerProps
         className="w-full max-w-4xl rounded-xl overflow-hidden border border-primary/30 shadow-lg relative"
         style={{ aspectRatio: '16/9' }}
       >
-        {/* YouTube Player */}
+        {/* YouTube Player Container */}
         <div
-          ref={playerRef}
+          ref={containerRef}
           style={{
             width: '100%',
             height: '100%',
@@ -130,30 +129,56 @@ export function CustomYouTubePlayer({ videoId, title }: CustomYouTubePlayerProps
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.3)',
+            backgroundColor: 'rgba(0, 0, 0, 0.4)',
             zIndex: 5,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            opacity: 1,
             pointerEvents: 'auto',
-            transition: 'opacity 0.3s ease-in-out',
           }}
         >
-          {/* FABRANI Logo/Text */}
+          {/* FABRANI Logo */}
           <div
             style={{
               textAlign: 'center',
-              color: '#D4AF37',
-              fontSize: '2rem',
-              fontWeight: 'bold',
-              fontFamily: "'Montserrat', sans-serif",
-              letterSpacing: '2px',
-              textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '0.5rem',
             }}
           >
-            <div style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>F</div>
-            <div style={{ fontSize: '0.9rem', letterSpacing: '3px' }}>FABRANI</div>
+            {/* F Logo */}
+            <div
+              style={{
+                width: '80px',
+                height: '80px',
+                backgroundColor: '#EF4444',
+                borderRadius: '8px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '48px',
+                fontWeight: 'bold',
+                color: '#D4AF37',
+                fontFamily: "'Montserrat', sans-serif",
+                boxShadow: '0 4px 20px rgba(239, 68, 68, 0.4)',
+              }}
+            >
+              F
+            </div>
+            {/* FABRANI Text */}
+            <div
+              style={{
+                color: '#D4AF37',
+                fontSize: '18px',
+                fontWeight: 'bold',
+                fontFamily: "'Montserrat', sans-serif",
+                letterSpacing: '2px',
+                textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
+              }}
+            >
+              FABRANI
+            </div>
           </div>
         </div>
 

@@ -54,7 +54,7 @@ export default function Home() {
               {/* Headline */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight animate-fade-in-up delay-100">
                 De Infoprodutor para{" "}
-                <span className="text-primary glow-text-neon">Empresário de Educação Formal</span>
+                <span className="text-primary">Empresário de Educação Formal</span>
               </h1>
 
               {/* Subheadline */}

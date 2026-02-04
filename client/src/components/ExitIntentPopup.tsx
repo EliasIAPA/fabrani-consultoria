@@ -1,15 +1,34 @@
 import { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 export function ExitIntentPopup() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasShown, setHasShown] = useState(false);
 
   useEffect(() => {
+    // Check if popup has already been shown in this session
+    const popupShown = sessionStorage.getItem('exitPopupShown');
+    if (popupShown) {
+      setHasShown(true);
+      return;
+    }
+
+    // Set up 5-minute timer
+    const timeoutId = setTimeout(() => {
+      if (!hasShown && !sessionStorage.getItem('exitPopupShown')) {
+        setIsOpen(true);
+        sessionStorage.setItem('exitPopupShown', 'true');
+        setHasShown(true);
+      }
+    }, 5 * 60 * 1000); // 5 minutes
+
+    // Set up exit intent detection
     const handleMouseLeave = (e: MouseEvent) => {
       // Only trigger if mouse is leaving from the top of the page
-      if (e.clientY <= 0 && !isOpen) {
+      if (e.clientY <= 0 && !hasShown && !sessionStorage.getItem('exitPopupShown')) {
         setIsOpen(true);
+        sessionStorage.setItem('exitPopupShown', 'true');
+        setHasShown(true);
       }
     };
 
@@ -17,8 +36,9 @@ export function ExitIntentPopup() {
 
     return () => {
       document.removeEventListener('mouseleave', handleMouseLeave);
+      clearTimeout(timeoutId);
     };
-  }, [isOpen]);
+  }, [hasShown]);
 
   const handleClose = () => {
     setIsOpen(false);
@@ -77,17 +97,8 @@ export function ExitIntentPopup() {
               />
             </div>
 
-            {/* CTA Button */}
-            <div className="mt-6 flex flex-col gap-3">
-              <Button
-                size="lg"
-                className="btn-neon w-full text-black text-lg font-bold py-6"
-                asChild
-              >
-                <a href="https://payfast.greenn.com.br/em29d57/offer/aiAmgX" target="_blank" rel="noopener noreferrer">
-                  🔥 QUERO ACESSAR AGORA
-                </a>
-              </Button>
+            {/* Close Button */}
+            <div className="mt-6 flex justify-center">
               <button
                 onClick={handleClose}
                 className="text-foreground/60 hover:text-foreground transition-colors font-semibold"

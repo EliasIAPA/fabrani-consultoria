@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/accordion";
 import { Check, AlertTriangle, Zap, Target, FileText, Users, Lock, Clock, ShieldAlert, HelpCircle, Award, Briefcase, GraduationCap, ChevronRight, CheckCircle2, Lightbulb, TrendingUp } from "lucide-react";
 import { trackInitiateCheckout } from "@/lib/fbPixel";
+import { CustomYouTubePlayer } from "@/components/CustomYouTubePlayer";
 
 export default function Home() {
 
@@ -732,22 +733,8 @@ export default function Home() {
                 </h2>
               </div>
 
-              {/* YouTube Video */}
-              <div className="flex justify-center mb-12">
-                <div className="w-full max-w-4xl aspect-video rounded-xl overflow-hidden border border-primary/30 shadow-lg">
-                  <iframe 
-                    width="100%" 
-                    height="100%" 
-                    src="https://www.youtube.com/embed/N4Hl1NsRtwg" 
-                    title="O AVALIADOR INVISÍVEL DO MERCADO DE CURSOS ONLINE" 
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerPolicy="strict-origin-when-cross-origin" 
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                </div>
-              </div>
+              {/* YouTube Video with Custom Controls */}
+              <CustomYouTubePlayer videoId="N4Hl1NsRtwg" title="O AVALIADOR INVISÍVEL DO MERCADO DE CURSOS ONLINE" />
             </div>
           </div>
         </section>

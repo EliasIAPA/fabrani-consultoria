@@ -1,23 +1,9 @@
-import { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Check, MessageCircle, Mail, Calendar } from "lucide-react";
 
 export default function ThankYouPage() {
-  // Rastrear evento Purchase quando pagina carrega
-  useEffect(() => {
-    // Facebook Pixel - Evento Purchase
-    if (typeof window !== "undefined" && (window as any).fbq) {
-      (window as any).fbq("track", "Purchase", {
-        value: 97.00,
-        currency: "BRL",
-        content_name: "Certificacao MEC - Condicao Especial",
-        content_type: "product",
-        content_id: "aiAmgX",
-      });
-    }
-  }, []);
   return (
     <div className="min-h-screen bg-white text-foreground overflow-x-hidden">
       <Header />

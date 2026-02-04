@@ -149,10 +149,16 @@
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Playfair Display', 'Inter', serif;
+    font-family: 'Inter', sans-serif;
     /* Improved base font size for better readability */
-    font-size: 18px;
-    line-height: 1.7;
+    font-size: 16px; /* Mobile: 16px para melhor legibilidade */
+    line-height: 1.8; /* Aumentado de 1.7 para 1.8 */
+  }
+  
+  @media (min-width: 768px) {
+    body {
+      font-size: 18px; /* Desktop: 18px */
+    }
     /* Custom scrollbar for dark mode */
     &::-webkit-scrollbar {
       width: 8px;
@@ -174,9 +180,9 @@
   /* IMPROVED Typography - Larger, more readable */
   h1, h2, h3, h4, h5, h6 {
     @apply tracking-tight font-bold mb-6 text-foreground;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    line-height: 1.15;
+    line-height: 1.2;
   }
   
   h1 {
@@ -200,13 +206,22 @@
   /* IMPROVED: Body text larger and more readable */
   p {
     @apply mb-5 leading-relaxed;
-    font-size: 1.125rem; /* 18px base */
+    font-size: 1rem; /* 16px mobile */
     color: oklch(0.30 0.01 0); /* Cinza escuro para legibilidade */
+    line-height: 1.8;
   }
   
-  /* Strong text should be preto for emphasis */
+  @media (min-width: 768px) {
+    p {
+      font-size: 1.125rem; /* 18px desktop */
+    }
+  }
+  
+  /* Strong text should be preto for emphasis - Montserrat Bold */
   strong, b {
-    @apply text-foreground font-semibold;
+    @apply text-foreground font-bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
   }
   
   /* Lists more readable */
@@ -215,9 +230,15 @@
   }
   
   li {
-    font-size: 1.0625rem; /* 17px */
-    line-height: 1.6;
+    font-size: 1rem; /* 16px mobile */
+    line-height: 1.8;
     color: oklch(0.30 0.01 0); /* Cinza escuro */
+  }
+  
+  @media (min-width: 768px) {
+    li {
+      font-size: 1.0625rem; /* 17px desktop */
+    }
   }
   
   /* Glassmorphism utilities */
@@ -326,6 +347,8 @@
   /* IMPROVED: Section Title Style - More prominent */
   .section-title-bar {
     @apply relative pb-6 mb-10 text-center text-foreground;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
   }
   
   .section-title-bar::after {
@@ -376,12 +399,36 @@
   
   /* FAQ Accordion improvements */
   .faq-trigger {
-    @apply text-lg md:text-xl font-semibold text-foreground py-5;
+    @apply text-lg md:text-xl font-bold text-foreground py-5;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
   }
   
   .faq-content {
     @apply text-base md:text-lg leading-relaxed pb-5;
     color: oklch(0.30 0.01 0);
+    line-height: 1.8;
+  }
+  
+  /* Highlight text with Montserrat Bold */
+  .highlight-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: oklch(0.05 0.01 0);
+  }
+  
+  /* Subtitle with Montserrat */
+  .subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: oklch(0.30 0.01 0);
+  }
+  
+  @media (min-width: 768px) {
+    .subtitle {
+      font-size: 1.25rem;
+    }
   }
 }
 

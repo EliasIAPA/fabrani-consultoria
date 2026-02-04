@@ -720,7 +720,40 @@ export default function Home() {
         </section>
 
         {/* ========================================
-             12. O QUE VOCÊ SÓ ENCONTRA NA FABRANI
+             2. MEC - O AVALIADOR INVISÍVEL
+        ========================================= */}
+        <section className="py-24 bg-background relative">
+          <div className="container">
+            <div className="max-w-5xl mx-auto">
+              {/* Headline */}
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
+                  MEC O AVALIADOR INVISÍVEL DE CURSOS ONLINE
+                </h2>
+              </div>
+
+              {/* YouTube Video */}
+              <div className="flex justify-center mb-12">
+                <div className="w-full max-w-4xl aspect-video rounded-xl overflow-hidden border border-primary/30 shadow-lg">
+                  <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/N4Hl1NsRtwg" 
+                    title="O AVALIADOR INVISÍVEL DO MERCADO DE CURSOS ONLINE" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerPolicy="strict-origin-when-cross-origin" 
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ========================================
+             3. O QUE VOCÊ SÓ ENCONTRA NA FABRANI
         ========================================= */}
         <section className="py-24 bg-background relative">
           <div className="container">

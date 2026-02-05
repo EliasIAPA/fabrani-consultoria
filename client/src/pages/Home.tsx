@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/accordion";
 import { Check, AlertTriangle, Zap, Target, FileText, Users, Lock, Clock, ShieldAlert, HelpCircle, Award, Briefcase, GraduationCap, ChevronRight, CheckCircle2, Lightbulb, TrendingUp } from "lucide-react";
 import { trackInitiateCheckout } from "@/lib/fbPixel";
+import { ConvertAIPlayer } from "@/components/ConvertAIPlayer";
 
 
 export default function Home() {
@@ -732,9 +733,7 @@ export default function Home() {
               </div>
 
               {/* ConvertAI Vturb SmartPlayer */}
-              <div className="w-full rounded-2xl overflow-hidden shadow-2xl" style={{ aspectRatio: '16/9' }}>
-                <div id="vid-6984591d3f2c4e4035cfa155" style={{ display: 'block', margin: '0 auto', width: '100%', height: '100%' }}></div>
-              </div>
+              <ConvertAIPlayer />
             </div>
           </div>
         </section>

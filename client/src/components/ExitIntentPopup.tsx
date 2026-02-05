@@ -101,9 +101,9 @@ export function ExitIntentPopup() {
             <div className="mt-6 flex justify-center">
               <button
                 onClick={handleClose}
-                className="text-foreground/60 hover:text-foreground transition-colors font-semibold"
+                className="text-red-500 hover:text-red-600 transition-colors font-semibold text-lg"
               >
-                Fechar popup
+                Fechar
               </button>
             </div>
           </div>

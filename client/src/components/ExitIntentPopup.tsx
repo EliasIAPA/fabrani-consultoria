@@ -72,12 +72,12 @@ export function ExitIntentPopup() {
         <div className="bg-background rounded-2xl border-2 border-primary shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
           {/* Header */}
           <div className="sticky top-0 bg-gradient-to-r from-primary to-primary/80 p-6 flex items-center justify-between">
-            <div className="flex-1">
-              <h2 className="text-2xl md:text-3xl font-black text-black leading-tight">
+            <div className="flex items-center justify-between">
+              <h2 className="text-2xl font-black text-black">
                 ESPERE — ESPERE
               </h2>
-              <p className="text-black/90 font-semibold mt-2">
-                Não sai antes de VER ESSE VÍDEO
+              <p className="text-sm text-muted-foreground">
+                Não sai antes de ler este recado
               </p>
             </div>
             <button
@@ -92,10 +92,10 @@ export function ExitIntentPopup() {
           <div className="p-8 space-y-6">
             <div className="space-y-4">
               <p className="text-lg text-foreground leading-relaxed">
-                Você está a <strong>1 ajuste</strong> de escalar suas vendas em 300%.
+                Você está a <strong>1 ajuste</strong> de escalar suas vendas e ter seu Curso válido como Extensão Universitária no MEC.
               </p>
               <p className="text-base text-muted-foreground">
-                O Founder da FABRANI validou 150 projetos em 2025. Sua consultoria custa R$ 5.000, mas hoje você consegue por apenas R$ 97.
+                Essa oferta encerra <strong>HOJE</strong>. <span className="text-primary font-bold">R$97,00</span> Isso mesmo <span className="text-primary font-bold">R$97,00</span>.
               </p>
             </div>
 
@@ -107,7 +107,7 @@ export function ExitIntentPopup() {
                 rel="noopener noreferrer"
                 className="btn-neon h-12 w-full flex items-center justify-center text-black font-bold text-lg rounded-lg hover:shadow-lg transition-all"
               >
-                🔥 QUERO MINHA CONSULTORIA AGORA
+                QUERO ACESSAR
               </a>
               <button
                 onClick={handleClose}

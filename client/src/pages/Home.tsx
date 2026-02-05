@@ -732,8 +732,8 @@ export default function Home() {
               </div>
 
               {/* ConvertAI Vturb SmartPlayer */}
-              <div className="w-full rounded-2xl overflow-hidden shadow-2xl">
-                <div id="vid-6984591d3f2c4e4035cfa155" style={{ display: 'block', margin: '0 auto', width: '100%' }}></div>
+              <div className="w-full rounded-2xl overflow-hidden shadow-2xl" style={{ aspectRatio: '16/9' }}>
+                <div id="vid-6984591d3f2c4e4035cfa155" style={{ display: 'block', margin: '0 auto', width: '100%', height: '100%' }}></div>
               </div>
             </div>
           </div>

@@ -1,6 +1,17 @@
 import { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 
+// Extend JSX to support vturb-smartplayer custom element
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'vturb-smartplayer': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
+        id?: string;
+      };
+    }
+  }
+}
+
 export function ExitIntentPopup() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasShown, setHasShown] = useState(false);
@@ -40,22 +51,7 @@ export function ExitIntentPopup() {
     };
   }, [hasShown]);
 
-  useEffect(() => {
-    // Load ConvertAI script when popup opens
-    if (isOpen) {
-      const script = document.createElement('script');
-      script.src = 'https://scripts.converteai.net/3758b217-bbef-4f2e-a783-8b3253d8c374/players/6984591d3f2c4e4035cfa155/v4/player.js';
-      script.async = true;
-      document.head.appendChild(script);
 
-      return () => {
-        // Cleanup script if needed
-        if (document.head.contains(script)) {
-          document.head.removeChild(script);
-        }
-      };
-    }
-  }, [isOpen]);
 
   const handleClose = () => {
     setIsOpen(false);
@@ -92,20 +88,30 @@ export function ExitIntentPopup() {
             </button>
           </div>
 
-          {/* Video Container */}
-          <div className="p-6">
-            <div style={{ width: '100%' }}>
-              <div
-                id="vid-6984591d3f2c4e4035cfa155"
-                style={{ display: 'block', margin: '0 auto', width: '100%' }}
-              />
+          {/* Content */}
+          <div className="p-8 space-y-6">
+            <div className="space-y-4">
+              <p className="text-lg text-foreground leading-relaxed">
+                Você está a <strong>1 ajuste</strong> de escalar suas vendas em 300%.
+              </p>
+              <p className="text-base text-muted-foreground">
+                O Founder da FABRANI validou 150 projetos em 2025. Sua consultoria custa R$ 5.000, mas hoje você consegue por apenas R$ 97.
+              </p>
             </div>
 
-            {/* Close Button */}
-            <div className="mt-6 flex justify-center">
+            {/* CTA Button */}
+            <div className="flex flex-col gap-3">
+              <a
+                href="https://payfast.greenn.com.br/em29d57/offer/aiAmgX"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-neon h-12 w-full flex items-center justify-center text-black font-bold text-lg rounded-lg hover:shadow-lg transition-all"
+              >
+                🔥 QUERO MINHA CONSULTORIA AGORA
+              </a>
               <button
                 onClick={handleClose}
-                className="text-red-500 hover:text-red-600 transition-colors font-semibold text-lg"
+                className="text-red-500 hover:text-red-600 transition-colors font-semibold"
               >
                 Fechar
               </button>

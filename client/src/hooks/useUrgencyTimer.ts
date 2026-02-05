@@ -66,10 +66,9 @@ export function useUrgencyTimer(): UseUrgencyTimerReturn {
       const remainingSeconds = TIMER_DURATION - elapsedSeconds;
 
       if (remainingSeconds <= 0) {
-        // Tempo expirou - redirecionar para /time
+        // Tempo expirou
         setIsExpired(true);
         setHasVisitedBefore(true);
-        window.location.href = EXPIRED_REDIRECT_PATH;
         return;
       }
 
@@ -98,10 +97,9 @@ export function useUrgencyTimer(): UseUrgencyTimerReturn {
         } else if (prev.minutes > 0) {
           return { minutes: prev.minutes - 1, seconds: 59 };
         } else {
-          // Tempo esgotou - redirecionar
+          // Tempo esgotou
           clearInterval(timer);
           setIsExpired(true);
-          window.location.href = EXPIRED_REDIRECT_PATH;
           return { minutes: 0, seconds: 0 };
         }
       });

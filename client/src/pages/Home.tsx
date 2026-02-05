@@ -1,5 +1,4 @@
 import { Header } from "@/components/Header";
-import { ExitPopup } from "@/components/ExitPopup";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -22,7 +21,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary selection:text-black">
       <Header />
-      <ExitPopup />
       
       <main>
         {/* ========================================

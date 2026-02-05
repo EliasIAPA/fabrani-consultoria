@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/accordion";
 import { Check, AlertTriangle, Zap, Target, FileText, Users, Lock, Clock, ShieldAlert, HelpCircle, Award, Briefcase, GraduationCap, ChevronRight, CheckCircle2, Lightbulb, TrendingUp } from "lucide-react";
 import { trackInitiateCheckout } from "@/lib/fbPixel";
-import { CustomYouTubePlayer } from "@/components/CustomYouTubePlayer";
+
 
 export default function Home() {
 
@@ -731,8 +731,10 @@ export default function Home() {
                 </h2>
               </div>
 
-              {/* YouTube Video with Custom Controls */}
-              <CustomYouTubePlayer videoId="N4Hl1NsRtwg" title="O AVALIADOR INVISÍVEL DO MERCADO DE CURSOS ONLINE" />
+              {/* ConvertAI Vturb SmartPlayer */}
+              <div className="w-full rounded-2xl overflow-hidden shadow-2xl">
+                <div id="vid-6984591d3f2c4e4035cfa155" style={{ display: 'block', margin: '0 auto', width: '100%' }}></div>
+              </div>
             </div>
           </div>
         </section>

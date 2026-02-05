@@ -21,40 +21,25 @@ export function Header({ price = "R$ 97", isTimePage = false }: HeaderProps) {
 
   const formatTime = (val: number) => val.toString().padStart(2, '0');
 
-  // Se está na página /time, mostrar mensagem de oferta expirada
-  const showExpiredMessage = isTimePage || isExpired;
-
   return (
     <>
       {/* Top Bar de Urgência - IMPROVED CONTRAST */}
       <div className={cn(
         "py-2.5 text-center relative z-50 overflow-hidden",
-        showExpiredMessage ? "bg-red-600" : "bg-primary"
+        "bg-primary"
       )}>
         <div className="container flex items-center justify-center gap-2 md:gap-4">
-          {showExpiredMessage ? (
-            <>
-              <span className="text-white font-bold text-sm md:text-base flex items-center gap-2">
-                <span>⏰</span> OFERTA ESPECIAL ENCERRADA
-              </span>
-              <span className="hidden md:inline text-white/80">|</span>
-              <span className="text-white/90 font-medium text-sm md:text-base">
-                Novo valor: <strong className="text-white">R$ 97</strong>
-              </span>
-            </>
-          ) : (
-            <>
-              <span className="text-black font-bold text-sm md:text-base flex items-center gap-2">
-                <span className="animate-pulse">⚡</span> VAGAS LIMITADAS
-              </span>
-              <span className="hidden md:inline text-black/60">|</span>
-              <span className="text-black/80 font-medium text-sm md:text-base">CONSULTORIA COM O FOUNDER</span>
-              <span className="hidden md:inline text-black/60">→</span>
-              <a href="#cta" className="text-black font-bold underline underline-offset-2 hover:no-underline transition-all text-sm md:text-base">
-                GARANTIR VAGA
-              </a>
-            </>
-          )}
+          <>
+            <span className="text-black font-bold text-sm md:text-base flex items-center gap-2">
+              <span className="animate-pulse">⚡</span> VAGAS LIMITADAS
+            </span>
+            <span className="hidden md:inline text-black/60">|</span>
+            <span className="text-black/80 font-medium text-sm md:text-base">CONSULTORIA COM O FOUNDER</span>
+            <span className="hidden md:inline text-black/60">→</span>
+            <a href="#cta" className="text-black font-bold underline underline-offset-2 hover:no-underline transition-all text-sm md:text-base">
+              GARANTIR VAGA
+            </a>
+          </>
         </div>
       </div>
 
@@ -80,19 +65,7 @@ export function Header({ price = "R$ 97", isTimePage = false }: HeaderProps) {
 
           {/* Countdown Timer - IMPROVED READABILITY */}
           <div className="flex items-center gap-4">
-            {showExpiredMessage ? (
-              <div className="flex items-center gap-3 bg-red-600/20 border-2 border-red-500/40 px-4 md:px-6 py-2.5 md:py-3 rounded-xl">
-                <span className="text-xs md:text-sm text-red-400 uppercase tracking-wider font-semibold">
-                  Tempo esgotado
-                </span>
-                <div className="flex items-center gap-1.5 font-mono text-red-400 font-black text-xl md:text-2xl leading-none">
-                  <span className="w-[2.5ch] text-center bg-black/30 px-1.5 py-1 rounded">00</span>
-                  <span className="text-white/50 text-lg">:</span>
-                  <span className="w-[2.5ch] text-center bg-black/30 px-1.5 py-1 rounded">00</span>
-                </div>
-              </div>
-            ) : (
-              <div className="flex items-center gap-3 bg-primary/15 border-2 border-primary px-5 md:px-8 py-3 md:py-4 rounded-xl shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+            <div className="flex items-center gap-3 bg-primary/15 border-2 border-primary px-5 md:px-8 py-3 md:py-4 rounded-xl shadow-[0_0_30px_rgba(212,175,55,0.4)]">
                 <span className="text-sm md:text-base text-primary uppercase tracking-wider font-semibold hidden sm:inline-block">
                   Oferta encerra em:
                 </span>
@@ -102,7 +75,6 @@ export function Header({ price = "R$ 97", isTimePage = false }: HeaderProps) {
                   <span className="w-[2.5ch] text-center bg-primary/30 px-2 py-1.5 rounded-lg shadow-inner text-primary">{formatTime(timeLeft.seconds)}</span>
                 </div>
               </div>
-            )}
           </div>
         </div>
       </header>

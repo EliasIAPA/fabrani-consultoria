@@ -15,26 +15,22 @@ export function ConvertAIPlayer() {
   }, []);
 
   return (
-    <div id="ifr_6984591d3f2c4e4035cfa155_wrapper" style={{ margin: 0, width: '100%', padding: 0 }}>
-      <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, margin: 0, padding: 0 }} id="ifr_6984591d3f2c4e4035cfa155_aspect">
-        <iframe
-          ref={iframeRef}
-          frameBorder={0}
-          allowFullScreen
-          src="about:blank"
-          id="ifr_6984591d3f2c4e4035cfa155"
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            borderRadius: '1rem',
-            boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)'
-          }}
-          referrerPolicy="origin"
-        />
-      </div>
+    <div id="ifr_6984591d3f2c4e4035cfa155_wrapper" style={{ margin: 0, width: '100%', padding: 0, aspectRatio: '16/9' }}>
+      <iframe
+        ref={iframeRef}
+        frameBorder={0}
+        allowFullScreen
+        src="about:blank"
+        id="ifr_6984591d3f2c4e4035cfa155"
+        style={{
+          width: '100%',
+          height: '100%',
+          borderRadius: '1rem',
+          boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)',
+          display: 'block'
+        }}
+        referrerPolicy="origin"
+      />
     </div>
   );
 }

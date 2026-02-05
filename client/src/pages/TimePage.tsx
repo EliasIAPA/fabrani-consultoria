@@ -837,7 +837,7 @@ export default function TimePage() {
                     className="w-full h-full object-cover"
                     poster="/videos/outlier2025-poster.jpg"
                   >
-                    <source src="/videos/outlier2025.mp4" type="video/mp4" />
+                    <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663030990044/sDTSdMfxILQrUHbh.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeos.
                   </video>
                 </div>
@@ -872,7 +872,7 @@ export default function TimePage() {
                     className="w-full h-full object-cover"
                     poster="/videos/vendedordeElite-poster.jpg"
                   >
-                    <source src="/videos/vendedordeElite.mp4" type="video/mp4" />
+                    <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663030990044/apYADtvklkWtyyFn.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeos.
                   </video>
                 </div>
@@ -891,7 +891,7 @@ export default function TimePage() {
                     className="w-full h-full object-cover"
                     poster="/videos/RennerSilva-poster.jpg"
                   >
-                    <source src="/videos/RennerSilva.mp4" type="video/mp4" />
+                    <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663030990044/zifvbstGXFkxWEBh.mp4" type="video/mp4" />
                     Seu navegador não suporta vídeos.
                   </video>
                 </div>

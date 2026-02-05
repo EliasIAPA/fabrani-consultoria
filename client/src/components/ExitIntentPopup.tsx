@@ -40,6 +40,23 @@ export function ExitIntentPopup() {
     };
   }, [hasShown]);
 
+  useEffect(() => {
+    // Load ConvertAI script when popup opens
+    if (isOpen) {
+      const script = document.createElement('script');
+      script.src = 'https://scripts.converteai.net/3758b217-bbef-4f2e-a783-8b3253d8c374/players/6984591d3f2c4e4035cfa155/v4/player.js';
+      script.async = true;
+      document.head.appendChild(script);
+
+      return () => {
+        // Cleanup script if needed
+        if (document.head.contains(script)) {
+          document.head.removeChild(script);
+        }
+      };
+    }
+  }, [isOpen]);
+
   const handleClose = () => {
     setIsOpen(false);
   };
@@ -77,28 +94,10 @@ export function ExitIntentPopup() {
 
           {/* Video Container */}
           <div className="p-6">
-            <div className="w-full rounded-xl overflow-hidden border border-primary/30 shadow-lg" style={{ aspectRatio: '16/9' }}>
-              <iframe
-                frameBorder={0}
-                allowFullScreen
-                src="about:blank"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  display: 'block'
-                }}
-                referrerPolicy="origin"
-                onLoad={(e) => {
-                  const iframe = e.currentTarget as HTMLIFrameElement;
-                  if (iframe && !iframe.dataset.loaded) {
-                    const src = 'https://scripts.converteai.net/3758b217-bbef-4f2e-a783-8b3253d8c374/players/6984591d3f2c4e4035cfa155/v4/embed.html' + 
-                                (location.search || '?') + 
-                                '&vl=' + 
-                                encodeURIComponent(location.href);
-                    iframe.src = src;
-                    iframe.dataset.loaded = 'true';
-                  }
-                }}
+            <div style={{ width: '100%' }}>
+              <div
+                id="vid-6984591d3f2c4e4035cfa155"
+                style={{ display: 'block', margin: '0 auto', width: '100%' }}
               />
             </div>
 

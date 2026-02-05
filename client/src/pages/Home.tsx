@@ -722,11 +722,11 @@ export default function Home() {
         {/* ========================================
              2. O MAIOR AVALISTA DO MERCADO DIGITAL
         ========================================= */}
-        <section className="py-12 bg-background relative">
+        <section className="py-6 bg-background relative">
           <div className="container">
             <div className="max-w-5xl mx-auto">
               {/* Headline - O MAIOR AVALISTA */}
-              <div className="text-center mb-16">
+              <div className="text-center mb-8">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
                   O MAIOR AVALISTA DO MERCADO DIGITAL
                 </h2>

@@ -15,8 +15,8 @@ export function ConvertAIPlayer() {
   }, []);
 
   return (
-    <div id="ifr_6984591d3f2c4e4035cfa155_wrapper" style={{ margin: '0 auto', width: '100%' }}>
-      <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }} id="ifr_6984591d3f2c4e4035cfa155_aspect">
+    <div id="ifr_6984591d3f2c4e4035cfa155_wrapper" style={{ margin: '0 auto', width: '100%', marginBottom: 0 }}>
+      <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, marginBottom: 0 }} id="ifr_6984591d3f2c4e4035cfa155_aspect">
         <iframe
           ref={iframeRef}
           frameBorder={0}

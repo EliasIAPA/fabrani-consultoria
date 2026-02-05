@@ -77,22 +77,27 @@ export function ExitIntentPopup() {
 
           {/* Video Container */}
           <div className="p-6">
-            <div className="relative w-full rounded-xl overflow-hidden border border-primary/30 shadow-lg" style={{ aspectRatio: '16/9' }}>
+            <div className="w-full rounded-xl overflow-hidden border border-primary/30 shadow-lg" style={{ aspectRatio: '16/9' }}>
               <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/N4Hl1NsRtwg?autoplay=1"
-                title="O AVALIADOR INVISÍVEL DO MERCADO DE CURSOS ONLINE"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
+                frameBorder={0}
                 allowFullScreen
+                src="about:blank"
                 style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
                   width: '100%',
                   height: '100%',
+                  display: 'block'
+                }}
+                referrerPolicy="origin"
+                onLoad={(e) => {
+                  const iframe = e.currentTarget as HTMLIFrameElement;
+                  if (iframe && !iframe.dataset.loaded) {
+                    const src = 'https://scripts.converteai.net/3758b217-bbef-4f2e-a783-8b3253d8c374/players/6984591d3f2c4e4035cfa155/v4/embed.html' + 
+                                (location.search || '?') + 
+                                '&vl=' + 
+                                encodeURIComponent(location.href);
+                    iframe.src = src;
+                    iframe.dataset.loaded = 'true';
+                  }
                 }}
               />
             </div>

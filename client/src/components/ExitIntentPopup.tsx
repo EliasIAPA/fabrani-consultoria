@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'wouter';
 import { X } from 'lucide-react';
 
 // Extend JSX to support vturb-smartplayer custom element
@@ -13,8 +14,14 @@ declare global {
 }
 
 export function ExitIntentPopup() {
+  const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [hasShown, setHasShown] = useState(false);
+
+  // Don't show popup on thank you page
+  if (location === '/obrigado') {
+    return null;
+  }
 
   useEffect(() => {
     // Check if popup has already been shown in this session
@@ -57,7 +64,7 @@ export function ExitIntentPopup() {
     setIsOpen(false);
   };
 
-  if (!isOpen) return null;
+  if (!isOpen || location === '/obrigado') return null;
 
   return (
     <>

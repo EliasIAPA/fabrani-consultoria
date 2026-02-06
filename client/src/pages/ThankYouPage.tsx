@@ -1,9 +1,21 @@
+import { useEffect } from 'react';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Check, MessageCircle, Mail, Calendar } from "lucide-react";
 
 export default function ThankYouPage() {
+  useEffect(() => {
+    // Track purchase event in Meta Pixel when user reaches thank you page
+    if (window.fbq) {
+      // Track Purchase event with R$ 97 value
+      window.fbq('track', 'Purchase', {
+        value: 97,
+        currency: 'BRL'
+      });
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white text-foreground overflow-x-hidden">
       <Header />

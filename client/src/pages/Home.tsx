@@ -11,6 +11,7 @@ import {
 import { Check, AlertTriangle, Zap, Target, FileText, Users, Lock, Clock, ShieldAlert, HelpCircle, Award, Briefcase, GraduationCap, ChevronRight, CheckCircle2, Lightbulb, TrendingUp } from "lucide-react";
 import { trackInitiateCheckout } from "@/lib/fbPixel";
 import { ConvertAIPlayer } from "@/components/ConvertAIPlayer";
+import { ConversionForm } from "@/components/ConversionForm";
 
 
 export default function Home() {
@@ -849,6 +850,18 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ========================================
+             8.5. FORMULARIO DE CONVERSAO
+        ========================================= */}
+        <section className="py-24 bg-gradient-to-b from-background to-card relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,135,0.05),transparent_60%)]"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+          
+          <div className="container relative z-10">
+            <ConversionForm />
           </div>
         </section>
 

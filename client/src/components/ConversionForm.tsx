@@ -92,15 +92,15 @@ export function ConversionForm() {
 
   if (submitted) {
     return (
-      <div className="flex flex-col items-center justify-center py-12 px-4">
+      <div className="flex flex-col items-center justify-center py-8 md:py-12 px-4">
         <div className="text-center space-y-4">
           <div className="flex justify-center">
             <CheckCircle2 className="w-16 h-16 text-primary animate-bounce" />
           </div>
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+          <h3 className="text-xl md:text-2xl font-bold text-foreground">
             ✅ Cadastro Realizado com Sucesso!
           </h3>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-sm md:text-base">
             Você receberá em breve os detalhes da sua Avaliação Acadêmica no WhatsApp e E-mail.
           </p>
         </div>
@@ -109,26 +109,26 @@ export function ConversionForm() {
   }
 
   return (
-    <div className="w-full max-w-2xl mx-auto px-4 py-8">
+    <div className="w-full max-w-2xl mx-auto px-4 py-6 md:py-8">
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-purple-500/5 pointer-events-none rounded-3xl" />
 
-      <div className="relative z-10 space-y-8">
+      <div className="relative z-10 space-y-5">
         {/* Headline */}
-        <div className="text-center space-y-3">
-          <h2 className="text-3xl md:text-4xl font-black text-foreground leading-tight">
+        <div className="text-center space-y-2">
+          <h2 className="text-xl md:text-3xl font-black text-foreground leading-tight">
             Cadastre-se para Receber sua <span className="text-primary">Avaliação Acadêmica</span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-sm md:text-base">
             Análise completa do seu curso em 60 minutos com um consultor especializado da FABRANI
           </p>
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4">
           {/* Nome */}
-          <div className="space-y-2">
-            <label htmlFor="name" className="block text-sm font-semibold text-foreground">
+          <div className="space-y-1">
+            <label htmlFor="name" className="block text-xs md:text-sm font-semibold text-foreground">
               Nome Completo
             </label>
             <Input
@@ -138,14 +138,14 @@ export function ConversionForm() {
               placeholder="Seu nome"
               value={formData.name}
               onChange={handleChange}
-              className="h-12 bg-background border-2 border-border hover:border-primary/50 focus:border-primary transition-colors text-foreground placeholder:text-muted-foreground/50"
+              className="h-10 md:h-12 bg-background border-2 border-border hover:border-primary/50 focus:border-primary transition-colors text-sm md:text-base text-foreground placeholder:text-muted-foreground/50"
               disabled={loading}
             />
           </div>
 
           {/* WhatsApp */}
-          <div className="space-y-2">
-            <label htmlFor="whatsapp" className="block text-sm font-semibold text-foreground">
+          <div className="space-y-1">
+            <label htmlFor="whatsapp" className="block text-xs md:text-sm font-semibold text-foreground">
               WhatsApp
             </label>
             <Input
@@ -155,14 +155,14 @@ export function ConversionForm() {
               placeholder="(11) 99999-9999"
               value={formData.whatsapp}
               onChange={handleChange}
-              className="h-12 bg-background border-2 border-border hover:border-primary/50 focus:border-primary transition-colors text-foreground placeholder:text-muted-foreground/50"
+              className="h-10 md:h-12 bg-background border-2 border-border hover:border-primary/50 focus:border-primary transition-colors text-sm md:text-base text-foreground placeholder:text-muted-foreground/50"
               disabled={loading}
             />
           </div>
 
           {/* Email */}
-          <div className="space-y-2">
-            <label htmlFor="email" className="block text-sm font-semibold text-foreground">
+          <div className="space-y-1">
+            <label htmlFor="email" className="block text-xs md:text-sm font-semibold text-foreground">
               E-mail
             </label>
             <Input
@@ -172,23 +172,23 @@ export function ConversionForm() {
               placeholder="seu@email.com"
               value={formData.email}
               onChange={handleChange}
-              className="h-12 bg-background border-2 border-border hover:border-primary/50 focus:border-primary transition-colors text-foreground placeholder:text-muted-foreground/50"
+              className="h-10 md:h-12 bg-background border-2 border-border hover:border-primary/50 focus:border-primary transition-colors text-sm md:text-base text-foreground placeholder:text-muted-foreground/50"
               disabled={loading}
             />
           </div>
 
           {/* Revenue Select */}
-          <div className="space-y-2">
-            <label htmlFor="revenue" className="block text-sm font-semibold text-foreground">
+          <div className="space-y-1">
+            <label htmlFor="revenue" className="block text-xs md:text-sm font-semibold text-foreground">
               Seu Faturamento Mensal
             </label>
             <Select value={formData.revenue} onValueChange={handleRevenueChange} disabled={loading}>
-              <SelectTrigger className="h-12 bg-background border-2 border-border hover:border-primary/50 focus:border-primary transition-colors text-foreground">
+              <SelectTrigger className="h-10 md:h-12 bg-background border-2 border-border hover:border-primary/50 focus:border-primary transition-colors text-sm md:text-base text-foreground">
                 <SelectValue placeholder="Selecione uma opção" />
               </SelectTrigger>
               <SelectContent className="bg-card border-border">
                 {revenueOptions.map((option) => (
-                  <SelectItem key={option.value} value={option.value} className="text-foreground">
+                  <SelectItem key={option.value} value={option.value} className="text-sm text-foreground">
                     {option.label}
                   </SelectItem>
                 ))}
@@ -208,20 +208,20 @@ export function ConversionForm() {
           <Button
             type="submit"
             disabled={loading}
-            className="w-full h-14 text-lg font-bold bg-gradient-to-r from-primary to-orange-600 hover:from-primary/90 hover:to-orange-600/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl"
+            className="w-full h-12 md:h-14 text-sm md:text-base font-bold bg-gradient-to-r from-primary to-orange-600 hover:from-primary/90 hover:to-orange-600/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl"
           >
             {loading ? (
               <span className="flex items-center gap-2">
-                <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
                 Processando...
               </span>
             ) : (
-              "🔥 GARANTIR MINHA AVALIAÇÃO ACADÊMICA"
+              <span className="text-xs md:text-base">🔥 GARANTIR MINHA AVALIAÇÃO ACADÊMICA</span>
             )}
           </Button>
 
           {/* Trust Badges */}
-          <div className="flex flex-wrap justify-center gap-4 pt-4 text-xs text-muted-foreground">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4 pt-2 md:pt-4 text-xs text-muted-foreground">
             <span className="flex items-center gap-1">✓ Dados 100% Seguros</span>
             <span className="flex items-center gap-1">✓ Sem Compromisso</span>
             <span className="flex items-center gap-1">✓ Resposta em 24h</span>

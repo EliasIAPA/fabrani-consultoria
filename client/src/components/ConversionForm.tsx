@@ -273,7 +273,7 @@ export function ConversionForm() {
                 Processando...
               </span>
             ) : (
-              <span className="text-xs md:text-base">🔥 GARANTIR MINHA AVALIAÇÃO ACADÊMICA</span>
+              <span className="text-xs md:text-base">🔥 AGENDAR AGORA</span>
             )}
           </Button>
 

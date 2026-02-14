@@ -64,7 +64,7 @@ export default function Home() {
                   className="btn-neon h-auto w-full sm:w-auto text-black text-sm sm:text-base md:text-lg px-5 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5" 
                   onClick={handleCTAClick}
                 >
-                  Agendar Avaliação Acadêmica
+                  Agendar Agora
                 </Button>
                 <p className="text-xs md:text-sm text-foreground flex items-center gap-2">
                   <Lock size={14} className="text-primary" /> Avaliação Gratuita • Sem Compromisso

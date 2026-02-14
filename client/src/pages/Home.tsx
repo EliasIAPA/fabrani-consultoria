@@ -30,44 +30,44 @@ export default function Home() {
         {/* ========================================
              NEW 1. HERO SECTION — MUDANÇA DE CATEGORIA
         ========================================= */}
-        <section id="hero-new" className="relative min-h-screen flex items-center pt-28 md:pt-32 pb-16 md:pb-20 overflow-hidden">
+        <section id="hero-new" className="relative h-screen flex items-center justify-center pt-16 md:pt-20 pb-8 md:pb-12 overflow-hidden">
           {/* Background Effects */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,135,0.08),transparent_60%)]"></div>
           <div className="absolute top-0 left-0 w-full h-full bg-[url('/grid.svg')] opacity-[0.03]"></div>
           
           <div className="container relative z-10">
-            <div className="max-w-5xl mx-auto text-center space-y-10">
+            <div className="max-w-4xl mx-auto text-center space-y-4">
               
               {/* Context Badge */}
-              <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm animate-fade-in-up">
-                <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
-                <span className="text-sm md:text-base font-semibold text-foreground/90">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-sm animate-fade-in-up text-xs md:text-sm">
+                <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                <span className="font-semibold text-foreground/90">
                   Para quem já vende cursos, mentorias ou treinamentos
                 </span>
               </div>
 
               {/* H1 Headline */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight animate-fade-in-up delay-100">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.15] tracking-tight animate-fade-in-up delay-100">
                 Seu curso pode continuar competindo como infoproduto… {" "}
-                <span className="text-primary">ou entrar oficialmente na Educação Formal.</span>
+                <span className="text-primary">ou entrar na Educação Formal.</span>
               </h1>
 
               {/* Subheadline */}
-              <p className="text-lg md:text-xl text-foreground/90 max-w-4xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-                Existe um Atalho Institucional que transforma seu treinamento em uma <strong>Extensão Universitária com certificação validada por faculdade reconhecida pelo MEC</strong>. Quando isso acontece, ele deixa de disputar atenção. Ele passa a operar com Reconhecimento Institucional. O valor percebido sobe. A resistência ao preço diminui. E vender fica mais simples.
+              <p className="text-base md:text-lg text-foreground/90 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
+                Transforme seu treinamento em <strong>Extensão Universitária com certificação MEC</strong>. Saia da disputa por preço e passe a operar com Reconhecimento Institucional.
               </p>
 
               {/* CTA */}
-              <div className="flex flex-col items-center gap-5 animate-fade-in-up delay-300 pt-4">
+              <div className="flex flex-col items-center gap-3 animate-fade-in-up delay-300 pt-2">
                 <Button 
                   size="lg" 
-                  className="btn-neon h-auto w-full sm:w-auto text-black text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6" 
+                  className="btn-neon h-auto w-full sm:w-auto text-black text-sm sm:text-base md:text-lg px-5 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5" 
                   onClick={handleCTAClick}
                 >
                   Agendar Avaliação Acadêmica
                 </Button>
-                <p className="text-sm md:text-base text-foreground flex items-center gap-2">
-                  <Lock size={16} className="text-primary" /> Avaliação Gratuita • Sem Compromisso
+                <p className="text-xs md:text-sm text-foreground flex items-center gap-2">
+                  <Lock size={14} className="text-primary" /> Avaliação Gratuita • Sem Compromisso
                 </p>
               </div>
             </div>

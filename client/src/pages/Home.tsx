@@ -26,6 +26,18 @@ export default function Home() {
       
       <main>
         {/* ========================================
+             FORMULARIO DE CONVERSAO - TOPO DA PAGINA
+        ========================================= */}
+        <section className="py-24 bg-gradient-to-b from-background to-card relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,135,0.05),transparent_60%)]"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+          
+          <div className="container relative z-10">
+            <ConversionForm />
+          </div>
+        </section>
+
+        {/* ========================================
              NEW 1. HERO SECTION — MUDANÇA DE CATEGORIA
         ========================================= */}
         <section id="hero-new" className="relative min-h-screen flex items-center pt-28 md:pt-32 pb-16 md:pb-20 overflow-hidden">
@@ -850,18 +862,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* ========================================
-             8.5. FORMULARIO DE CONVERSAO
-        ========================================= */}
-        <section className="py-24 bg-gradient-to-b from-background to-card relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,135,0.05),transparent_60%)]"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-          
-          <div className="container relative z-10">
-            <ConversionForm />
           </div>
         </section>
 

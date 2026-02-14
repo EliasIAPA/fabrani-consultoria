@@ -15,6 +15,38 @@ export function ConversionForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [emailError, setEmailError] = useState("");
+
+  // Função para formatar telefone
+  const formatPhoneNumber = (value: string) => {
+    // Remove tudo que não é número
+    const cleaned = value.replace(/\D/g, "");
+    
+    // Limita a 11 dígitos
+    if (cleaned.length > 11) return formData.whatsapp;
+    
+    // Formata como (XX) 9XXXX-XXXX
+    if (cleaned.length <= 2) {
+      return cleaned;
+    } else if (cleaned.length <= 7) {
+      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
+    } else {
+      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(7, 11)}`;
+    }
+  };
+
+  // Função para validar e-mail em tempo real
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!email) {
+      setEmailError("");
+    } else if (!emailRegex.test(email)) {
+      setEmailError("E-mail inválido");
+    } else {
+      setEmailError("");
+    }
+  };
 
   const revenueOptions = [
     { value: "0", label: "Ainda não vendo meu treinamento" },
@@ -29,7 +61,17 @@ export function ConversionForm() {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    
+    if (name === "whatsapp") {
+      const formatted = formatPhoneNumber(value);
+      setFormData((prev) => ({ ...prev, [name]: formatted }));
+    } else if (name === "email") {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+      validateEmail(value);
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+    
     setError("");
   };
 
@@ -43,11 +85,11 @@ export function ConversionForm() {
       setError("Por favor, insira seu nome");
       return false;
     }
-    if (!formData.whatsapp.trim()) {
-      setError("Por favor, insira seu WhatsApp");
+    if (!formData.whatsapp.trim() || formData.whatsapp.replace(/\D/g, "").length < 11) {
+      setError("Por favor, insira um WhatsApp válido (11 dígitos)");
       return false;
     }
-    if (!formData.email.trim() || !formData.email.includes("@")) {
+    if (!formData.email.trim() || emailError) {
       setError("Por favor, insira um e-mail válido");
       return false;
     }
@@ -155,6 +197,7 @@ export function ConversionForm() {
               placeholder="(11) 99999-9999"
               value={formData.whatsapp}
               onChange={handleChange}
+              maxLength={14}
               className="h-10 md:h-12 bg-background border-2 border-border hover:border-primary/50 focus:border-primary transition-colors text-sm md:text-base text-foreground placeholder:text-muted-foreground/50"
               disabled={loading}
             />
@@ -165,16 +208,30 @@ export function ConversionForm() {
             <label htmlFor="email" className="block text-xs md:text-sm font-semibold text-foreground">
               E-mail
             </label>
-            <Input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="seu@email.com"
-              value={formData.email}
-              onChange={handleChange}
-              className="h-10 md:h-12 bg-background border-2 border-border hover:border-primary/50 focus:border-primary transition-colors text-sm md:text-base text-foreground placeholder:text-muted-foreground/50"
-              disabled={loading}
-            />
+            <div className="relative">
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="seu@email.com"
+                value={formData.email}
+                onChange={handleChange}
+                className={`h-10 md:h-12 bg-background border-2 transition-colors text-sm md:text-base text-foreground placeholder:text-muted-foreground/50 ${
+                  emailError
+                    ? "border-red-500 hover:border-red-500/70 focus:border-red-500"
+                    : "border-border hover:border-primary/50 focus:border-primary"
+                }`}
+                disabled={loading}
+              />
+              {emailError && (
+                <div className="absolute right-3 top-1/2 -translate-y-1/2">
+                  <AlertCircle className="w-5 h-5 text-red-500" />
+                </div>
+              )}
+            </div>
+            {emailError && (
+              <p className="text-xs text-red-500 mt-1">{emailError}</p>
+            )}
           </div>
 
           {/* Revenue Select */}

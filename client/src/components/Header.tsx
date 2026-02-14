@@ -23,47 +23,19 @@ export function Header({ price = "R$ 97", isTimePage = false }: HeaderProps) {
 
   return (
     <>
-      {/* Top Bar de Urgência - IMPROVED CONTRAST */}
-      <div className={cn(
-        "py-2.5 text-center relative z-50 overflow-hidden",
-        "bg-primary"
-      )}>
-        <div className="container flex items-center justify-center gap-2 md:gap-4">
-          <>
-            <span className="text-black font-bold text-sm md:text-base flex items-center gap-2">
-              <span className="animate-pulse">⚡</span> VAGAS LIMITADAS
-            </span>
-            <span className="hidden md:inline text-black/60">|</span>
-            <span className="text-black/80 font-medium text-sm md:text-base">CONSULTORIA COM O FOUNDER</span>
-            <span className="hidden md:inline text-black/60">→</span>
-            <a href="#cta" className="text-black font-bold underline underline-offset-2 hover:no-underline transition-all text-sm md:text-base">
-              GARANTIR VAGA
-            </a>
-          </>
-        </div>
-      </div>
+
 
       {/* Main Header */}
       <header
         className={cn(
-          "fixed top-[44px] left-0 right-0 z-40 transition-all duration-300 border-b border-transparent",
+          "fixed top-0 left-0 right-0 z-40 transition-all duration-300 border-b border-transparent",
           isScrolled
             ? "bg-background/95 backdrop-blur-xl border-white/10 py-3 shadow-[0_4px_30px_-10px_rgba(0,0,0,0.5)]"
             : "bg-background/50 backdrop-blur-sm py-4 md:py-5"
         )}
       >
         <div className="container flex items-center justify-between">
-          {/* Logo - IMPROVED */}
-          <a href="/" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-primary text-black flex items-center justify-center font-black text-xl md:text-2xl shadow-[0_0_20px_rgba(0,255,135,0.5)] group-hover:shadow-[0_0_30px_rgba(0,255,135,0.7)] transition-all duration-300">
-              F
-            </div>
-            <span className="text-xl md:text-2xl font-black tracking-tight text-primary group-hover:text-primary transition-colors">
-              FABRANI
-            </span>
-          </a>
-
-
+          {/* Logo removido para liberar espaço */}
         </div>
       </header>
     </>

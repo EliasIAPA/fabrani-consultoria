@@ -53,8 +53,8 @@ export default function Home() {
               </h1>
 
               {/* Subheadline */}
-              <p className="text-base md:text-lg text-foreground/90 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-                Transforme seu treinamento em <strong>Extensão Universitária com certificação MEC</strong>. Saia da disputa por preço e passe a operar com Reconhecimento Institucional.
+              <p className="text-sm md:text-base text-foreground/90 max-w-3xl mx-auto leading-tight animate-fade-in-up delay-200">
+                Existe um Atalho Institucional que transforma seu treinamento em uma <strong>Extensão Universitária com certificação validada por faculdade reconhecida pelo MEC</strong>. Quando isso acontece, ele deixa de disputar atenção. Ele passa a operar com Reconhecimento Institucional. O valor percebido sobe. A resistência ao preço diminui. E vender fica mais simples.
               </p>
 
               {/* CTA */}

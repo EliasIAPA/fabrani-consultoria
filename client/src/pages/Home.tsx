@@ -12,12 +12,14 @@ import { Check, AlertTriangle, Zap, Target, FileText, Users, Lock, Clock, Shield
 import { trackInitiateCheckout } from "@/lib/fbPixel";
 import { ConvertAIPlayer } from "@/components/ConvertAIPlayer";
 import { ConversionForm } from "@/components/ConversionForm";
-
+import { useState } from "react";
 
 export default function Home() {
+  const [showFormModal, setShowFormModal] = useState(false);
 
   const handleCTAClick = () => {
     trackInitiateCheckout();
+    setShowFormModal(true);
   };
 
   return (
@@ -25,18 +27,6 @@ export default function Home() {
       <Header />
       
       <main>
-        {/* ========================================
-             FORMULARIO DE CONVERSAO - TOPO DA PAGINA
-        ========================================= */}
-        <section className="py-24 bg-gradient-to-b from-background to-card relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,135,0.05),transparent_60%)]"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-          
-          <div className="container relative z-10">
-            <ConversionForm />
-          </div>
-        </section>
-
         {/* ========================================
              NEW 1. HERO SECTION — MUDANÇA DE CATEGORIA
         ========================================= */}
@@ -72,12 +62,9 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   className="btn-neon h-auto w-full sm:w-auto text-black text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6" 
-                  asChild
                   onClick={handleCTAClick}
                 >
-                  <a href="https://payfast.greenn.com.br/em29d57/offer/aiAmgX" target="_blank" rel="noopener noreferrer">
-                    Agendar Avaliação Acadêmica
-                  </a>
+                  Agendar Avaliação Acadêmica
                 </Button>
                 <p className="text-sm md:text-base text-foreground flex items-center gap-2">
                   <Lock size={16} className="text-primary" /> Avaliação Gratuita • Sem Compromisso
@@ -204,12 +191,9 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   className="btn-neon h-auto text-black text-base md:text-lg px-8 md:px-12 py-4 md:py-5" 
-                  asChild
                   onClick={handleCTAClick}
                 >
-                  <a href="https://payfast.greenn.com.br/em29d57/offer/aiAmgX" target="_blank" rel="noopener noreferrer">
-                    👉 Quero mudar de categoria
-                  </a>
+                  👉 Quero mudar de categoria
                 </Button>
               </div>
             </div>
@@ -299,12 +283,9 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   className="btn-neon h-auto text-black text-base md:text-lg px-8 md:px-12 py-4 md:py-5" 
-                  asChild
                   onClick={handleCTAClick}
                 >
-                  <a href="https://payfast.greenn.com.br/em29d57/offer/aiAmgX" target="_blank" rel="noopener noreferrer">
-                    👉 Solicitar Avaliação Acadêmica
-                  </a>
+                  🔥 QUERO ACESSAR
                 </Button>
               </div>
             </div>
@@ -474,12 +455,9 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   className="btn-neon h-auto w-full sm:w-auto text-black text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6" 
-                  asChild
                   onClick={handleCTAClick}
                 >
-                  <a href="https://payfast.greenn.com.br/em29d57/offer/aiAmgX" target="_blank" rel="noopener noreferrer">
-                    🔥 QUERO ACESSAR
-                  </a>
+                  👉 SOLICITAR AVALIAÇÃO ACADÊMICA
                 </Button>
                 <p className="text-sm md:text-base text-foreground flex items-center gap-2">
                   <Lock size={16} className="text-primary" /> Pagamento Seguro • Vagas Limitadas
@@ -852,11 +830,9 @@ export default function Home() {
                     <Button 
                       size="lg" 
                       className="btn-neon h-auto text-black text-base md:text-lg px-8 py-4" 
-                      asChild
+                      onClick={handleCTAClick}
                     >
-                      <a href="https://payfast.greenn.com.br/em29d57/offer/aiAmgX" target="_blank" rel="noopener noreferrer">
-                        👉 Quero minha Avaliação Acadêmica
-                      </a>
+                      👉 QUERO MINHA AVALIAÇÃO ACADÊMICA
                     </Button>
                   </div>
                 </div>
@@ -935,6 +911,24 @@ export default function Home() {
           </div>
         </section>
 
+        {/* MODAL POPUP COM FORMULARIO */}
+        {showFormModal && (
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+            <div className="bg-background rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+              <button
+                onClick={() => setShowFormModal(false)}
+                className="absolute top-6 right-6 text-muted-foreground hover:text-foreground transition-colors z-10"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <div className="p-8 md:p-12">
+                <ConversionForm />
+              </div>
+            </div>
+          </div>
+        )}
       </main>
 
       <Footer />

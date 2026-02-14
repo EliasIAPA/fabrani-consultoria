@@ -619,7 +619,7 @@ export default function Home() {
                       className="w-full h-auto object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-8">
-                      <h3 className="text-2xl font-bold text-white">Elias Evangelista</h3>
+                      <h3 className="text-2xl font-bold text-primary">Elias Evangelista</h3>
                       <p className="text-primary font-mono">Founder & Diretor FABRANI</p>
                     </div>
                   </div>
@@ -639,7 +639,7 @@ export default function Home() {
                     
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <div className="flex items-center gap-2 text-white font-bold">
+                        <div className="flex items-center gap-2 text-primary font-bold">
                           <Briefcase className="text-primary" size={20} /> Experiência
                         </div>
                         <ul className="text-sm space-y-1">
@@ -651,7 +651,7 @@ export default function Home() {
                       </div>
                       
                       <div className="space-y-2">
-                        <div className="flex items-center gap-2 text-white font-bold">
+                        <div className="flex items-center gap-2 text-primary font-bold">
                           <GraduationCap className="text-primary" size={20} /> Formação
                         </div>
                         <ul className="text-sm space-y-1">
@@ -663,16 +663,16 @@ export default function Home() {
                     </div>
 
                     <div className="bg-card border border-border p-6 rounded-xl">
-                      <div className="flex items-center gap-2 text-white font-bold mb-4">
+                      <div className="flex items-center gap-2 text-primary font-bold mb-4">
                         <Award className="text-primary" size={20} /> Track Record
                       </div>
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div>
-                          <span className="block text-2xl font-bold text-white">150</span>
+                          <span className="block text-2xl font-bold text-primary">150</span>
                           <span className="text-muted-foreground">Projetos Validados em 2025</span>
                         </div>
                         <div>
-                          <span className="block text-2xl font-bold text-white">+100k</span>
+                          <span className="block text-2xl font-bold text-primary">+100k</span>
                           <span className="text-muted-foreground">Alunos Treinados</span>
                         </div>
                       </div>
@@ -719,7 +719,7 @@ export default function Home() {
               ].map((caseStudy, i) => (
                 <div key={i} className="group relative p-8 rounded-xl bg-card border border-border border-l-4 border-l-primary hover:border-primary hover:shadow-[0_12px_48px_rgba(0,255,135,0.2)] transition-all duration-500">
                   <div className="relative z-10">
-                    <h3 className="text-2xl font-bold text-white mb-2">{caseStudy.name}</h3>
+                    <h3 className="text-2xl font-bold text-primary mb-2">{caseStudy.name}</h3>
                     <p className="text-primary font-mono font-bold text-lg mb-4">{caseStudy.stat}</p>
                     <p className="text-sm text-muted-foreground">{caseStudy.desc}</p>
                   </div>
@@ -747,7 +747,7 @@ export default function Home() {
               <div className="bg-card border border-primary/30 rounded-2xl p-8 md:p-12 space-y-8">
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">Uma reunião estratégica de 60 minutos com um Consultor da FABRANI.</h3>
+                    <h3 className="text-2xl font-bold text-primary mb-4">Uma reunião estratégica de 60 minutos com um Consultor da FABRANI.</h3>
                     <p className="text-lg text-foreground leading-relaxed">
                       Durante essa sessão, seu treinamento é analisado sob os critérios acadêmicos utilizados para estruturar Extensões Universitárias reconhecidas pelo MEC.
                     </p>

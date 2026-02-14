@@ -299,6 +299,126 @@ export default function Home() {
         </section>
 
         {/* ========================================
+             6. QUEM JÁ CONFIA NA FABRANI
+        ========================================= */}
+        <section className="py-24 bg-card relative">
+          <div className="container">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="section-title-bar text-3xl md:text-4xl font-bold mb-6">
+                Quem Já Confia na FABRANI
+              </h2>
+              <p className="text-muted-foreground">
+                Grandes nomes do mercado digital que validaram seus projetos com a FABRANI
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {/* Ícaro de Carvalho - O Novo Mercado */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src="/images/parceiros/onm.jpg" 
+                    alt="Ícaro de Carvalho - O Novo Mercado - Certificação FABRANI"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">O Novo Mercado - 2025</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">Certificação FABRANI</p>
+                  <p className="text-base text-foreground/70">Pós Graduação Ícaro de Carvalho / FABRANI - Projeto: Elias Evangelista</p>
+                </div>
+              </div>
+
+              {/* Escola do Dólar - Forbes */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src="/images/parceiros/escola-dolar.jpg" 
+                    alt="Escola do Dólar - Forbes Malta - Certificação FABRANI"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">Escola do Dólar</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+20 mil alunos nos EUA</p>
+                  <p className="text-base text-foreground/70">Escola do Dólar - Certificação FABRANI - Capa Forbes Malta</p>
+                </div>
+              </div>
+
+              {/* Neil Patel */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img 
+                    src="/images/parceiros/neilpatel.jpg" 
+                    alt="Elias Evangelista e Neil Patel"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">Neil Patel</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">Maior Especialista em SEO</p>
+                  <p className="text-base text-foreground/70">Elias Evangelista com Neil Patel - Referência mundial em Marketing Digital</p>
+                </div>
+              </div>
+
+              {/* Evento Outlier - 2 mil pessoas */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
+                    poster="/videos/outlier2025-poster.jpg"
+                  >
+                    <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663030990044/sDTSdMfxILQrUHbh.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos.
+                  </video>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">Evento Outlier</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+2 mil pessoas</p>
+                  <p className="text-base text-foreground/70">Certificação FABRANI - Tiago Finch / Ticto</p>
+                </div>
+              </div>
+
+              {/* Weburn */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden bg-[#2d2d2d] flex items-center justify-center">
+                  <img 
+                    src="/images/parceiros/weburn.png" 
+                    alt="Weburn - MBA FABRANI"
+                    className="w-3/4 h-auto object-contain group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">Weburn</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+2,5 milhões de usuários</p>
+                  <p className="text-base text-foreground/70">Desenvolvimento de MBA pela FABRANI</p>
+                </div>
+              </div>
+
+              {/* Vendedor de Elite */}
+              <div className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-primary/50 transition-all duration-500 bg-card">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <video 
+                    controls 
+                    className="w-full h-full object-cover"
+                    poster="/videos/vendedordeElite-poster.jpg"
+                  >
+                    <source src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663030990044/apYADtvklkWtyyFn.mp4" type="video/mp4" />
+                    Seu navegador não suporta vídeos.
+                  </video>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">Vendedor de Elite</h3>
+                  <p className="text-primary font-mono font-bold text-lg mb-2">+3 mil pessoas</p>
+                  <p className="text-base text-foreground/70">Certificação e desenvolvimento de conteúdo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ========================================
              1. PRÉ-HEADLINE + HERO SECTION (ORIGINAL)
         ========================================= */}
         <section id="hero" className="relative min-h-screen flex items-center pt-28 md:pt-32 pb-16 md:pb-20 overflow-hidden">

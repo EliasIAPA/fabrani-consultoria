@@ -729,6 +729,198 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ========================================
+             7. A OFERTA DA CONSULTORIA ESTRATÉGICA
+        ========================================= */}
+        <section className="py-24 bg-background relative">
+          <div className="container max-w-4xl">
+            <div className="space-y-12">
+              <div className="text-center space-y-6">
+                <h2 className="section-title-bar text-3xl md:text-5xl font-bold">
+                  A Oferta da Consultoria Estratégica
+                </h2>
+                <p className="text-xl text-muted-foreground">
+                  A Avaliação que define se seu treinamento pode receber a Chancela do MEC.
+                </p>
+              </div>
+
+              <div className="bg-card border border-primary/30 rounded-2xl p-8 md:p-12 space-y-8">
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-4">Uma reunião estratégica de 60 minutos com um Consultor da FABRANI.</h3>
+                    <p className="text-lg text-foreground leading-relaxed">
+                      Durante essa sessão, seu treinamento é analisado sob os critérios acadêmicos utilizados para estruturar Extensões Universitárias reconhecidas pelo MEC.
+                    </p>
+                  </div>
+
+                  <div>
+                    <p className="text-lg font-semibold text-foreground mb-4">Ao final, você terá uma definição objetiva:</p>
+                    <ul className="space-y-3">
+                      <li className="flex gap-3 text-foreground">
+                        <span className="text-primary font-bold">•</span>
+                        <span>Se já pode ser enquadrado na Educação Formal</span>
+                      </li>
+                      <li className="flex gap-3 text-foreground">
+                        <span className="text-primary font-bold">•</span>
+                        <span>O que precisa ser ajustado, se necessário</span>
+                      </li>
+                      <li className="flex gap-3 text-foreground">
+                        <span className="text-primary font-bold">•</span>
+                        <span>E o caminho para implementação</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="border-t border-border pt-6 space-y-4">
+                    <p className="text-lg text-foreground leading-relaxed">
+                      Essa é a etapa obrigatória antes de qualquer certificação.
+                    </p>
+                    <p className="text-lg font-bold text-primary">
+                      É aqui que se decide se o seu curso continua como infoproduto… ou passa a operar com Reconhecimento Institucional.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ========================================
+             8. CTA FINAL E APLICAÇÃO
+        ========================================= */}
+        <section className="py-24 bg-card relative">
+          <div className="container max-w-4xl">
+            <div className="space-y-12">
+              <div className="text-center space-y-8">
+                <h2 className="text-3xl md:text-5xl font-bold">
+                  <span className="text-foreground">Existem dois caminhos.</span>
+                </h2>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="bg-background border border-border rounded-xl p-6 space-y-4">
+                    <p className="text-lg font-semibold text-foreground">Continuar competindo como infoproduto.</p>
+                    <p className="text-muted-foreground">Disputar preço, explicar valor, convencer a cada venda.</p>
+                  </div>
+                  <div className="bg-background border border-primary/50 rounded-xl p-6 space-y-4 relative">
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-black px-3 py-1 rounded-full text-xs font-bold">RECOMENDADO</div>
+                    <p className="text-lg font-semibold text-primary">Ou entrar oficialmente na Educação Formal.</p>
+                    <p className="text-muted-foreground">Legitimidade institucional, autoridade acadêmica, margens maiores.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-primary/10 to-purple-600/10 border border-primary/30 rounded-2xl p-8 md:p-12 space-y-8">
+                <div className="space-y-6 text-center">
+                  <p className="text-lg text-foreground">
+                    Seu curso já foi validado pelo mercado.
+                  </p>
+                  <p className="text-lg font-bold text-primary text-xl">
+                    Agora ele pode ser validado institucionalmente.
+                  </p>
+
+                  <div className="space-y-4 pt-4">
+                    <p className="text-foreground">
+                      A Avaliação Acadêmica é gratuita.
+                    </p>
+                    <p className="text-muted-foreground">
+                      Mas depende da disponibilidade da Junta e dos Consultores.
+                    </p>
+                    <p className="text-sm text-primary font-semibold">
+                      E as 10 primeiras aplicações contam com participação direta do Diretor da Faculdade.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="border-t border-primary/30 pt-8">
+                  <p className="text-center text-lg font-bold text-foreground mb-6">
+                    A diferença entre disputar preço… ou operar com reconhecimento institucional… começa com essa decisão.
+                  </p>
+                  <div className="flex justify-center">
+                    <Button 
+                      size="lg" 
+                      className="btn-neon h-auto text-black text-base md:text-lg px-8 py-4" 
+                      asChild
+                    >
+                      <a href="https://payfast.greenn.com.br/em29d57/offer/aiAmgX" target="_blank" rel="noopener noreferrer">
+                        👉 Quero minha Avaliação Acadêmica
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ========================================
+             9. FAQ — PERGUNTAS FREQUENTES
+        ========================================= */}
+        <section className="py-24 bg-background">
+          <div className="container max-w-4xl">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <h2 className="section-title-bar text-3xl md:text-4xl font-bold mb-6">
+                Perguntas Frequentes
+              </h2>
+              <p className="text-muted-foreground">
+                Dúvidas sobre a Avaliação Acadêmica e o processo de certificação
+              </p>
+            </div>
+
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {[
+                {
+                  question: "Quanto custa a Avaliação Acadêmica?",
+                  answer: "A Avaliação Acadêmica é gratuita. Ela existe para analisar a elegibilidade do seu treinamento e apresentar o caminho de implementação institucional."
+                },
+                {
+                  question: "Como exatamente isso impacta as vendas dos meus treinamentos?",
+                  answer: "Ao entrar na Educação Formal, seu curso muda de categoria. Ele deixa de competir apenas por promessa e preço e passa a operar com legitimidade institucional. Isso eleva o valor percebido, reduz objeções de preço e encurta o ciclo de decisão. Na prática: menos esforço de persuasão e mais Lucro."
+                },
+                {
+                  question: "Se eu já vendo bem, por que estruturar a certificação agora?",
+                  answer: "Porque enquanto ainda é diferencial, posiciona você acima do mercado. Quem estrutura autoridade institucional antes consolida percepção e margem. Quando virar padrão, deixa de ser vantagem estratégica."
+                },
+                {
+                  question: "Vou ter que mudar meu modelo de negócio ou a estrutura do curso?",
+                  answer: "Não necessariamente. A Avaliação Acadêmica identifica se o seu treinamento já atende aos critérios ou quais AJUSTES PONTUAIS são necessários — sem descaracterizar seu modelo comercial."
+                },
+                {
+                  question: "Entrar na Educação Formal deixa meu negócio mais burocrático ou engessado?",
+                  answer: "Não. A certificação adiciona legitimidade institucional. Seu modelo de vendas, funil e estratégia continuam sob seu controle."
+                },
+                {
+                  question: "Vale para palestra, mentoria, curso presencial ou só para curso online?",
+                  answer: "Pode ser estruturado para diferentes formatos — online, presencial, mentoria ou treinamento. A viabilidade depende do nível acadêmico e da organização do conteúdo, não do formato."
+                },
+                {
+                  question: "E se meu curso não for aprovado?",
+                  answer: "Você recebe um diagnóstico claro com os pontos necessários para atingir o padrão exigido. A validação protege a seriedade e a credibilidade do processo."
+                },
+                {
+                  question: "Preciso entender de burocracia?",
+                  answer: "Não. Toda a estrutura acadêmica e documental é conduzida pela equipe responsável. Você foca no conteúdo. O enquadramento institucional é conduzido por nós."
+                },
+                {
+                  question: "E se não tiver vagas para avaliar meu treinamento?",
+                  answer: "Como a análise envolve consultor e banca acadêmica real, a agenda é organizada por ciclos. Caso as vagas estejam preenchidas, você poderá entrar na página em outro momento e tentar novamente."
+                },
+                {
+                  question: "Qual o impacto de deixar a certificação para depois?",
+                  answer: "Enquanto seu curso permanece fora da Educação Formal, ele continua competindo nas mesmas condições de qualquer outro infoproduto, que pode ser copiado a qualquer instante, precisando brigar por preço. Estruturar institucionalmente altera posicionamento, percepção e margem. Adiar essa decisão é manter o mesmo enquadramento atual."
+                }
+              ].map((item, i) => (
+                <AccordionItem key={i} value={`item-${i}`} className="border border-border rounded-lg px-6">
+                  <AccordionTrigger className="py-4 hover:no-underline">
+                    <span className="text-left font-semibold text-foreground">{item.question}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-4 text-muted-foreground">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </section>
 
       </main>
 

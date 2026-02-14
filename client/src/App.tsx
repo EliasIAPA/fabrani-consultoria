@@ -4,7 +4,7 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { ExitIntentPopup } from "./components/ExitIntentPopup";
+
 import Home from "./pages/Home";
 import TimePage from "./pages/TimePage";
 import ThankYouPage from "./pages/ThankYouPage";
@@ -39,7 +39,7 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <ExitIntentPopup />
+
           <Router />
         </TooltipProvider>
       </ThemeProvider>

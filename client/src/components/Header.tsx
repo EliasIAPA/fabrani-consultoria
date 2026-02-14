@@ -63,19 +63,7 @@ export function Header({ price = "R$ 97", isTimePage = false }: HeaderProps) {
             </span>
           </a>
 
-          {/* Countdown Timer - IMPROVED READABILITY */}
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-3 bg-primary/15 border-2 border-primary px-5 md:px-8 py-3 md:py-4 rounded-xl shadow-[0_0_30px_rgba(212,175,55,0.4)]">
-                <span className="text-sm md:text-base text-primary uppercase tracking-wider font-semibold hidden sm:inline-block">
-                  Oferta encerra em:
-                </span>
-                <div className="flex items-center gap-2 font-mono text-primary font-black text-2xl md:text-4xl leading-none">
-                  <span className="w-[2.5ch] text-center bg-primary/30 px-2 py-1.5 rounded-lg shadow-inner">{formatTime(timeLeft.minutes)}</span>
-                  <span className="text-primary/60 text-xl md:text-2xl animate-pulse">:</span>
-                  <span className="w-[2.5ch] text-center bg-primary/30 px-2 py-1.5 rounded-lg shadow-inner text-primary">{formatTime(timeLeft.seconds)}</span>
-                </div>
-              </div>
-          </div>
+
         </div>
       </header>
     </>

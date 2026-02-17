@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CheckCircle2, AlertCircle } from "lucide-react";
+import { trpc } from "@/lib/trpc";
 
 export function ConversionForm() {
   const [formData, setFormData] = useState({
@@ -16,6 +17,18 @@ export function ConversionForm() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [emailError, setEmailError] = useState("");
+
+  // tRPC mutation for submitting leads
+  const submitLeadMutation = trpc.leads.submit.useMutation({
+    onSuccess: () => {
+      setSubmitted(true);
+      setFormData({ name: "", whatsapp: "", email: "", revenue: "" });
+      setTimeout(() => setSubmitted(false), 5000);
+    },
+    onError: (err) => {
+      setError(err.message || "Erro ao enviar formulário. Tente novamente.");
+    },
+  });
 
   // Função para formatar telefone APENAS para exibição
   const formatPhoneForDisplay = (digits: string): string => {
@@ -112,10 +125,14 @@ export function ConversionForm() {
     setLoading(true);
     
     try {
-      // Simular envio para BREVO ou backend
-      // Aqui você pode integrar com sua API de captura de leads
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
+      // Submit lead via tRPC
+      await submitLeadMutation.mutateAsync({
+        name: formData.name,
+        whatsapp: formData.whatsapp,
+        email: formData.email,
+        revenue: formData.revenue,
+      });
+
       // Disparar evento no Meta Pixel
       if (window.fbq) {
         window.fbq("track", "Lead", {
@@ -123,12 +140,6 @@ export function ConversionForm() {
           currency: "BRL",
         });
       }
-
-      setSubmitted(true);
-      setFormData({ name: "", whatsapp: "", email: "", revenue: "" });
-      
-      // Reset form após 5 segundos
-      setTimeout(() => setSubmitted(false), 5000);
     } catch (err) {
       setError("Erro ao enviar formulário. Tente novamente.");
     } finally {
@@ -273,10 +284,10 @@ export function ConversionForm() {
           {/* CTA Button */}
           <Button
             type="submit"
-            disabled={loading}
+            disabled={loading || submitLeadMutation.isPending}
             className="w-full h-12 md:h-14 text-sm md:text-base font-bold bg-gradient-to-r from-primary to-orange-600 hover:from-primary/90 hover:to-orange-600/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl"
           >
-            {loading ? (
+            {loading || submitLeadMutation.isPending ? (
               <span className="flex items-center gap-2">
                 <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
                 Processando...

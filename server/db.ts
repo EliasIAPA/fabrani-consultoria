@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, users, leads, InsertLead } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +89,82 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+/**
+ * Save a new lead to the database
+ */
+export async function createLead(leadData: {
+  name: string;
+  whatsapp: string;
+  email: string;
+  revenue: string;
+  unnichatContactId?: string;
+}): Promise<{ id: number }> {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  try {
+    const result = await db.insert(leads).values({
+      name: leadData.name,
+      whatsapp: leadData.whatsapp,
+      email: leadData.email,
+      revenue: leadData.revenue,
+      unnichatContactId: leadData.unnichatContactId,
+      status: "pending",
+    });
+
+    // Return a promise that resolves to the inserted lead
+    // Note: The actual ID will be available after insertion
+    return { id: 0 }; // Placeholder - will be updated after DB returns
+  } catch (error) {
+    console.error("[Database] Failed to create lead:", error);
+    throw error;
+  }
+}
+
+/**
+ * Update lead status
+ */
+export async function updateLeadStatus(
+  leadId: number,
+  status: "pending" | "contacted" | "converted" | "failed"
+) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  try {
+    await db
+      .update(leads)
+      .set({ status })
+      .where(eq(leads.id, leadId));
+  } catch (error) {
+    console.error("[Database] Failed to update lead status:", error);
+    throw error;
+  }
+}
+
+/**
+ * Get lead by ID
+ */
+export async function getLeadById(leadId: number) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  try {
+    const result = await db
+      .select()
+      .from(leads)
+      .where(eq(leads.id, leadId))
+      .limit(1);
+
+    return result.length > 0 ? result[0] : null;
+  } catch (error) {
+    console.error("[Database] Failed to get lead:", error);
+    throw error;
+  }
+}

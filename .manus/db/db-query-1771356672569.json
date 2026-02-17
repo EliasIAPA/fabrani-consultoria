@@ -1,0 +1,21 @@
+{
+  "query": "SELECT * FROM leads WHERE email = 'maria@email.com' ORDER BY createdAt DESC LIMIT 1;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user Dz6p7HnQxN5GaK6.d20334eed1fd --database fZKFoz5oVLitnG3gWsaszs --execute SELECT * FROM leads WHERE email = 'maria@email.com' ORDER BY createdAt DESC LIMIT 1;",
+  "rows": [
+    {
+      "id": "1",
+      "name": "Maria Silva",
+      "whatsapp": "11987654321",
+      "email": "maria@email.com",
+      "revenue": "1",
+      "unnichatContactId": "NULL",
+      "status": "pending",
+      "createdAt": "2026-02-17 19:30:52",
+      "updatedAt": "2026-02-17 19:30:52"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\twhatsapp\temail\trevenue\tunnichatContactId\tstatus\tcreatedAt\tupdatedAt\n1\tMaria Silva\t11987654321\tmaria@email.com\t1\tNULL\tpending\t2026-02-17 19:30:52\t2026-02-17 19:30:52\n",
+  "stderr": "",
+  "execution_time_ms": 200
+}

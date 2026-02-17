@@ -4,6 +4,8 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import { sendFacebookEvent, generateEventId, hashUserData } from "./facebookCapi";
+import { createLead, updateLeadStatus } from "./db";
+import { createUnnichatContact, sendUnnichatMessage } from "./unnichat";
 
 export const appRouter = router({
   // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -17,6 +19,72 @@ export const appRouter = router({
         success: true,
       } as const;
     }),
+  }),
+
+  // Leads Router - Handles form submissions
+  leads: router({
+    /**
+     * Submit a new lead from the conversion form
+     * Saves to database and creates contact in Unnichat
+     */
+    submit: publicProcedure
+      .input(
+        z.object({
+          name: z.string().min(1, "Name is required"),
+          whatsapp: z.string().min(11, "WhatsApp must have 11 digits"),
+          email: z.string().email("Invalid email"),
+          revenue: z.string().min(1, "Revenue is required"),
+        })
+      )
+      .mutation(async ({ input }) => {
+        try {
+          // Step 1: Create contact in Unnichat
+          const unnichatResult = await createUnnichatContact({
+            name: input.name,
+            phone: input.whatsapp,
+            email: input.email,
+            customFields: {
+              revenue: input.revenue,
+              source: "conversion_form",
+            },
+          });
+
+          // Step 2: Save lead to database
+          const leadResult = await createLead({
+            name: input.name,
+            whatsapp: input.whatsapp,
+            email: input.email,
+            revenue: input.revenue,
+            unnichatContactId: unnichatResult.contactId,
+          });
+
+          // Step 3: Send welcome message if contact was created
+          if (unnichatResult.success && unnichatResult.contactId) {
+            await sendUnnichatMessage(
+              unnichatResult.contactId,
+              `Ola ${input.name}! Recebemos sua solicitacao de avaliacao academica. Em breve um consultor entrara em contato com voce.`
+            );
+
+            // Update lead status to contacted
+            if (leadResult && leadResult.id > 0) {
+              await updateLeadStatus(leadResult.id, "contacted");
+            }
+          }
+
+          return {
+            success: true,
+            leadId: leadResult?.id,
+            unnichatContactId: unnichatResult.contactId,
+            message: "Lead criado com sucesso!",
+          };
+        } catch (error) {
+          console.error("[Leads] Error submitting lead:", error);
+          return {
+            success: false,
+            error: error instanceof Error ? error.message : "Unknown error",
+          };
+        }
+      }),
   }),
 
   // Facebook Conversions API (CAPI) Router

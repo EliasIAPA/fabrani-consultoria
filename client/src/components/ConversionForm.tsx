@@ -17,30 +17,18 @@ export function ConversionForm() {
   const [error, setError] = useState("");
   const [emailError, setEmailError] = useState("");
 
-  // Função para formatar telefone
-  const formatPhoneNumber = (value: string) => {
-    // Remove tudo que não é número
-    const cleaned = value.replace(/\D/g, "");
-    
-    // Limita a 11 dígitos - rejeita apenas se ultrapassar
-    if (cleaned.length > 11) {
-      // Retorna o valor anterior se tentar adicionar mais de 11 dígitos
-      return formData.whatsapp;
-    }
-    
-    // Formata como (XX) 9XXXX-XXXX
-    if (cleaned.length === 0) {
-      return "";
-    } else if (cleaned.length <= 2) {
-      return cleaned;
-    } else if (cleaned.length <= 7) {
-      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
-    } else if (cleaned.length <= 11) {
-      // Aceita de 8 a 11 dígitos - slice(7) pega todos os dígitos restantes
-      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(7)}`;
-    }
-    
-    return formData.whatsapp;
+  // Função para formatar telefone APENAS para exibição
+  const formatPhoneForDisplay = (digits: string): string => {
+    if (digits.length === 0) return "";
+    if (digits.length <= 2) return digits;
+    if (digits.length <= 7) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+    // Para 8-11 dígitos: (XX) 9XXXX-XXXX
+    return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7, 11)}`;
+  };
+
+  // Função para extrair apenas números
+  const extractDigits = (value: string): string => {
+    return value.replace(/\D/g, "");
   };
 
   // Função para validar e-mail em tempo real
@@ -71,8 +59,16 @@ export function ConversionForm() {
     const { name, value } = e.target;
     
     if (name === "whatsapp") {
-      const formatted = formatPhoneNumber(value);
-      setFormData((prev) => ({ ...prev, [name]: formatted }));
+      // Extrair apenas números
+      const digits = extractDigits(value);
+      
+      // Limitar a 11 dígitos
+      if (digits.length > 11) {
+        return; // Não atualiza se exceder 11 dígitos
+      }
+      
+      // Armazenar apenas os dígitos
+      setFormData((prev) => ({ ...prev, [name]: digits }));
     } else if (name === "email") {
       setFormData((prev) => ({ ...prev, [name]: value }));
       validateEmail(value);
@@ -93,7 +89,7 @@ export function ConversionForm() {
       setError("Por favor, insira seu nome");
       return false;
     }
-    if (!formData.whatsapp.trim() || formData.whatsapp.replace(/\D/g, "").length < 11) {
+    if (!formData.whatsapp || formData.whatsapp.length !== 11) {
       setError("Por favor, insira um WhatsApp válido (11 dígitos)");
       return false;
     }
@@ -203,12 +199,17 @@ export function ConversionForm() {
               name="whatsapp"
               type="tel"
               placeholder="(11) 99999-9999"
-              value={formData.whatsapp}
+              value={formatPhoneForDisplay(formData.whatsapp)}
               onChange={handleChange}
-              maxLength={14}
+              inputMode="numeric"
               className="h-10 md:h-12 bg-background border-2 border-border hover:border-primary/50 focus:border-primary transition-colors text-sm md:text-base text-foreground placeholder:text-muted-foreground/50"
               disabled={loading}
             />
+            {formData.whatsapp.length > 0 && formData.whatsapp.length < 11 && (
+              <p className="text-xs text-amber-600 mt-1">
+                {11 - formData.whatsapp.length} dígito(s) faltando
+              </p>
+            )}
           </div>
 
           {/* Email */}

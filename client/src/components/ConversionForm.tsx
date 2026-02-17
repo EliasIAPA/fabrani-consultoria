@@ -22,8 +22,17 @@ export function ConversionForm() {
   const submitLeadMutation = trpc.leads.submit.useMutation({
     onSuccess: () => {
       setSubmitted(true);
-      setFormData({ name: "", whatsapp: "", email: "", revenue: "" });
-      setTimeout(() => setSubmitted(false), 5000);
+      
+      // Redirecionar para escala.fabrani.com.br/agenda com dados como URL params após 2 segundos
+      setTimeout(() => {
+        const params = new URLSearchParams({
+          name: formData.name,
+          whatsapp: formData.whatsapp,
+          email: formData.email,
+          revenue: formData.revenue,
+        });
+        window.location.href = `https://escala.fabrani.com.br/agenda?${params.toString()}`;
+      }, 2000);
     },
     onError: (err) => {
       setError(err.message || "Erro ao enviar formulário. Tente novamente.");
@@ -158,8 +167,11 @@ export function ConversionForm() {
             ✅ Cadastro Realizado com Sucesso!
           </h3>
           <p className="text-muted-foreground text-sm md:text-base">
-            Você receberá em breve os detalhes da sua Avaliação Acadêmica no WhatsApp e E-mail.
+            Redirecionando para agendamento...
           </p>
+          <div className="flex justify-center mt-4">
+            <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+          </div>
         </div>
       </div>
     );

@@ -22,17 +22,25 @@ export function ConversionForm() {
     // Remove tudo que não é número
     const cleaned = value.replace(/\D/g, "");
     
-    // Limita a 11 dígitos
-    if (cleaned.length > 11) return formData.whatsapp;
+    // Limita a 11 dígitos - rejeita apenas se ultrapassar
+    if (cleaned.length > 11) {
+      // Retorna o valor anterior se tentar adicionar mais de 11 dígitos
+      return formData.whatsapp;
+    }
     
     // Formata como (XX) 9XXXX-XXXX
-    if (cleaned.length <= 2) {
+    if (cleaned.length === 0) {
+      return "";
+    } else if (cleaned.length <= 2) {
       return cleaned;
     } else if (cleaned.length <= 7) {
       return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2)}`;
-    } else {
-      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(7, 11)}`;
+    } else if (cleaned.length <= 11) {
+      // Aceita de 8 a 11 dígitos - slice(7) pega todos os dígitos restantes
+      return `(${cleaned.slice(0, 2)}) ${cleaned.slice(2, 7)}-${cleaned.slice(7)}`;
     }
+    
+    return formData.whatsapp;
   };
 
   // Função para validar e-mail em tempo real
